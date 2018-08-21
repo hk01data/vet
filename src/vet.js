@@ -864,70 +864,7 @@ var vet = {
              "營業電話號碼2":"-",
              "營業電話號碼3":"-",
              "cat":"H",
-"opening_hours" : {
-         "open_now" : false,
-         "periods" : [
-            {
-               "close" : {
-                  "day" : 1,
-                  "time" : "1330"
-               },
-               "open" : {
-                  "day" : 1,
-                  "time" : "0830"
-               }
-            },
-            {
-               "close" : {
-                  "day" : 2,
-                  "time" : "1330"
-               },
-               "open" : {
-                  "day" : 2,
-                  "time" : "0830"
-               }
-            },
-            {
-               "close" : {
-                  "day" : 3,
-                  "time" : "1330"
-               },
-               "open" : {
-                  "day" : 3,
-                  "time" : "0830"
-               }
-            },
-            {
-               "close" : {
-                  "day" : 4,
-                  "time" : "1330"
-               },
-               "open" : {
-                  "day" : 4,
-                  "time" : "0830"
-               }
-            },
-            {
-               "close" : {
-                  "day" : 5,
-                  "time" : "1300"
-               },
-               "open" : {
-                  "day" : 5,
-                  "time" : "0830"
-               }
-            }
-         ],
-         "weekday_text" : [
-            "Monday: 8:30 am – 1:30 pm",
-            "Tuesday: 8:30 am – 1:30 pm",
-            "Wednesday: 8:30 am – 1:30 pm",
-            "Thursday: 8:30 am – 1:30 pm",
-            "Friday: 8:30 am – 1:00 pm",
-            "Saturday: Closed",
-            "Sunday: Closed"
-         ]
-      }
+			"opening_hours" : ""
           },
           "geometry":{  
              "type":"Point",
@@ -9704,70 +9641,7 @@ var vet = {
              "營業電話號碼2":"-",
              "營業電話號碼3":"-",
              "cat":"S",
-"opening_hours" : {
-         "open_now" : false,
-         "periods" : [
-            {
-               "close" : {
-                  "day" : 1,
-                  "time" : "1730"
-               },
-               "open" : {
-                  "day" : 1,
-                  "time" : "0830"
-               }
-            },
-            {
-               "close" : {
-                  "day" : 2,
-                  "time" : "1730"
-               },
-               "open" : {
-                  "day" : 2,
-                  "time" : "0830"
-               }
-            },
-            {
-               "close" : {
-                  "day" : 3,
-                  "time" : "1730"
-               },
-               "open" : {
-                  "day" : 3,
-                  "time" : "0830"
-               }
-            },
-            {
-               "close" : {
-                  "day" : 4,
-                  "time" : "1730"
-               },
-               "open" : {
-                  "day" : 4,
-                  "time" : "0830"
-               }
-            },
-            {
-               "close" : {
-                  "day" : 5,
-                  "time" : "1700"
-               },
-               "open" : {
-                  "day" : 5,
-                  "time" : "0830"
-               }
-            }
-         ],
-         "weekday_text" : [
-            "Monday: 8:30 am – 5:30 pm",
-            "Tuesday: 8:30 am – 5:30 pm",
-            "Wednesday: 8:30 am – 5:30 pm",
-            "Thursday: 8:30 am – 5:30 pm",
-            "Friday: 8:30 am – 5:00 pm",
-            "Saturday: Closed",
-            "Sunday: Closed"
-         ]
-      }
+"opening_hours" : ""
           },
           "geometry":{  
              "type":"Point",
