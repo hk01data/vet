@@ -23,30 +23,13 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
             <div class="container">
-                <span id="branchStatus">營業中</span>
-                <span class="card-title" id="branchName">Card title</span>
+                <span id="branchStatus"></span>
+                <span class="card-title" id="branchName"></span>
                 <span id="addrName"></span><br />
                 <span id="telephone"></span>
-                <!-- <div>
-                    <i class="fas fa-phone"></i><span class="text-secondary" id="telephone"></span>
-                </div>
-                <div>
-                    <i class="fas fa-map-marker-alt"></i><span class="text-secondary" id="addrName"></span>
-                </div> -->
-                <ul>
-                    <li>星期日 10:00–20:00</li>
-                    <li>星期一 10:00–20:00</li>
-                    <li>星期二 10:00–20:00</li>
-                    <li>星期三 10:00–20:00</li>
-                    <li>星期四 10:00–20:00</li>
-                    <li>星期五 10:00–20:00</li>
-                    <li>星期六 10:00–20:00</li>
+                <ul id="opening_hours">
                 </ul>
-                <!-- <ul class="fa-ul">
-                    <li id="telephone"><span class="fa-li"><i class="fas fa-phone-volume"></i></span></li>
-                    <li id="addrName"><span class="fa-li"><i class="fas fa-map-marker-alt"></i></span></li>
-                  </ul> -->
-                  <a href="#">前往網站 ⟶</a>
+                <a id="branchWebsite" href="#">前往網站 ⟶</a>
             </div>
         </div>
     </div>
@@ -54,8 +37,8 @@
 
     <script>
         var vetmap = L.map('mapid', {
-            center: (screen.width >= 768)? [22.300522, 114.172841] : [22.309763, 114.179704],
-            zoom: (screen.width >= 768)? 14 : 13,
+            center: (screen.width >= 768) ? [22.300522, 114.172841] : [22.309763, 114.179704],
+            zoom: (screen.width >= 768) ? 14 : 13,
             zoomSnap: 0.25,
             maxBounds: ([
                 [21.795661, 113.073929],
@@ -69,6 +52,8 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(vetmap);
 
+        myUl = document.getElementById('opening_hours');
+
         var green = L.icon({
             iconUrl: 'icon/green.png',
             iconSize: [25, 25]
@@ -79,7 +64,12 @@
             iconSize: [25, 25]
         });
 
-        s_lay = L.geoJSON(vet, {
+        var purple = L.icon({
+            iconUrl: 'icon/purple.png',
+            iconSize: [25, 25]
+        });
+
+        inactive_lay = L.geoJSON(vet, {
             onEachFeature: onEachFeature,
 
             pointToLayer: function(geoJsonPoint, latlng) {
@@ -88,11 +78,11 @@
                 });
             },
             filter: function(geoJsonFeature) {
-                return geoJsonFeature.properties.cat == 'S';
+                if (checkBranchStatus(geoJsonFeature["properties"]) == 'inactive') return true;
             },
         }).addTo(vetmap);
 
-        h_lay = L.geoJSON(vet, {
+        active_lay = L.geoJSON(vet, {
             onEachFeature: onEachFeature,
             pointToLayer: function(geoJsonPoint, latlng) {
                 return L.marker(latlng, {
@@ -100,13 +90,26 @@
                 });
             },
             filter: function(geoJsonFeature) {
-                return geoJsonFeature.properties.cat == 'H';
-            }
+                if (checkBranchStatus(geoJsonFeature["properties"]) == 'active') return true;
+            },
+        }).addTo(vetmap);
+
+        no_info_lay = L.geoJSON(vet, {
+            onEachFeature: onEachFeature,
+            pointToLayer: function(geoJsonPoint, latlng) {
+                return L.marker(latlng, {
+                    icon: purple
+                });
+            },
+            filter: function(geoJsonFeature) {
+                if (checkBranchStatus(geoJsonFeature["properties"]) == 'no_info') return true;
+            },
         }).addTo(vetmap);
 
         var overlayMaps = {
-            "s": s_lay,
-            "h": h_lay
+            "休息": inactive_lay,
+            "營業中": active_lay,
+            "沒有資料": no_info_lay
         };
 
         L.control.layers({}, overlayMaps, {
@@ -126,6 +129,10 @@
                     iconUrl: 'icon/brown.png',
                     iconSize: [25, 25]
                 });
+                purple = L.icon({
+                    iconUrl: 'icon/purple.png',
+                    iconSize: [25, 25]
+                });
             } else if (currentZoom >= 14 && currentZoom < 15) {
                 green = L.icon({
                     iconUrl: 'icon/green.png',
@@ -133,6 +140,10 @@
                 });
                 brown = L.icon({
                     iconUrl: 'icon/brown.png',
+                    iconSize: [35, 35]
+                });
+                purple = L.icon({
+                    iconUrl: 'icon/purple.png',
                     iconSize: [35, 35]
                 });
             } else if (currentZoom >= 15) {
@@ -144,6 +155,10 @@
                     iconUrl: 'icon/brown.png',
                     iconSize: [45, 45]
                 });
+                purple = L.icon({
+                    iconUrl: 'icon/purple.png',
+                    iconSize: [45, 45]
+                });
             } else {
                 green = L.icon({
                     iconUrl: 'icon/green_dot.png',
@@ -153,9 +168,14 @@
                     iconUrl: 'icon/brown_dot.png',
                     iconSize: [12, 12]
                 });
+                purple = L.icon({
+                    iconUrl: 'icon/purple_dot.png',
+                    iconSize: [12, 12]
+                });
             }
-            h_lay.eachLayer(mkr => mkr.setIcon(green));
-            s_lay.eachLayer(mkr => mkr.setIcon(brown));
+            active_lay.eachLayer(mkr => mkr.setIcon(green));
+            inactive_lay.eachLayer(mkr => mkr.setIcon(brown));
+            no_info_lay.eachLayer(mkr => mkr.setIcon(purple));
         })
 
         var card = document.querySelector('.card');
@@ -166,25 +186,87 @@
             })
         }
 
+        // The original open_close function
+        function checkBranchStatus(p) { 
+            // Return if no information
+            if (p["opening_hours"] == "") return "no_info";
+        
+            // var filValue = 'inactive';
+            let date = new Date();
+            let weekDay = date.getDay();
+            let time = date.getHours() * 100 + date.getMinutes();
+
+            let periods = p["opening_hours"]["periods"];
+            let filValue = "inactive";
+
+            periods.forEach(days => {
+                if (days['open']['day'] == weekDay) {
+                    let open = parseInt(days['open']['time']);
+                    let close = parseInt(days['close']['time']);
+                    if (time >= open && time <= close) {
+                        filValue = "active";
+                    }
+                }
+            })
+            return filValue
+        }
+
         function pop_info(e) {
-            console.log(e.target);
-            vetmap.panTo([e.target.feature.geometry.coordinates[1], e.target.feature.geometry.coordinates[0]], {
-                // offset: [0, -545]
-            });
+            //offset the centre
+            bounds = vetmap.getBounds();
+            lat_bounds = bounds._northEast.lat - bounds._southWest.lat;
+            var centre = e.target.feature.geometry.coordinates //.reverse();
+            vetmap.panTo([centre[1] - lat_bounds * 0.2, centre[0]]);
+
+            //add opening hours to the information box
             prop = e['target']["feature"]["properties"];
-            document.getElementById("branchName").textContent = prop["獸醫診所名稱"];
-            document.getElementById("addrName").textContent = (prop["營業地址"]) ? prop["營業地址"] : "沒有提供";
-            var tele = document.getElementById("telephone");
+            myUl.innerHTML = "";
+            
+            
+
+            console.log(e.target.feature.properties)
+            let branchStatus = (checkBranchStatus(prop));
+            document.getElementById("branchStatus").textContent = 
+            (branchStatus == "no_info")? "沒有營業時間資料": (branchStatus == "active")? " 營業中" : "休息";
+            document.getElementById("branchStatus").className = "";
+            document.getElementById("branchStatus").classList.add(branchStatus);
+            
+
+            if (prop["opening_hours"] != "") {
+                prop["opening_hours"]["weekday_text"].forEach(
+                item => {
+                    myUl.innerHTML += "<li>" + item + "</li>";
+                }
+            )
+            }
+            
+
+            document.getElementById("branchName").textContent = prop["chi_name"];
+            document.getElementById("addrName").textContent = (prop["chi_address"]) ? prop["chi_address"] : "沒有提供";
+            
+            let tele = document.getElementById("telephone");
             tele.innerHTML = "";
-            if (prop["營業電話號碼1"] != "-") {
-                tele.innerHTML += prop["營業電話號碼1"];
+            if (prop["tel1"] != "-") {
+                tele.innerHTML += prop["tel1"];
             }
-            if (prop["營業電話號碼2"] != "-") {
-                tele.innerHTML +=  "／" + prop["營業電話號碼2"];
+            if (prop["tel2"] != "-") {
+                tele.innerHTML += "／" + prop["tel2"];
             }
-            if (prop["營業電話號碼3"] != "-") {
-                tele.innerHTML += "／" + prop["營業電話號碼3"];
+            if (prop["tel3"] != "-") {
+                tele.innerHTML += "／" + prop["tel3"];
             }
+
+            document.getElementById("branchStatus").classList.add(branchStatus);
+            
+            if (prop["website"] != "") {
+                document.getElementById("branchWebsite").style.display = 'true';
+                document.getElementById("branchWebsite").setAttribute("href", prop["website"]);
+            }
+            else {
+                document.getElementById("branchWebsite").style.display = 'none';
+            }
+            
+
             card.classList.remove("card-hidden");
         }
 
