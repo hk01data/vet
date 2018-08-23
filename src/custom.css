@@ -1,6 +1,5 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
-
 body {
     margin: 0;
     padding: 0;
@@ -27,7 +26,7 @@ body {
     line-height: 1.8rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 835px) {
     .card--custom {
         width: 100%;
         bottom: 0;
@@ -35,9 +34,9 @@ body {
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 835px) {
     .card--custom {
-        width: 30%;
+        /* width: 40%; */
         max-width: 350px;
         /* margin: 0 auto; */
         max-height: 80%;
@@ -48,7 +47,6 @@ body {
         border-bottom-left-radius: 8px !important;
         border-bottom-right-radius: 8px !important;
     }
-
     .card-body {
         padding: 1.5rem !important;
     }
@@ -90,8 +88,19 @@ body {
     border-radius: 0.8rem;
     font-weight: 300;
     display: inline-block;
-    color:black;
+    color: black;
+}
+
+.card .active {
     background: springgreen;
+}
+
+.card .inactive {
+    background: orange;
+}
+
+.card .no_info {
+    background: plum;
 }
 
 .card #branchName {
@@ -100,7 +109,6 @@ body {
     display: block;
     margin-bottom: .5rem;
 }
-
 
 .card .fas {
     margin-right: 15px;
