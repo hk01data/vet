@@ -11,29 +11,34 @@
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
         crossorigin=""></script>
-    <script src="src/vet.js?v=20180823"></script>
+    <script src="src/vet.js?v=201808231612"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="src/custom.css?v=20180823">
+    <link rel="stylesheet" href="src/custom.css?v=201808231612">
 </head>
 
 <body>
     <div id='mapid'></div>
     <div class="card card--custom card-hidden">
+        <div class="card-header">                
+            <span id="branchStatus"></span>
+            <span class="card-title" id="branchName"></span>
+        </div>
         <div class="card-body">
             <button type="button" class="close" id="close-card" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             <div class="container">
-                <span id="branchStatus"></span>
-                <span class="card-title" id="branchName"></span>
-                <span id="addrName"></span><br />
-                <span id="telephone"></span>
+                <ul class="fa-ul" id= "branchDetail">
+                    <li><span class="fa-li"><i class="fas fa-map-marker-alt fa-fw"></i></span><span id="addrName"></span></li>
+                    <li><span class="fa-li"><i class="fas fa-phone fa-fw"></i></span><span id="telephone"></span></li>
+                    <li id="opening_hour_title"><span class="fa-li"><i class="fas fa-clock fa-fw"></i></span>開放時間</li>
+                  </ul>
                 <ul id="opening_hours"></ul>
 
-                <a id="issueReport" href="#" target="_blank">報料 ⟶</a>
+                <a id="issueReport" href="#" target="_blank">資料有誤？請報料 ⟶</a>
             </div>
         </div>
         <div class="card-footer"><a id="branchWebsite" href="#" target="_blank">前往網站 ⟶</a></div>
@@ -183,7 +188,13 @@
             no_info_lay.eachLayer(mkr => mkr.setIcon(purple));
         })
 
-        var card = document.querySelector('.card');
+        var card = document.querySelector('.card--custom');
+
+        // card.addEventListener('click', () => {
+        //     if ()
+        //     card.style.maxHeight = "100%";
+        //     card.style.height = "100%";
+        // });
 
         function onEachFeature(feature, layer) {
             layer.on({
@@ -240,11 +251,14 @@
 
 
             if (prop["weekday_text"] != "") {
+                document.getElementById("opening_hour_title").style.display = "inline";
                 prop["weekday_text"].forEach(
                     item => {
                         myUl.innerHTML += "<li>" + item + "</li>";
                     }
                 )
+            } else {
+                document.getElementById("opening_hour_title").style.display = "none";
             }
 
 
@@ -269,6 +283,8 @@
             else {
                 document.querySelector(".card-footer").style.display = 'none';
             }
+
+            
 
 
             card.classList.remove("card-hidden");
