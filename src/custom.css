@@ -20,6 +20,11 @@ body {
     height: 100vh;
 }
 
+.card-header {
+    background-color: #f6f6f6;
+    padding: 1rem 2rem 0rem !important;
+    border: none;
+}
 .card--custom {
     left: 0;
     right: 0;
@@ -38,16 +43,15 @@ body {
 .card-body {
     overflow-y: auto;
     max-height: calc(100vh - 220px);
-}
-
-/* .card-body::-webkit-scrollbar {
-    width: 5px; 
-    background: #ccc;
-} */
+    background: url(../images/hk01watermark.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0 1.25rem 1rem !important;
+    }
 
 .card-footer {
     border: none !important;
-    padding: .75rem 1.5rem !important;
+    padding: .75rem 1.25rem !important;
 
 }
 @media only screen and (max-width: 835px) {
@@ -60,9 +64,7 @@ body {
 
 @media only screen and (min-width: 835px) {
     .card--custom {
-        /* width: 40%; */
         max-width: 350px;
-        /* margin: 0 auto; */
         max-height: 80%;
         top: 100px;
         left: 10px;
@@ -71,20 +73,8 @@ body {
         border-bottom-left-radius: 8px !important;
         border-bottom-right-radius: 8px !important;
     }
-    .card-body {
-        padding: 1.5rem !important;
-    }
 }
 
-.card-body {
-    background: url(../images/hk01watermark.png);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.card-header {
-    margin-bottom: 0.25rem;
-}
 
 .close {
     position: absolute;
@@ -131,9 +121,25 @@ body {
     font-size: 1.6rem;
     font-weight: 500;
     display: block;
-    margin-bottom: .5rem;
+    margin-bottom: .8rem;
 }
 
 .card .fas {
-    margin-right: 15px;
+    margin-right: 1rem;
+}
+
+.card #branchDetail {
+    margin-left: 2rem;
+    margin-bottom: 0;
+}
+
+#opening_hours {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 2rem;
+}
+
+#issueReport {
+    display: block;
+    margin-top: 0.75rem;
 }
