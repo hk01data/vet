@@ -6,13 +6,17 @@
     <meta charset='utf-8' />
     <title>Hong Kong Veterinarian Map</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin="" />
     <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
-    <script src="src/vet.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/custom.css">
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+        crossorigin=""></script>
+    <script src="src/vet.js?v=20180823"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="src/custom.css?v=20180823">
 </head>
 
 <body>
@@ -20,18 +24,19 @@
     <div class="card card--custom card-hidden">
         <div class="card-body">
             <button type="button" class="close" id="close-card" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                <span aria-hidden="true">&times;</span>
+            </button>
             <div class="container">
                 <span id="branchStatus"></span>
                 <span class="card-title" id="branchName"></span>
                 <span id="addrName"></span><br />
                 <span id="telephone"></span>
-                <ul id="opening_hours">
-                </ul>
-                <a id="branchWebsite" href="#">前往網站 ⟶</a>
+                <ul id="opening_hours"></ul>
+
+                <a id="issueReport" href="#" target="_blank">報料 ⟶</a>
             </div>
         </div>
+        <div class="card-footer"><a id="branchWebsite" href="#" target="_blank">前往網站 ⟶</a></div>
     </div>
 
 
@@ -49,10 +54,10 @@
         var osm = L.tileLayer('https://maptile.hk01.com/tile/{z}/{x}/{y}.png', {
             maxZoom: 18,
             minZoom: 10,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors|此地圖只涵蓋已簽署同意被列入漁護署「獸醫診所名單」的獸醫診所，未必包括全港所有診所。'
         }).addTo(vetmap);
 
-        myUl = document.getElementById('opening_hours');
+        
 
         var green = L.icon({
             iconUrl: 'icon/green.png',
@@ -72,36 +77,36 @@
         inactive_lay = L.geoJSON(vet, {
             onEachFeature: onEachFeature,
 
-            pointToLayer: function(geoJsonPoint, latlng) {
+            pointToLayer: function (geoJsonPoint, latlng) {
                 return L.marker(latlng, {
                     icon: brown
                 });
             },
-            filter: function(geoJsonFeature) {
+            filter: function (geoJsonFeature) {
                 if (checkBranchStatus(geoJsonFeature["properties"]) == 'inactive') return true;
             },
         }).addTo(vetmap);
 
         active_lay = L.geoJSON(vet, {
             onEachFeature: onEachFeature,
-            pointToLayer: function(geoJsonPoint, latlng) {
+            pointToLayer: function (geoJsonPoint, latlng) {
                 return L.marker(latlng, {
                     icon: green
                 });
             },
-            filter: function(geoJsonFeature) {
+            filter: function (geoJsonFeature) {
                 if (checkBranchStatus(geoJsonFeature["properties"]) == 'active') return true;
             },
         }).addTo(vetmap);
 
         no_info_lay = L.geoJSON(vet, {
             onEachFeature: onEachFeature,
-            pointToLayer: function(geoJsonPoint, latlng) {
+            pointToLayer: function (geoJsonPoint, latlng) {
                 return L.marker(latlng, {
                     icon: purple
                 });
             },
-            filter: function(geoJsonFeature) {
+            filter: function (geoJsonFeature) {
                 if (checkBranchStatus(geoJsonFeature["properties"]) == 'no_info') return true;
             },
         }).addTo(vetmap);
@@ -117,7 +122,7 @@
             position: 'topright'
         }).addTo(vetmap);
 
-        vetmap.on('zoomend', function() {
+        vetmap.on('zoomend', function () {
             var currentZoom = vetmap.getZoom();
             console.log(currentZoom);
             if (currentZoom >= 11.5 && currentZoom < 14) {
@@ -187,19 +192,21 @@
         }
 
         // The original open_close function
-        function checkBranchStatus(p) { 
+        function checkBranchStatus(p) {
             // Return if no information
             if (p["opening_hours"] == "") return "no_info";
-        
-            // var filValue = 'inactive';
+
             let date = new Date();
             let weekDay = date.getDay();
             let time = date.getHours() * 100 + date.getMinutes();
 
-            let periods = p["opening_hours"]["periods"];
+            let periods = p["opening_hours"];
             let filValue = "inactive";
 
             periods.forEach(days => {
+                // Always Open
+                if (days['open']['day'] == 0 && days['open']['time'] == '0000' && days['close'] == null) filValue = "active";
+
                 if (days['open']['day'] == weekDay) {
                     let open = parseInt(days['open']['time']);
                     let close = parseInt(days['close']['time']);
@@ -220,52 +227,49 @@
 
             //add opening hours to the information box
             prop = e['target']["feature"]["properties"];
+
+            var myUl = document.getElementById('opening_hours');
             myUl.innerHTML = "";
-            
-            
 
             console.log(e.target.feature.properties)
             let branchStatus = (checkBranchStatus(prop));
-            document.getElementById("branchStatus").textContent = 
-            (branchStatus == "no_info")? "沒有營業時間資料": (branchStatus == "active")? " 營業中" : "休息";
+            document.getElementById("branchStatus").textContent =
+                (branchStatus == "no_info") ? "沒有營業時間資料" : (branchStatus == "active") ? " 營業中" : "休息";
             document.getElementById("branchStatus").className = "";
             document.getElementById("branchStatus").classList.add(branchStatus);
-            
 
-            if (prop["opening_hours"] != "") {
-                prop["opening_hours"]["weekday_text"].forEach(
-                item => {
-                    myUl.innerHTML += "<li>" + item + "</li>";
-                }
-            )
+
+            if (prop["weekday_text"] != "") {
+                prop["weekday_text"].forEach(
+                    item => {
+                        myUl.innerHTML += "<li>" + item + "</li>";
+                    }
+                )
             }
-            
+
 
             document.getElementById("branchName").textContent = prop["chi_name"];
             document.getElementById("addrName").textContent = (prop["chi_address"]) ? prop["chi_address"] : "沒有提供";
-            
-            let tele = document.getElementById("telephone");
+
+            var tele = document.getElementById("telephone");
             tele.innerHTML = "";
-            if (prop["tel1"] != "-") {
-                tele.innerHTML += prop["tel1"];
-            }
-            if (prop["tel2"] != "-") {
-                tele.innerHTML += "／" + prop["tel2"];
-            }
-            if (prop["tel3"] != "-") {
-                tele.innerHTML += "／" + prop["tel3"];
-            }
+            if (prop["tel1"]) tele.innerHTML += prop["tel1"];
+            if (prop["tel2"]) tele.innerHTML += "／" + prop["tel2"];
+            if (prop["tel3"]) tele.innerHTML += "／" + prop["tel3"];
+
+            var issueReport_url = `https://docs.google.com/forms/d/e/1FAIpQLSfb7iTwVeGGaSbER9PocNqhihbR3SVerUbW593ud5QhWiOFqA/viewform?usp=pp_url&entry.149864145=${prop["chi_name"]}&entry.759571823=${prop["chi_address"]}`;
+            document.getElementById("issueReport").setAttribute("href", issueReport_url);
 
             document.getElementById("branchStatus").classList.add(branchStatus);
-            
+
             if (prop["website"] != "") {
-                document.getElementById("branchWebsite").style.display = 'true';
+                document.querySelector(".card-footer").style.display = 'block';
                 document.getElementById("branchWebsite").setAttribute("href", prop["website"]);
             }
             else {
-                document.getElementById("branchWebsite").style.display = 'none';
+                document.querySelector(".card-footer").style.display = 'none';
             }
-            
+
 
             card.classList.remove("card-hidden");
         }
