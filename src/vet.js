@@ -10,14 +10,12 @@ var vet = {
             "eng_address":"2/F, 458 Lockhart Road, Causeway Bay, HK",
             "district":"港島東",
             "tel1":28939939,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            // "opening_hours":"",
-            // dummy
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2100'}, 'open': {'day': 0, 'time': '2000'}}, {'close': {'day': 1, 'time': '2100'}, 'open': {'day': 1, 'time': '2000'}}, {'close': {'day': 2, 'time': '2100'}, 'open': {'day': 2, 'time': '2000'}}, {'close': {'day': 3, 'time': '2100'}, 'open': {'day': 3, 'time': '2000'}}, {'close': {'day': 4, 'time': '2100'}, 'open': {'day': 4, 'time': '2000'}}, {'close': {'day': 5, 'time': '2100'}, 'open': {'day': 5, 'time': '2000'}}, {'close': {'day': 6, 'time': '2100'}, 'open': {'day': 6, 'time': '2000'}}], 'weekday_text': ['星期一: 10:00 – 19:00', '星期二: 10:00 – 19:00', '星期三: 10:00 – 19:00', '星期四: 10:00 – 19:00', '星期五: 10:00 – 19:00', '星期六: 10:00 – 19:00', '星期日: 10:00 – 19:00']},
-            "cat":"H"
+            "opening_hours":"",
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -36,12 +34,12 @@ var vet = {
             "eng_address":"64 Tung Lo Wan Road, Tai Hang, HK",
             "district":"港島東",
             "tel1":28956811,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"http://www.happypets.hk",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 19:00', '星期二: 10:00 – 19:00', '星期三: 10:00 – 19:00', '星期四: 10:00 – 19:00', '星期五: 10:00 – 19:00', '星期六: 10:00 – 19:00', '星期日: 10:00 – 19:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 19:00', '星期二: 10:00 – 19:00', '星期三: 10:00 – 19:00', '星期四: 10:00 – 19:00', '星期五: 10:00 – 19:00', '星期六: 10:00 – 19:00', '星期日: 10:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -60,12 +58,12 @@ var vet = {
             "eng_address":"Shop 2-3, Belle House, 25-27 Whitfield Road, HK",
             "district":"港島東",
             "tel1":25780321,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"http://www.akvh.com.hk",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1300'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 0, 'time': '1700'}, 'open': {'day': 0, 'time': '1400'}}, {'close': {'day': 1, 'time': '1330'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 1, 'time': '2030'}, 'open': {'day': 1, 'time': '1530'}}, {'close': {'day': 2, 'time': '1330'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 2, 'time': '2030'}, 'open': {'day': 2, 'time': '1530'}}, {'close': {'day': 3, 'time': '1330'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 3, 'time': '2030'}, 'open': {'day': 3, 'time': '1530'}}, {'close': {'day': 4, 'time': '1300'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 4, 'time': '2030'}, 'open': {'day': 4, 'time': '1530'}}, {'close': {'day': 5, 'time': '1330'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 5, 'time': '2030'}, 'open': {'day': 5, 'time': '1530'}}, {'close': {'day': 6, 'time': '1330'}, 'open': {'day': 6, 'time': '1000'}}, {'close': {'day': 6, 'time': '2030'}, 'open': {'day': 6, 'time': '1530'}}], 'weekday_text': ['星期一: 10:00 – 13:30, 15:30 – 20:30', '星期二: 10:00 – 13:30, 15:30 – 20:30', '星期三: 10:00 – 13:30, 15:30 – 20:30', '星期四: 10:00 – 13:00, 15:30 – 20:30', '星期五: 10:00 – 13:30, 15:30 – 20:30', '星期六: 10:00 – 13:30, 15:30 – 20:30', '星期日: 10:00 – 13:00, 14:00 – 17:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1300"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 0, "time": "1700"}, "open": {"day": 0, "time": "1400"}}, {"close": {"day": 1, "time": "1330"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 1, "time": "2030"}, "open": {"day": 1, "time": "1530"}}, {"close": {"day": 2, "time": "1330"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 2, "time": "2030"}, "open": {"day": 2, "time": "1530"}}, {"close": {"day": 3, "time": "1330"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 3, "time": "2030"}, "open": {"day": 3, "time": "1530"}}, {"close": {"day": 4, "time": "1300"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 4, "time": "2030"}, "open": {"day": 4, "time": "1530"}}, {"close": {"day": 5, "time": "1330"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 5, "time": "2030"}, "open": {"day": 5, "time": "1530"}}, {"close": {"day": 6, "time": "1330"}, "open": {"day": 6, "time": "1000"}}, {"close": {"day": 6, "time": "2030"}, "open": {"day": 6, "time": "1530"}}],
+            "weekday_text":['星期一: 10:00 – 13:30, 15:30 – 20:30', '星期二: 10:00 – 13:30, 15:30 – 20:30', '星期三: 10:00 – 13:30, 15:30 – 20:30', '星期四: 10:00 – 13:00, 15:30 – 20:30', '星期五: 10:00 – 13:30, 15:30 – 20:30', '星期六: 10:00 – 13:30, 15:30 – 20:30', '星期日: 10:00 – 13:00, 14:00 – 17:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -84,12 +82,12 @@ var vet = {
             "eng_address":"29 Whitfield Road, Causeway Bay, HK",
             "district":"港島東",
             "tel1":25100836,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"http://doctorsbeckandstone.com/Our_vets_in_Hong_Kong#a",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 19:00', '星期日: 09:00 – 19:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 19:00', '星期日: 09:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -108,12 +106,12 @@ var vet = {
             "eng_address":"G/F, Shop 2, Wun Sha Court, 1-5 Wun Sha Street, Tai Hang, HK",
             "district":"港島東",
             "tel1":25775755,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1800'}, 'open': {'day': 0, 'time': '1200'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1030'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1030'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1030'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1030'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1030'}}, {'close': {'day': 6, 'time': '1800'}, 'open': {'day': 6, 'time': '1200'}}], 'weekday_text': ['星期一: 10:30 – 19:00', '星期二: 10:30 – 19:00', '星期三: 10:30 – 19:00', '星期四: 10:30 – 19:00', '星期五: 10:30 – 19:00', '星期六: 12:00 – 18:00', '星期日: 12:00 – 18:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1800"}, "open": {"day": 0, "time": "1200"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1030"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1030"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1030"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1030"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1030"}}, {"close": {"day": 6, "time": "1800"}, "open": {"day": 6, "time": "1200"}}],
+            "weekday_text":['星期一: 10:30 – 19:00', '星期二: 10:30 – 19:00', '星期三: 10:30 – 19:00', '星期四: 10:30 – 19:00', '星期五: 10:30 – 19:00', '星期六: 12:00 – 18:00', '星期日: 12:00 – 18:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -132,12 +130,12 @@ var vet = {
             "eng_address":"G/F, 100 Hing Fat Street, Causeway Bay, HK",
             "district":"港島東",
             "tel1":25081083,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"http://www.centralanimalhospital.hk",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1300'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 0, 'time': '2200'}, 'open': {'day': 0, 'time': '1500'}}, {'close': {'day': 1, 'time': '1300'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 1, 'time': '2200'}, 'open': {'day': 1, 'time': '1500'}}, {'close': {'day': 2, 'time': '1300'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 2, 'time': '2200'}, 'open': {'day': 2, 'time': '1500'}}, {'close': {'day': 3, 'time': '1300'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 3, 'time': '2200'}, 'open': {'day': 3, 'time': '1500'}}, {'close': {'day': 4, 'time': '1300'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 4, 'time': '2200'}, 'open': {'day': 4, 'time': '1500'}}, {'close': {'day': 5, 'time': '1300'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 5, 'time': '2200'}, 'open': {'day': 5, 'time': '1500'}}, {'close': {'day': 6, 'time': '1300'}, 'open': {'day': 6, 'time': '1000'}}, {'close': {'day': 6, 'time': '2200'}, 'open': {'day': 6, 'time': '1500'}}], 'weekday_text': ['星期一: 10:00 – 13:00, 15:00 – 22:00', '星期二: 10:00 – 13:00, 15:00 – 22:00', '星期三: 10:00 – 13:00, 15:00 – 22:00', '星期四: 10:00 – 13:00, 15:00 – 22:00', '星期五: 10:00 – 13:00, 15:00 – 22:00', '星期六: 10:00 – 13:00, 15:00 – 22:00', '星期日: 10:00 – 13:00, 15:00 – 22:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1300"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 0, "time": "2200"}, "open": {"day": 0, "time": "1500"}}, {"close": {"day": 1, "time": "1300"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 1, "time": "2200"}, "open": {"day": 1, "time": "1500"}}, {"close": {"day": 2, "time": "1300"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 2, "time": "2200"}, "open": {"day": 2, "time": "1500"}}, {"close": {"day": 3, "time": "1300"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 3, "time": "2200"}, "open": {"day": 3, "time": "1500"}}, {"close": {"day": 4, "time": "1300"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 4, "time": "2200"}, "open": {"day": 4, "time": "1500"}}, {"close": {"day": 5, "time": "1300"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 5, "time": "2200"}, "open": {"day": 5, "time": "1500"}}, {"close": {"day": 6, "time": "1300"}, "open": {"day": 6, "time": "1000"}}, {"close": {"day": 6, "time": "2200"}, "open": {"day": 6, "time": "1500"}}],
+            "weekday_text":['星期一: 10:00 – 13:00, 15:00 – 22:00', '星期二: 10:00 – 13:00, 15:00 – 22:00', '星期三: 10:00 – 13:00, 15:00 – 22:00', '星期四: 10:00 – 13:00, 15:00 – 22:00', '星期五: 10:00 – 13:00, 15:00 – 22:00', '星期六: 10:00 – 13:00, 15:00 – 22:00', '星期日: 10:00 – 13:00, 15:00 – 22:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -156,12 +154,12 @@ var vet = {
             "eng_address":"G/F, 2A Wing Hing Street, Tin Hau, HK",
             "district":"港島東",
             "tel1":23800612,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1700'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 19:00', '星期日: 10:00 – 17:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1700"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 19:00', '星期日: 10:00 – 17:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -180,12 +178,12 @@ var vet = {
             "eng_address":"Shop B, G/F, Wilson Count, 41 King's Road, Tin Hau, HK",
             "district":"港島東",
             "tel1":21042000,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '0930'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '0930'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '0930'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '0930'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '0930'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '0930'}}], 'weekday_text': ['星期一: 09:30 – 19:00', '星期二: 09:30 – 19:00', '星期三: 09:30 – 19:00', '星期四: 09:30 – 19:00', '星期五: 09:30 – 19:00', '星期六: 09:30 – 19:00', '星期日: 10:00 – 19:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "0930"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "0930"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "0930"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "0930"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "0930"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "0930"}}],
+            "weekday_text":['星期一: 09:30 – 19:00', '星期二: 09:30 – 19:00', '星期三: 09:30 – 19:00', '星期四: 09:30 – 19:00', '星期五: 09:30 – 19:00', '星期六: 09:30 – 19:00', '星期日: 10:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -204,12 +202,12 @@ var vet = {
             "eng_address":"G/F, 37 Wing Hing Street, Tin Hau, HK",
             "district":"港島東",
             "tel1":25706048,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -228,12 +226,12 @@ var vet = {
             "eng_address":"G/F, 4 Gordon Road, Tin Hau, HK",
             "district":"港島東",
             "tel1":25271718,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1800'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '1800'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 18:00', '星期日: 09:00 – 18:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1800"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "1800"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 18:00', '星期日: 09:00 – 18:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -252,12 +250,12 @@ var vet = {
             "eng_address":"Shop A, 1/F, 310A, King's Road, North Point, HK",
             "district":"港島東",
             "tel1":25300101,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2000'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "2000"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -276,12 +274,12 @@ var vet = {
             "eng_address":"G/F, 66 Java Road, North Point, HK",
             "district":"港島東",
             "tel1":28118907,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'open': {'day': 0, 'time': '0000'}}], 'weekday_text': ['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業']},
-            "cat":"S"
+            "opening_hours":[{"open": {"day": 0, "time": "0000"}}],
+            "weekday_text":['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -300,12 +298,12 @@ var vet = {
             "eng_address":"Unit 20A, G/F, 1048 King's Road, Yick Fat Building, Quarry Bay",
             "district":"港島東",
             "tel1":28092618,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 19:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -324,12 +322,12 @@ var vet = {
             "eng_address":"Shop 7, 6/F, 5-7, Sun Sing Street, Shau Kei Wan, HK",
             "district":"港島東",
             "tel1":29671896,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -348,12 +346,12 @@ var vet = {
             "eng_address":"G/F, 256 Shau Kei Wan Road, HK",
             "district":"港島東",
             "tel1":29153999,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2100'}, 'open': {'day': 0, 'time': '0800'}}, {'close': {'day': 1, 'time': '2100'}, 'open': {'day': 1, 'time': '0800'}}, {'close': {'day': 2, 'time': '2100'}, 'open': {'day': 2, 'time': '0800'}}, {'close': {'day': 3, 'time': '2100'}, 'open': {'day': 3, 'time': '0800'}}, {'close': {'day': 4, 'time': '2100'}, 'open': {'day': 4, 'time': '0800'}}, {'close': {'day': 5, 'time': '2100'}, 'open': {'day': 5, 'time': '0800'}}, {'close': {'day': 6, 'time': '2100'}, 'open': {'day': 6, 'time': '0800'}}], 'weekday_text': ['星期一: 08:00 – 21:00', '星期二: 08:00 – 21:00', '星期三: 08:00 – 21:00', '星期四: 08:00 – 21:00', '星期五: 08:00 – 21:00', '星期六: 08:00 – 21:00', '星期日: 08:00 – 21:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2100"}, "open": {"day": 0, "time": "0800"}}, {"close": {"day": 1, "time": "2100"}, "open": {"day": 1, "time": "0800"}}, {"close": {"day": 2, "time": "2100"}, "open": {"day": 2, "time": "0800"}}, {"close": {"day": 3, "time": "2100"}, "open": {"day": 3, "time": "0800"}}, {"close": {"day": 4, "time": "2100"}, "open": {"day": 4, "time": "0800"}}, {"close": {"day": 5, "time": "2100"}, "open": {"day": 5, "time": "0800"}}, {"close": {"day": 6, "time": "2100"}, "open": {"day": 6, "time": "0800"}}],
+            "weekday_text":['星期一: 08:00 – 21:00', '星期二: 08:00 – 21:00', '星期三: 08:00 – 21:00', '星期四: 08:00 – 21:00', '星期五: 08:00 – 21:00', '星期六: 08:00 – 21:00', '星期日: 08:00 – 21:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -372,12 +370,12 @@ var vet = {
             "eng_address":"G/F, 256 Shau Kei Wan Road, HK",
             "district":"港島東",
             "tel1":97730372,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -396,12 +394,12 @@ var vet = {
             "eng_address":"G/F, 256 Shau Kei Wan Road, HK",
             "district":"港島東",
             "tel1":29157979,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'open': {'day': 0, 'time': '0000'}}], 'weekday_text': ['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業']},
-            "cat":"S"
+            "opening_hours":[{"open": {"day": 0, "time": "0000"}}],
+            "weekday_text":['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -420,12 +418,12 @@ var vet = {
             "eng_address":"G/F, 56 Shau Kei Wan Road, Sai Wan Ho, HK",
             "district":"港島東",
             "tel1":25602721,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1800'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '1800'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 18:00', '星期日: 09:00 – 18:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1800"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "1800"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 18:00', '星期日: 09:00 – 18:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -444,12 +442,12 @@ var vet = {
             "eng_address":"G/F, 66 Java Road, North Point, HK",
             "district":"港島東",
             "tel1":28118907,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'open': {'day': 0, 'time': '0000'}}], 'weekday_text': ['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業']},
-            "cat":"S"
+            "opening_hours":[{"open": {"day": 0, "time": "0000"}}],
+            "weekday_text":['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -468,12 +466,12 @@ var vet = {
             "eng_address":"G/F 37 Aberdeen Street, Central, HK",
             "district":"港島中西及南區",
             "tel1":29758228,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1700'}, 'open': {'day': 0, 'time': '1200'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 19:00', '星期二: 10:00 – 19:00', '星期三: 10:00 – 19:00', '星期四: 10:00 – 19:00', '星期五: 10:00 – 19:00', '星期六: 10:00 – 19:00', '星期日: 12:00 – 17:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1700"}, "open": {"day": 0, "time": "1200"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 19:00', '星期二: 10:00 – 19:00', '星期三: 10:00 – 19:00', '星期四: 10:00 – 19:00', '星期五: 10:00 – 19:00', '星期六: 10:00 – 19:00', '星期日: 12:00 – 17:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -492,12 +490,12 @@ var vet = {
             "eng_address":"Shop B, G/F, Caineway Mansion, 130, Caine Road, Mid-levels, Central, HK",
             "district":"港島中西及南區",
             "tel1":22910065,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1800'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 18:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1800"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 18:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -510,42 +508,18 @@ var vet = {
       {  
          "type":"Feature",
          "properties":{  
-            "chi_name":"Creature Comforts Veterinary Housecall Practice",
-            "chi_address":"GPO Box 481, Central District, HK",
-            "eng_name":"",
-            "eng_address":"",
-            "district":"港島中西及南區",
-            "tel1":97730372,
-            "tel2":"-",
-            "tel3":"-",
-            "website":"",
-            "remarks":"",
-            "opening_hours":"",
-            "cat":"H"
-         },
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               114.225117,
-               22.280107
-            ]
-         }
-      },
-      {  
-         "type":"Feature",
-         "properties":{  
             "chi_name":"西區獸醫診所",
             "chi_address":"香港皇后大道西303號地下",
             "eng_name":"Queenwest Veterinary Clinic",
             "eng_address":"G/F, 303 Queen's Road West, HK",
             "district":"港島中西及南區",
             "tel1":28582211,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'open': {'day': 0, 'time': '0000'}}], 'weekday_text': ['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業']},
-            "cat":"S"
+            "opening_hours":[{"open": {"day": 0, "time": "0000"}}],
+            "weekday_text":['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -558,42 +532,18 @@ var vet = {
       {  
          "type":"Feature",
          "properties":{  
-            "chi_name":"永恆動物醫療中心",
-            "chi_address":"香港皇后大道西513號尼斯花園地下B鋪",
-            "eng_name":"Endless Love Veterinary Centre",
-            "eng_address":"Shop B, G/F Nice Garden, 513 Queen's Road West, HK",
-            "district":"港島中西及南區",
-            "tel1":28182333,
-            "tel2":"-",
-            "tel3":"-",
-            "website":"",
-            "remarks":"Permantly closed",
-            "opening_hours":"",
-            "cat":"H"
-         },
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               114.133319,
-               22.286642
-            ]
-         }
-      },
-      {  
-         "type":"Feature",
-         "properties":{  
             "chi_name":"雅各動物醫院",
             "chi_address":"香港西營盤第二街68-80號地下",
             "eng_name":"Acorn Veterinary Hospital",
             "eng_address":"G/F, 68-80 Second Street, Sai Ying Pun, HK",
             "district":"港島中西及南區",
             "tel1":25400228,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1700'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 19:00', '星期日: 10:00 – 17:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1700"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 19:00', '星期日: 10:00 – 17:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -612,12 +562,12 @@ var vet = {
             "eng_address":"Shop 1, G/F & 1/F, Rockson Mansion, 25-35 Water Street, Sai Ying Pun, HK",
             "district":"港島中西及南區",
             "tel1":25492330,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'open': {'day': 0, 'time': '0000'}}], 'weekday_text': ['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業']},
-            "cat":"H"
+            "opening_hours":[{"open": {"day": 0, "time": "0000"}}],
+            "weekday_text":['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -636,12 +586,12 @@ var vet = {
             "eng_address":"Shop 1, G/F, Fook On Building, No. 192 Third Street, Sai Ying Pun, HK",
             "district":"港島中西及南區",
             "tel1":29152095,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 19:00', '星期日: 休息']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 19:00', '星期日: 休息'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -660,12 +610,12 @@ var vet = {
             "eng_address":"G/F, Cheong Yue Mansions, 13 North Street, Sai Wan, HK",
             "district":"港島中西及南區",
             "tel1":28912011,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -684,12 +634,12 @@ var vet = {
             "eng_address":"LG/F, 10-12 Wong Ma Kok Road, Stanley, HK",
             "district":"港島中西及南區",
             "tel1":28132030,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -708,12 +658,12 @@ var vet = {
             "eng_address":"2/F, Hing Tai Building, 139-140 Connaught Road West, HK",
             "district":"港島中西及南區",
             "tel1":26871030,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 19:00', '星期日: 09:00 – 19:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 19:00', '星期日: 09:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -732,12 +682,12 @@ var vet = {
             "eng_address":"Shop 4, G/F, ABBA Centre, 223 -227 Aberdeen Main Road, Aberdeen, HK",
             "district":"港島中西及南區",
             "tel1":28895238,
-            "tel2":"28895938",
-            "tel3":"-",
+            "tel2":28895938.0,
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1300'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 0, 'time': '2100'}, 'open': {'day': 0, 'time': '1600'}}, {'close': {'day': 1, 'time': '1300'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 1, 'time': '2100'}, 'open': {'day': 1, 'time': '1600'}}, {'close': {'day': 2, 'time': '1300'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 2, 'time': '2100'}, 'open': {'day': 2, 'time': '1600'}}, {'close': {'day': 3, 'time': '1300'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 3, 'time': '2100'}, 'open': {'day': 3, 'time': '1600'}}, {'close': {'day': 4, 'time': '1300'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 4, 'time': '2100'}, 'open': {'day': 4, 'time': '1600'}}, {'close': {'day': 5, 'time': '1300'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 5, 'time': '2100'}, 'open': {'day': 5, 'time': '1600'}}, {'close': {'day': 6, 'time': '1300'}, 'open': {'day': 6, 'time': '1000'}}, {'close': {'day': 6, 'time': '2100'}, 'open': {'day': 6, 'time': '1600'}}], 'weekday_text': ['星期一: 10:00 – 13:00, 16:00 – 21:00', '星期二: 10:00 – 13:00, 16:00 – 21:00', '星期三: 10:00 – 13:00, 16:00 – 21:00', '星期四: 10:00 – 13:00, 16:00 – 21:00', '星期五: 10:00 – 13:00, 16:00 – 21:00', '星期六: 10:00 – 13:00, 16:00 – 21:00', '星期日: 10:00 – 13:00, 16:00 – 21:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1300"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 0, "time": "2100"}, "open": {"day": 0, "time": "1600"}}, {"close": {"day": 1, "time": "1300"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 1, "time": "2100"}, "open": {"day": 1, "time": "1600"}}, {"close": {"day": 2, "time": "1300"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 2, "time": "2100"}, "open": {"day": 2, "time": "1600"}}, {"close": {"day": 3, "time": "1300"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 3, "time": "2100"}, "open": {"day": 3, "time": "1600"}}, {"close": {"day": 4, "time": "1300"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 4, "time": "2100"}, "open": {"day": 4, "time": "1600"}}, {"close": {"day": 5, "time": "1300"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 5, "time": "2100"}, "open": {"day": 5, "time": "1600"}}, {"close": {"day": 6, "time": "1300"}, "open": {"day": 6, "time": "1000"}}, {"close": {"day": 6, "time": "2100"}, "open": {"day": 6, "time": "1600"}}],
+            "weekday_text":['星期一: 10:00 – 13:00, 16:00 – 21:00', '星期二: 10:00 – 13:00, 16:00 – 21:00', '星期三: 10:00 – 13:00, 16:00 – 21:00', '星期四: 10:00 – 13:00, 16:00 – 21:00', '星期五: 10:00 – 13:00, 16:00 – 21:00', '星期六: 10:00 – 13:00, 16:00 – 21:00', '星期日: 10:00 – 13:00, 16:00 – 21:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -756,12 +706,12 @@ var vet = {
             "eng_address":"Shop A1-A2, G/F, Happy View Building, 165-167 Ap Lei Chau Main Street, HK",
             "district":"港島中西及南區",
             "tel1":28051318,
-            "tel2":"28051328",
-            "tel3":"-",
+            "tel2":28051328.0,
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2000'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2000"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -780,12 +730,12 @@ var vet = {
             "eng_address":"Flat D, G/F, Kelly Court, 9-15 Catchick Street, HK",
             "district":"港島中西及南區",
             "tel1":34619126,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 1, 'time': '0800'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 2, 'time': '0800'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 4, 'time': '0800'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 5, 'time': '0800'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 6, 'time': '0800'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 0, 'time': '0800'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 08:00', '星期二: 休息', '星期三: 09:00 – 08:00', '星期四: 09:00 – 08:00', '星期五: 09:00 – 08:00', '星期六: 09:00 – 08:00', '星期日: 09:00 – 08:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 1, "time": "2000"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 0, "time": "2000"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 20:00', '星期二: 休息', '星期三: 09:00 – 20:00', '星期四: 09:00 – 20:00', '星期五: 09:00 – 20:00', '星期六: 09:00 – 20:00', '星期日: 09:00 – 20:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -804,12 +754,12 @@ var vet = {
             "eng_address":"G/F, 6 Cheong Ming Street, Happy Valley, HK",
             "district":"灣仔區",
             "tel1":25720977,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1200'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 0, 'time': '1700'}, 'open': {'day': 0, 'time': '1400'}}, {'close': {'day': 1, 'time': '1300'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1500'}}, {'close': {'day': 2, 'time': '1300'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1500'}}, {'close': {'day': 3, 'time': '1300'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1500'}}, {'close': {'day': 4, 'time': '1300'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1500'}}, {'close': {'day': 5, 'time': '1300'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1500'}}, {'close': {'day': 6, 'time': '1300'}, 'open': {'day': 6, 'time': '0900'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '1500'}}], 'weekday_text': ['星期一: 09:00 – 13:00, 15:00 – 19:00', '星期二: 09:00 – 13:00, 15:00 – 19:00', '星期三: 09:00 – 13:00, 15:00 – 19:00', '星期四: 09:00 – 13:00, 15:00 – 19:00', '星期五: 09:00 – 13:00, 15:00 – 19:00', '星期六: 09:00 – 13:00, 15:00 – 19:00', '星期日: 10:00 – 12:00, 14:00 – 17:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1200"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 0, "time": "1700"}, "open": {"day": 0, "time": "1400"}}, {"close": {"day": 1, "time": "1300"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1500"}}, {"close": {"day": 2, "time": "1300"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1500"}}, {"close": {"day": 3, "time": "1300"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1500"}}, {"close": {"day": 4, "time": "1300"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1500"}}, {"close": {"day": 5, "time": "1300"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1500"}}, {"close": {"day": 6, "time": "1300"}, "open": {"day": 6, "time": "0900"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "1500"}}],
+            "weekday_text":['星期一: 09:00 – 13:00, 15:00 – 19:00', '星期二: 09:00 – 13:00, 15:00 – 19:00', '星期三: 09:00 – 13:00, 15:00 – 19:00', '星期四: 09:00 – 13:00, 15:00 – 19:00', '星期五: 09:00 – 13:00, 15:00 – 19:00', '星期六: 09:00 – 13:00, 15:00 – 19:00', '星期日: 10:00 – 12:00, 14:00 – 17:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -828,12 +778,12 @@ var vet = {
             "eng_address":"Shop B, G/F, Silverstone Mansion, 7 Tsun Yuen Street, Happy Valley, HK",
             "district":"灣仔區",
             "tel1":28335931,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -852,12 +802,12 @@ var vet = {
             "eng_address":"G/F, 15 Yuen Yuen Street, Happy Valley, HK",
             "district":"灣仔區",
             "tel1":25752389,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1300'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '0800'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '0800'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '0800'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '0800'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '0800'}}, {'close': {'day': 6, 'time': '1800'}, 'open': {'day': 6, 'time': '0800'}}], 'weekday_text': ['星期一: 08:00 – 19:00', '星期二: 08:00 – 19:00', '星期三: 08:00 – 19:00', '星期四: 08:00 – 19:00', '星期五: 08:00 – 19:00', '星期六: 08:00 – 18:00', '星期日: 10:00 – 13:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1300"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "0800"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "0800"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "0800"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "0800"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "0800"}}, {"close": {"day": 6, "time": "1800"}, "open": {"day": 6, "time": "0800"}}],
+            "weekday_text":['星期一: 08:00 – 19:00', '星期二: 08:00 – 19:00', '星期三: 08:00 – 19:00', '星期四: 08:00 – 19:00', '星期五: 08:00 – 19:00', '星期六: 08:00 – 18:00', '星期日: 10:00 – 13:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -876,12 +826,12 @@ var vet = {
             "eng_address":"Portion B, G/F, Igloo Residence, 1A Shan Kwong Road, Happy Valley, HK",
             "district":"灣仔區",
             "tel1":28932988,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '1030'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1030'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1030'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1030'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1030'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1030'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '1030'}}], 'weekday_text': ['星期一: 10:30 – 19:00', '星期二: 10:30 – 19:00', '星期三: 10:30 – 19:00', '星期四: 10:30 – 19:00', '星期五: 10:30 – 19:00', '星期六: 10:30 – 19:00', '星期日: 10:30 – 19:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "1030"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1030"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1030"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1030"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1030"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1030"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "1030"}}],
+            "weekday_text":['星期一: 10:30 – 19:00', '星期二: 10:30 – 19:00', '星期三: 10:30 – 19:00', '星期四: 10:30 – 19:00', '星期五: 10:30 – 19:00', '星期六: 10:30 – 19:00', '星期日: 10:30 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -900,12 +850,12 @@ var vet = {
             "eng_address":"G/F, 12-12A Kennedy Street, Wan Chai, HK",
             "district":"灣仔區",
             "tel1":25202373,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -924,12 +874,12 @@ var vet = {
             "eng_address":"Shop C, 1-3 Moon Street, Wan Chai, HK",
             "district":"灣仔區",
             "tel1":28654320,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -948,12 +898,12 @@ var vet = {
             "eng_address":"5 Wan Shing Street, Wan Chai, HK",
             "district":"灣仔區",
             "tel1":28020501,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1800'}, 'open': {'day': 0, 'time': '0845'}}, {'close': {'day': 1, 'time': '1800'}, 'open': {'day': 1, 'time': '0845'}}, {'close': {'day': 2, 'time': '1800'}, 'open': {'day': 2, 'time': '0845'}}, {'close': {'day': 3, 'time': '1800'}, 'open': {'day': 3, 'time': '0845'}}, {'close': {'day': 4, 'time': '1800'}, 'open': {'day': 4, 'time': '0845'}}, {'close': {'day': 5, 'time': '1800'}, 'open': {'day': 5, 'time': '0845'}}, {'close': {'day': 6, 'time': '1800'}, 'open': {'day': 6, 'time': '0845'}}], 'weekday_text': ['星期一: 08:45 – 18:00', '星期二: 08:45 – 18:00', '星期三: 08:45 – 18:00', '星期四: 08:45 – 18:00', '星期五: 08:45 – 18:00', '星期六: 08:45 – 18:00', '星期日: 08:45 – 18:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1800"}, "open": {"day": 0, "time": "0845"}}, {"close": {"day": 1, "time": "1800"}, "open": {"day": 1, "time": "0845"}}, {"close": {"day": 2, "time": "1800"}, "open": {"day": 2, "time": "0845"}}, {"close": {"day": 3, "time": "1800"}, "open": {"day": 3, "time": "0845"}}, {"close": {"day": 4, "time": "1800"}, "open": {"day": 4, "time": "0845"}}, {"close": {"day": 5, "time": "1800"}, "open": {"day": 5, "time": "0845"}}, {"close": {"day": 6, "time": "1800"}, "open": {"day": 6, "time": "0845"}}],
+            "weekday_text":['星期一: 08:45 – 18:00', '星期二: 08:45 – 18:00', '星期三: 08:45 – 18:00', '星期四: 08:45 – 18:00', '星期五: 08:45 – 18:00', '星期六: 08:45 – 18:00', '星期日: 08:45 – 18:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -972,12 +922,12 @@ var vet = {
             "eng_address":"G/F, 67 Hennessy Road, Wan Chai, HK",
             "district":"灣仔區",
             "tel1":28654320,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -996,12 +946,12 @@ var vet = {
             "eng_address":"G/F & B/F, Wing Shing Mansion, 7 Cross Lane, Wan Chai, HK",
             "district":"灣仔區",
             "tel1":25725422,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1200'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '1530'}}, {'close': {'day': 1, 'time': '1200'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1530'}}, {'close': {'day': 2, 'time': '1200'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1530'}}, {'close': {'day': 3, 'time': '1200'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1530'}}, {'close': {'day': 4, 'time': '1200'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1530'}}, {'close': {'day': 5, 'time': '1200'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1530'}}, {'close': {'day': 6, 'time': '1200'}, 'open': {'day': 6, 'time': '0900'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '1530'}}], 'weekday_text': ['星期一: 09:00 – 12:00, 15:30 – 19:00', '星期二: 09:00 – 12:00, 15:30 – 19:00', '星期三: 09:00 – 12:00, 15:30 – 19:00', '星期四: 09:00 – 12:00, 15:30 – 19:00', '星期五: 09:00 – 12:00, 15:30 – 19:00', '星期六: 09:00 – 12:00, 15:30 – 19:00', '星期日: 09:00 – 12:00, 15:30 – 19:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1200"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "1530"}}, {"close": {"day": 1, "time": "1200"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1530"}}, {"close": {"day": 2, "time": "1200"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1530"}}, {"close": {"day": 3, "time": "1200"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1530"}}, {"close": {"day": 4, "time": "1200"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1530"}}, {"close": {"day": 5, "time": "1200"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1530"}}, {"close": {"day": 6, "time": "1200"}, "open": {"day": 6, "time": "0900"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "1530"}}],
+            "weekday_text":['星期一: 09:00 – 12:00, 15:30 – 19:00', '星期二: 09:00 – 12:00, 15:30 – 19:00', '星期三: 09:00 – 12:00, 15:30 – 19:00', '星期四: 09:00 – 12:00, 15:30 – 19:00', '星期五: 09:00 – 12:00, 15:30 – 19:00', '星期六: 09:00 – 12:00, 15:30 – 19:00', '星期日: 09:00 – 12:00, 15:30 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1020,12 +970,12 @@ var vet = {
             "eng_address":"Shop C, 1 Liberty Avenue, Ho Man Tin, Kln",
             "district":"九龍城區",
             "tel1":27138950,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1044,12 +994,12 @@ var vet = {
             "eng_address":"Shop B, G/F & 1/F, 7 Liberty Avenue, Kln",
             "district":"九龍城區",
             "tel1":36503000,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'open': {'day': 0, 'time': '0000'}}], 'weekday_text': ['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業']},
-            "cat":"H"
+            "opening_hours":[{"open": {"day": 0, "time": "0000"}}],
+            "weekday_text":['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1068,12 +1018,12 @@ var vet = {
             "eng_address":"G/F, 9 Liberty Avenue, Ho Man Tin, Kln",
             "district":"九龍城區",
             "tel1":27120772,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1092,12 +1042,12 @@ var vet = {
             "eng_address":"105, Princess Margaret Road, Ho Man Tin, Kln (Next to Oi Man Estate Petrol Station)",
             "district":"九龍城區",
             "tel1":27139104,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1800'}, 'open': {'day': 0, 'time': '0845'}}, {'close': {'day': 1, 'time': '1800'}, 'open': {'day': 1, 'time': '0845'}}, {'close': {'day': 2, 'time': '1800'}, 'open': {'day': 2, 'time': '0845'}}, {'close': {'day': 3, 'time': '1800'}, 'open': {'day': 3, 'time': '0845'}}, {'close': {'day': 4, 'time': '1800'}, 'open': {'day': 4, 'time': '0845'}}, {'close': {'day': 5, 'time': '1800'}, 'open': {'day': 5, 'time': '0845'}}, {'close': {'day': 6, 'time': '1800'}, 'open': {'day': 6, 'time': '0845'}}], 'weekday_text': ['星期一: 08:45 – 18:00', '星期二: 08:45 – 18:00', '星期三: 08:45 – 18:00', '星期四: 08:45 – 18:00', '星期五: 08:45 – 18:00', '星期六: 08:45 – 18:00', '星期日: 08:45 – 18:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1800"}, "open": {"day": 0, "time": "0845"}}, {"close": {"day": 1, "time": "1800"}, "open": {"day": 1, "time": "0845"}}, {"close": {"day": 2, "time": "1800"}, "open": {"day": 2, "time": "0845"}}, {"close": {"day": 3, "time": "1800"}, "open": {"day": 3, "time": "0845"}}, {"close": {"day": 4, "time": "1800"}, "open": {"day": 4, "time": "0845"}}, {"close": {"day": 5, "time": "1800"}, "open": {"day": 5, "time": "0845"}}, {"close": {"day": 6, "time": "1800"}, "open": {"day": 6, "time": "0845"}}],
+            "weekday_text":['星期一: 08:45 – 18:00', '星期二: 08:45 – 18:00', '星期三: 08:45 – 18:00', '星期四: 08:45 – 18:00', '星期五: 08:45 – 18:00', '星期六: 08:45 – 18:00', '星期日: 08:45 – 18:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1116,12 +1066,12 @@ var vet = {
             "eng_address":"G/F, 13 Soares Avenue, Ho Man Tin, Kln",
             "district":"九龍城區",
             "tel1":27122918,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2000'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2000"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1140,12 +1090,12 @@ var vet = {
             "eng_address":"G/F, 23B, Soares Avenue, Ho Man Tin, Kln",
             "district":"九龍城區",
             "tel1":27629712,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1164,12 +1114,12 @@ var vet = {
             "eng_address":"G/F, Yen Yee Mansion, 29-33 Soares Avenue, Ho Man Tin, Kln",
             "district":"九龍城區",
             "tel1":27609663,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1188,12 +1138,12 @@ var vet = {
             "eng_address":"B/F, 27, Soares Avenue, Ho Man Tin, Kln",
             "district":"九龍城區",
             "tel1":27689318,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1212,12 +1162,12 @@ var vet = {
             "eng_address":"G/F, 66A, Waterloo Road, Ho Man Tin, Kln",
             "district":"九龍城區",
             "tel1":27601026,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1236,12 +1186,12 @@ var vet = {
             "eng_address":"G/F, 30 Man Tai Street, Whampoa Estate, Hung Hom, Kln",
             "district":"九龍城區",
             "tel1":23307566,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1200'}, 'open': {'day': 0, 'time': '0930'}}, {'close': {'day': 0, 'time': '1700'}, 'open': {'day': 0, 'time': '1400'}}, {'close': {'day': 1, 'time': '1300'}, 'open': {'day': 1, 'time': '0930'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1330'}}, {'close': {'day': 2, 'time': '1300'}, 'open': {'day': 2, 'time': '0930'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1330'}}, {'close': {'day': 3, 'time': '1300'}, 'open': {'day': 3, 'time': '0930'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1330'}}, {'close': {'day': 4, 'time': '1300'}, 'open': {'day': 4, 'time': '0930'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1330'}}, {'close': {'day': 5, 'time': '1300'}, 'open': {'day': 5, 'time': '0930'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1330'}}, {'close': {'day': 6, 'time': '1400'}, 'open': {'day': 6, 'time': '0930'}}, {'close': {'day': 6, 'time': '1830'}, 'open': {'day': 6, 'time': '1530'}}], 'weekday_text': ['星期一: 09:30 – 13:00, 13:30 – 19:00', '星期二: 09:30 – 13:00, 13:30 – 19:00', '星期三: 09:30 – 13:00, 13:30 – 19:00', '星期四: 09:30 – 13:00, 13:30 – 19:00', '星期五: 09:30 – 13:00, 13:30 – 19:00', '星期六: 09:30 – 14:00, 15:30 – 18:30', '星期日: 09:30 – 12:00, 14:00 – 17:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1200"}, "open": {"day": 0, "time": "0930"}}, {"close": {"day": 0, "time": "1700"}, "open": {"day": 0, "time": "1400"}}, {"close": {"day": 1, "time": "1300"}, "open": {"day": 1, "time": "0930"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1330"}}, {"close": {"day": 2, "time": "1300"}, "open": {"day": 2, "time": "0930"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1330"}}, {"close": {"day": 3, "time": "1300"}, "open": {"day": 3, "time": "0930"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1330"}}, {"close": {"day": 4, "time": "1300"}, "open": {"day": 4, "time": "0930"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1330"}}, {"close": {"day": 5, "time": "1300"}, "open": {"day": 5, "time": "0930"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1330"}}, {"close": {"day": 6, "time": "1400"}, "open": {"day": 6, "time": "0930"}}, {"close": {"day": 6, "time": "1830"}, "open": {"day": 6, "time": "1530"}}],
+            "weekday_text":['星期一: 09:30 – 13:00, 13:30 – 19:00', '星期二: 09:30 – 13:00, 13:30 – 19:00', '星期三: 09:30 – 13:00, 13:30 – 19:00', '星期四: 09:30 – 13:00, 13:30 – 19:00', '星期五: 09:30 – 13:00, 13:30 – 19:00', '星期六: 09:30 – 14:00, 15:30 – 18:30', '星期日: 09:30 – 12:00, 14:00 – 17:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1260,12 +1210,12 @@ var vet = {
             "eng_address":"Shop 4, G/F, 10 Valley Road, Hung Hom, Kln",
             "district":"九龍城區",
             "tel1":27611281,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1284,12 +1234,12 @@ var vet = {
             "eng_address":"G/F, 117 Wuhu Street, Hung Hom, Kln",
             "district":"九龍城區",
             "tel1":23343538,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1308,12 +1258,12 @@ var vet = {
             "eng_address":"G/F, 29A Man Tai Street, Hung Hom, Kln",
             "district":"九龍城區",
             "tel1":23305252,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 19:00', '星期日: 09:00 – 19:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 19:00', '星期日: 09:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1332,12 +1282,12 @@ var vet = {
             "eng_address":"Shop 5, G/F, Full Wing Building, 436-450 Chatham Road North, Hung Hom, Kln",
             "district":"九龍城區",
             "tel1":23343538,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1356,12 +1306,12 @@ var vet = {
             "eng_address":"50 Kai Tak Road, Kowloon City, Kln",
             "district":"九龍城區",
             "tel1":23823300,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 19:00', '星期二: 10:00 – 19:00', '星期三: 10:00 – 19:00', '星期四: 10:00 – 19:00', '星期五: 10:00 – 19:00', '星期六: 10:00 – 19:00', '星期日: 10:00 – 19:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 19:00', '星期二: 10:00 – 19:00', '星期三: 10:00 – 19:00', '星期四: 10:00 – 19:00', '星期五: 10:00 – 19:00', '星期六: 10:00 – 19:00', '星期日: 10:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1380,12 +1330,12 @@ var vet = {
             "eng_address":"G/F, 56 Tak Ku Ling Road, Kowloon City, Kln",
             "district":"九龍城區",
             "tel1":23823113,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1800'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '1300'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1500'}}, {'close': {'day': 2, 'time': '1300'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1500'}}, {'close': {'day': 3, 'time': '1300'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1500'}}, {'close': {'day': 4, 'time': '1300'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1500'}}, {'close': {'day': 5, 'time': '1300'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1500'}}, {'close': {'day': 6, 'time': '1300'}, 'open': {'day': 6, 'time': '1000'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '1500'}}], 'weekday_text': ['星期一: 10:00 – 13:00, 15:00 – 19:00', '星期二: 10:00 – 13:00, 15:00 – 19:00', '星期三: 10:00 – 13:00, 15:00 – 19:00', '星期四: 10:00 – 13:00, 15:00 – 19:00', '星期五: 10:00 – 13:00, 15:00 – 19:00', '星期六: 10:00 – 13:00, 15:00 – 19:00', '星期日: 10:00 – 18:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1800"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "1300"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1500"}}, {"close": {"day": 2, "time": "1300"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1500"}}, {"close": {"day": 3, "time": "1300"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1500"}}, {"close": {"day": 4, "time": "1300"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1500"}}, {"close": {"day": 5, "time": "1300"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1500"}}, {"close": {"day": 6, "time": "1300"}, "open": {"day": 6, "time": "1000"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "1500"}}],
+            "weekday_text":['星期一: 10:00 – 13:00, 15:00 – 19:00', '星期二: 10:00 – 13:00, 15:00 – 19:00', '星期三: 10:00 – 13:00, 15:00 – 19:00', '星期四: 10:00 – 13:00, 15:00 – 19:00', '星期五: 10:00 – 13:00, 15:00 – 19:00', '星期六: 10:00 – 13:00, 15:00 – 19:00', '星期日: 10:00 – 18:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1404,12 +1354,12 @@ var vet = {
             "eng_address":"G/F, 32 Shing Nam Road, Kowloon City, Kln",
             "district":"九龍城區",
             "tel1":23820228,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2200'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2200'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2200'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2200'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2200'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2200'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2200'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "2200"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2200"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2200"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2200"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2200"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2200"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2200"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1428,12 +1378,12 @@ var vet = {
             "eng_address":"G/F, 6 Lion Rock Road, Kowloon City, Kln",
             "district":"九龍城區",
             "tel1":28111160,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1300'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '1500'}}, {'close': {'day': 1, 'time': '1300'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1500'}}, {'close': {'day': 2, 'time': '1300'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1500'}}, {'close': {'day': 3, 'time': '1300'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1500'}}, {'close': {'day': 4, 'time': '1300'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1500'}}, {'close': {'day': 5, 'time': '1300'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1500'}}, {'close': {'day': 6, 'time': '1300'}, 'open': {'day': 6, 'time': '1000'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '1500'}}], 'weekday_text': ['星期一: 10:00 – 13:00, 15:00 – 19:00', '星期二: 10:00 – 13:00, 15:00 – 19:00', '星期三: 10:00 – 13:00, 15:00 – 19:00', '星期四: 10:00 – 13:00, 15:00 – 19:00', '星期五: 10:00 – 13:00, 15:00 – 19:00', '星期六: 10:00 – 13:00, 15:00 – 19:00', '星期日: 10:00 – 13:00, 15:00 – 19:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1300"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "1500"}}, {"close": {"day": 1, "time": "1300"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1500"}}, {"close": {"day": 2, "time": "1300"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1500"}}, {"close": {"day": 3, "time": "1300"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1500"}}, {"close": {"day": 4, "time": "1300"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1500"}}, {"close": {"day": 5, "time": "1300"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1500"}}, {"close": {"day": 6, "time": "1300"}, "open": {"day": 6, "time": "1000"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "1500"}}],
+            "weekday_text":['星期一: 10:00 – 13:00, 15:00 – 19:00', '星期二: 10:00 – 13:00, 15:00 – 19:00', '星期三: 10:00 – 13:00, 15:00 – 19:00', '星期四: 10:00 – 13:00, 15:00 – 19:00', '星期五: 10:00 – 13:00, 15:00 – 19:00', '星期六: 10:00 – 13:00, 15:00 – 19:00', '星期日: 10:00 – 13:00, 15:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1452,12 +1402,12 @@ var vet = {
             "eng_address":"Shop 3, 418 Ma Tau Wai Road, To Kwa Wan, Kln",
             "district":"九龍城區",
             "tel1":23234417,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2030'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 1, 'time': '2030'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '2030'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '2030'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '2030'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '2030'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '2030'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 20:30', '星期二: 09:00 – 20:30', '星期三: 09:00 – 20:30', '星期四: 09:00 – 20:30', '星期五: 09:00 – 20:30', '星期六: 09:00 – 20:30', '星期日: 09:00 – 20:30']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "2030"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 1, "time": "2030"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "2030"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "2030"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "2030"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "2030"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "2030"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 20:30', '星期二: 09:00 – 20:30', '星期三: 09:00 – 20:30', '星期四: 09:00 – 20:30', '星期五: 09:00 – 20:30', '星期六: 09:00 – 20:30', '星期日: 09:00 – 20:30'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1476,12 +1426,12 @@ var vet = {
             "eng_address":"G/F & Cockloft, 139 Pak Tai Street, To Kwa Wan, Kln",
             "district":"九龍城區",
             "tel1":27119909,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2100'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 1, 'time': '2100'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '2100'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '2100'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '2100'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '2100'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '2100'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 21:00', '星期二: 09:00 – 21:00', '星期三: 09:00 – 21:00', '星期四: 09:00 – 21:00', '星期五: 09:00 – 21:00', '星期六: 09:00 – 21:00', '星期日: 09:00 – 21:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2100"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 1, "time": "2100"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "2100"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "2100"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "2100"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "2100"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "2100"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 21:00', '星期二: 09:00 – 21:00', '星期三: 09:00 – 21:00', '星期四: 09:00 – 21:00', '星期五: 09:00 – 21:00', '星期六: 09:00 – 21:00', '星期日: 09:00 – 21:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1500,12 +1450,12 @@ var vet = {
             "eng_address":"Shop 1, G/F, Chung Wah Shopping Arcade, 5B - 5F Ma Hang Chung Road, To Kwa Wan, Kln",
             "district":"九龍城區",
             "tel1":27112028,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2100'}, 'open': {'day': 0, 'time': '1130'}}, {'close': {'day': 1, 'time': '2100'}, 'open': {'day': 1, 'time': '1130'}}, {'close': {'day': 2, 'time': '2100'}, 'open': {'day': 2, 'time': '1130'}}, {'close': {'day': 3, 'time': '2100'}, 'open': {'day': 3, 'time': '1130'}}, {'close': {'day': 4, 'time': '2100'}, 'open': {'day': 4, 'time': '1130'}}, {'close': {'day': 5, 'time': '2100'}, 'open': {'day': 5, 'time': '1130'}}, {'close': {'day': 6, 'time': '2100'}, 'open': {'day': 6, 'time': '1130'}}], 'weekday_text': ['星期一: 11:30 – 21:00', '星期二: 11:30 – 21:00', '星期三: 11:30 – 21:00', '星期四: 11:30 – 21:00', '星期五: 11:30 – 21:00', '星期六: 11:30 – 21:00', '星期日: 11:30 – 21:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "2100"}, "open": {"day": 0, "time": "1130"}}, {"close": {"day": 1, "time": "2100"}, "open": {"day": 1, "time": "1130"}}, {"close": {"day": 2, "time": "2100"}, "open": {"day": 2, "time": "1130"}}, {"close": {"day": 3, "time": "2100"}, "open": {"day": 3, "time": "1130"}}, {"close": {"day": 4, "time": "2100"}, "open": {"day": 4, "time": "1130"}}, {"close": {"day": 5, "time": "2100"}, "open": {"day": 5, "time": "1130"}}, {"close": {"day": 6, "time": "2100"}, "open": {"day": 6, "time": "1130"}}],
+            "weekday_text":['星期一: 11:30 – 21:00', '星期二: 11:30 – 21:00', '星期三: 11:30 – 21:00', '星期四: 11:30 – 21:00', '星期五: 11:30 – 21:00', '星期六: 11:30 – 21:00', '星期日: 11:30 – 21:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1524,12 +1474,12 @@ var vet = {
             "eng_address":"Room 4, 4/F, Wing Yip Commercial Building, 65 Yen Chow Street, Sham Shui Po, Kln",
             "district":"深水埗區",
             "tel1":27088973,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1548,12 +1498,12 @@ var vet = {
             "eng_address":"G/F, 79 Tai Nam Street, Sham Shui Po, Kln",
             "district":"深水埗區",
             "tel1":28987122,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1572,12 +1522,12 @@ var vet = {
             "eng_address":"G/F, 17 Apliu Street, Sham Shui Po, Kln",
             "district":"深水埗區",
             "tel1":23970800,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1596,12 +1546,12 @@ var vet = {
             "eng_address":"G/F, 24 Apliu Street, Sham Shui Po, Kln",
             "district":"深水埗區",
             "tel1":23808408,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1620,12 +1570,12 @@ var vet = {
             "eng_address":"G/F, 10 Shek Kip Mei Street, Sham Shui Po, Kln",
             "district":"深水埗區",
             "tel1":23963511,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1800'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 1, 'time': '1800'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 3, 'time': '1800'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '1800'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '1800'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '1800'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 18:00', '星期二: 休息', '星期三: 09:00 – 18:00', '星期四: 09:00 – 18:00', '星期五: 09:00 – 18:00', '星期六: 09:00 – 18:00', '星期日: 09:00 – 18:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1800"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 1, "time": "1800"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 3, "time": "1800"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "1800"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "1800"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "1800"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 18:00', '星期二: 休息', '星期三: 09:00 – 18:00', '星期四: 09:00 – 18:00', '星期五: 09:00 – 18:00', '星期六: 09:00 – 18:00', '星期日: 09:00 – 18:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1644,12 +1594,12 @@ var vet = {
             "eng_address":"24, 29, 77, 79, Ki Lung Street, Prince Edward, Kln",
             "district":"深水埗區",
             "tel1":23932070,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1668,12 +1618,12 @@ var vet = {
             "eng_address":"Shop N4, G/F, 7B Nassau Street, Mei Foo Sun Chuen Phase 5, Kln",
             "district":"深水埗區",
             "tel1":27438885,
-            "tel2":"24170993",
-            "tel3":"-",
+            "tel2":24170993.0,
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2200'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2200'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2200'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2200'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2200'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2200'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2200'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "2200"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2200"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2200"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2200"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2200"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2200"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2200"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1692,12 +1642,12 @@ var vet = {
             "eng_address":"G/F, Maple Mansion, 9-13 Maple Street, Sham Shui Po, Kln",
             "district":"深水埗區",
             "tel1":35763288,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2100'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 1, 'time': '2100'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '2100'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '2100'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '2100'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '2100'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '2100'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 21:00', '星期二: 09:00 – 21:00', '星期三: 09:00 – 21:00', '星期四: 09:00 – 21:00', '星期五: 09:00 – 21:00', '星期六: 09:00 – 21:00', '星期日: 09:00 – 21:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2100"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 1, "time": "2100"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "2100"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "2100"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "2100"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "2100"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "2100"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 21:00', '星期二: 09:00 – 21:00', '星期三: 09:00 – 21:00', '星期四: 09:00 – 21:00', '星期五: 09:00 – 21:00', '星期六: 09:00 – 21:00', '星期日: 09:00 – 21:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1716,12 +1666,12 @@ var vet = {
             "eng_address":"G/F, Chung Yuen Building, 13 Lok Kwan Street, Tai Kok Tsui, Kln",
             "district":"油尖旺區",
             "tel1":23147906,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1740,12 +1690,12 @@ var vet = {
             "eng_address":"Shop 21, G/F, King Tong Heights, No 1-39, Tit Shu Street, Tai Kok Tsui, Kln",
             "district":"油尖旺區",
             "tel1":21423399,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2000'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 休息', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2000"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 休息', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1764,12 +1714,12 @@ var vet = {
             "eng_address":"G/F, Chung Wo Building, 15 Chung Wui Street, Tai Kok Tsui, Kln",
             "district":"油尖旺區",
             "tel1":27872338,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1730'}, 'open': {'day': 0, 'time': '0930'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '0930'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '0930'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '0930'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '0930'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '0930'}}], 'weekday_text': ['星期一: 09:30 – 19:00', '星期二: 09:30 – 19:00', '星期三: 休息', '星期四: 09:30 – 19:00', '星期五: 09:30 – 19:00', '星期六: 09:30 – 19:00', '星期日: 09:30 – 17:30']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1730"}, "open": {"day": 0, "time": "0930"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "0930"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "0930"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "0930"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "0930"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "0930"}}],
+            "weekday_text":['星期一: 09:30 – 19:00', '星期二: 09:30 – 19:00', '星期三: 休息', '星期四: 09:30 – 19:00', '星期五: 09:30 – 19:00', '星期六: 09:30 – 19:00', '星期日: 09:30 – 17:30'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1788,12 +1738,12 @@ var vet = {
             "eng_address":"Shop A, G/F, Kin Fung Court, 11 Victory Avenue, Mong Kok, Kln",
             "district":"油尖旺區",
             "tel1":27118482,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1300'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 0, 'time': '1800'}, 'open': {'day': 0, 'time': '1500'}}, {'close': {'day': 1, 'time': '1300'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1500'}}, {'close': {'day': 2, 'time': '1300'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1500'}}, {'close': {'day': 3, 'time': '1300'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1500'}}, {'close': {'day': 4, 'time': '1300'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1500'}}, {'close': {'day': 5, 'time': '1300'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1500'}}, {'close': {'day': 6, 'time': '1300'}, 'open': {'day': 6, 'time': '1000'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '1500'}}], 'weekday_text': ['星期一: 10:00 – 13:00, 15:00 – 19:00', '星期二: 10:00 – 13:00, 15:00 – 19:00', '星期三: 10:00 – 13:00, 15:00 – 19:00', '星期四: 10:00 – 13:00, 15:00 – 19:00', '星期五: 10:00 – 13:00, 15:00 – 19:00', '星期六: 10:00 – 13:00, 15:00 – 19:00', '星期日: 10:00 – 13:00, 15:00 – 18:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1300"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 0, "time": "1800"}, "open": {"day": 0, "time": "1500"}}, {"close": {"day": 1, "time": "1300"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1500"}}, {"close": {"day": 2, "time": "1300"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1500"}}, {"close": {"day": 3, "time": "1300"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1500"}}, {"close": {"day": 4, "time": "1300"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1500"}}, {"close": {"day": 5, "time": "1300"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1500"}}, {"close": {"day": 6, "time": "1300"}, "open": {"day": 6, "time": "1000"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "1500"}}],
+            "weekday_text":['星期一: 10:00 – 13:00, 15:00 – 19:00', '星期二: 10:00 – 13:00, 15:00 – 19:00', '星期三: 10:00 – 13:00, 15:00 – 19:00', '星期四: 10:00 – 13:00, 15:00 – 19:00', '星期五: 10:00 – 13:00, 15:00 – 19:00', '星期六: 10:00 – 13:00, 15:00 – 19:00', '星期日: 10:00 – 13:00, 15:00 – 18:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1812,12 +1762,12 @@ var vet = {
             "eng_address":"G/F, 37 Waterloo Road, Mong Kok, Kln",
             "district":"油尖旺區",
             "tel1":27805338,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1000'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 1, 'time': '1100'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1500'}}, {'close': {'day': 2, 'time': '1100'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1500'}}, {'close': {'day': 3, 'time': '1300'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '1100'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1500'}}, {'close': {'day': 5, 'time': '1100'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1500'}}, {'close': {'day': 6, 'time': '1100'}, 'open': {'day': 6, 'time': '0900'}}, {'close': {'day': 6, 'time': '1800'}, 'open': {'day': 6, 'time': '1500'}}], 'weekday_text': ['星期一: 09:00 – 11:00, 15:00 – 19:00', '星期二: 09:00 – 11:00, 15:00 – 19:00', '星期三: 09:00 – 13:00', '星期四: 09:00 – 11:00, 15:00 – 19:00', '星期五: 09:00 – 11:00, 15:00 – 19:00', '星期六: 09:00 – 11:00, 15:00 – 18:00', '星期日: 09:00 – 10:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1000"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 1, "time": "1100"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1500"}}, {"close": {"day": 2, "time": "1100"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1500"}}, {"close": {"day": 3, "time": "1300"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "1100"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1500"}}, {"close": {"day": 5, "time": "1100"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1500"}}, {"close": {"day": 6, "time": "1100"}, "open": {"day": 6, "time": "0900"}}, {"close": {"day": 6, "time": "1800"}, "open": {"day": 6, "time": "1500"}}],
+            "weekday_text":['星期一: 09:00 – 11:00, 15:00 – 19:00', '星期二: 09:00 – 11:00, 15:00 – 19:00', '星期三: 09:00 – 13:00', '星期四: 09:00 – 11:00, 15:00 – 19:00', '星期五: 09:00 – 11:00, 15:00 – 19:00', '星期六: 09:00 – 11:00, 15:00 – 18:00', '星期日: 09:00 – 10:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1836,12 +1786,12 @@ var vet = {
             "eng_address":"G/F, Hing Yip House, 26 Sai Yee Street, Mong Kok, Kln",
             "district":"油尖旺區",
             "tel1":27812386,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'open': {'day': 0, 'time': '0000'}}], 'weekday_text': ['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業']},
-            "cat":"S"
+            "opening_hours":[{"open": {"day": 0, "time": "0000"}}],
+            "weekday_text":['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1860,12 +1810,12 @@ var vet = {
             "eng_address":"G/F, Lee Luen Mansion, 430 Portland Street, Mong Kok, Kln",
             "district":"油尖旺區",
             "tel1":23092011,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2000'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '1400'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 19:00', '星期二: 10:00 – 19:00', '星期三: 10:00 – 14:00', '星期四: 10:00 – 19:00', '星期五: 10:00 – 19:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "2000"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "1400"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 19:00', '星期二: 10:00 – 19:00', '星期三: 10:00 – 14:00', '星期四: 10:00 – 19:00', '星期五: 10:00 – 19:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1884,12 +1834,12 @@ var vet = {
             "eng_address":"Block B, 1/F, Chung Yuen Mansion, 71B Waterloo Road, Mong Kok, Kln (Clinic front door: 2 Emma Avenue)",
             "district":"油尖旺區",
             "tel1":27110332,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"http://www.globavet.com",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '1100'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 19:00', '星期日: 11:00 – 19:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "1100"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 19:00', '星期日: 11:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1908,12 +1858,12 @@ var vet = {
             "eng_address":"G/F, 7B Liberty Avenue, Mong Kok, Kowloon",
             "district":"油尖旺區",
             "tel1":36503000,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'open': {'day': 0, 'time': '0000'}}], 'weekday_text': ['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業']},
-            "cat":"S"
+            "opening_hours":[{"open": {"day": 0, "time": "0000"}}],
+            "weekday_text":['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1932,12 +1882,12 @@ var vet = {
             "eng_address":"1/F & 2/F Sun Ming Building, 488 Shanghai Street, Mong Kok, Kowloon",
             "district":"油尖旺區",
             "tel1":23092139,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 1, 'time': '1800'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '1800'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '1800'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '1800'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '1800'}, 'open': {'day': 5, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 18:00', '星期二: 09:00 – 18:00', '星期三: 09:00 – 18:00', '星期四: 09:00 – 18:00', '星期五: 09:00 – 18:00', '星期六: 休息', '星期日: 休息']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 1, "time": "1800"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "1800"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "1800"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "1800"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "1800"}, "open": {"day": 5, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 18:00', '星期二: 09:00 – 18:00', '星期三: 09:00 – 18:00', '星期四: 09:00 – 18:00', '星期五: 09:00 – 18:00', '星期六: 休息', '星期日: 休息'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1956,12 +1906,12 @@ var vet = {
             "eng_address":"G/F, 50, Tung Ming Street, Hong Ning Building , Kwun Tong, Kln",
             "district":"觀塘區",
             "tel1":23456504,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2000'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2000"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -1980,12 +1930,12 @@ var vet = {
             "eng_address":"Unit D12, 8/F, Mai Gar Industrial Building, 146 Wai Yip Street, Kwun Tong",
             "district":"觀塘區",
             "tel1":26251530,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2004,12 +1954,12 @@ var vet = {
             "eng_address":"G/F, 28, Man Nin Street, Sai Kung, NT",
             "district":"西貢區",
             "tel1":21944312,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1800'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 20:00', '星期二: 09:00 – 20:00', '星期三: 09:00 – 20:00', '星期四: 09:00 – 20:00', '星期五: 09:00 – 20:00', '星期六: 09:00 – 20:00', '星期日: 10:00 – 18:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1800"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 20:00', '星期二: 09:00 – 20:00', '星期三: 09:00 – 20:00', '星期四: 09:00 – 20:00', '星期五: 09:00 – 20:00', '星期六: 09:00 – 20:00', '星期日: 10:00 – 18:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2028,12 +1978,12 @@ var vet = {
             "eng_address":"G/F, 6 Hoi Pong Street, Sai Kung, NT",
             "district":"西貢區",
             "tel1":27928555,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2052,12 +2002,12 @@ var vet = {
             "eng_address":"40 Cotton Tree Villas, Muk Min Shan Road, Sai Kung, NT",
             "district":"西貢區",
             "tel1":96182475,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2076,12 +2026,12 @@ var vet = {
             "eng_address":"7 Sha Tsui Path, Sai Kung, NT",
             "district":"西貢區",
             "tel1":27921535,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1730'}, 'open': {'day': 0, 'time': '0850'}}, {'close': {'day': 1, 'time': '1730'}, 'open': {'day': 1, 'time': '0850'}}, {'close': {'day': 2, 'time': '1730'}, 'open': {'day': 2, 'time': '0850'}}, {'close': {'day': 3, 'time': '1730'}, 'open': {'day': 3, 'time': '0850'}}, {'close': {'day': 4, 'time': '1730'}, 'open': {'day': 4, 'time': '0850'}}, {'close': {'day': 5, 'time': '1730'}, 'open': {'day': 5, 'time': '0850'}}, {'close': {'day': 6, 'time': '1730'}, 'open': {'day': 6, 'time': '0850'}}], 'weekday_text': ['星期一: 08:50 – 17:30', '星期二: 08:50 – 17:30', '星期三: 08:50 – 17:30', '星期四: 08:50 – 17:30', '星期五: 08:50 – 17:30', '星期六: 08:50 – 17:30', '星期日: 08:50 – 17:30']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1730"}, "open": {"day": 0, "time": "0850"}}, {"close": {"day": 1, "time": "1730"}, "open": {"day": 1, "time": "0850"}}, {"close": {"day": 2, "time": "1730"}, "open": {"day": 2, "time": "0850"}}, {"close": {"day": 3, "time": "1730"}, "open": {"day": 3, "time": "0850"}}, {"close": {"day": 4, "time": "1730"}, "open": {"day": 4, "time": "0850"}}, {"close": {"day": 5, "time": "1730"}, "open": {"day": 5, "time": "0850"}}, {"close": {"day": 6, "time": "1730"}, "open": {"day": 6, "time": "0850"}}],
+            "weekday_text":['星期一: 08:50 – 17:30', '星期二: 08:50 – 17:30', '星期三: 08:50 – 17:30', '星期四: 08:50 – 17:30', '星期五: 08:50 – 17:30', '星期六: 08:50 – 17:30', '星期日: 08:50 – 17:30'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2100,12 +2050,12 @@ var vet = {
             "eng_address":"Shop 4, 66 Yi Chun Street, Sai Kung, NT",
             "district":"西貢區",
             "tel1":27920833,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '0800'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '0800'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '0800'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '0800'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '0800'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '0800'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '0800'}}], 'weekday_text': ['星期一: 08:00 – 19:00', '星期二: 08:00 – 19:00', '星期三: 08:00 – 19:00', '星期四: 08:00 – 19:00', '星期五: 08:00 – 19:00', '星期六: 08:00 – 19:00', '星期日: 08:00 – 19:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "0800"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "0800"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "0800"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "0800"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "0800"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "0800"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "0800"}}],
+            "weekday_text":['星期一: 08:00 – 19:00', '星期二: 08:00 – 19:00', '星期三: 08:00 – 19:00', '星期四: 08:00 – 19:00', '星期五: 08:00 – 19:00', '星期六: 08:00 – 19:00', '星期日: 08:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2124,12 +2074,12 @@ var vet = {
             "eng_address":"G/F, 30 Man Nin Street, Sai Kung, NT",
             "district":"西貢區",
             "tel1":27922206,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1230'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '1530'}}, {'close': {'day': 1, 'time': '1230'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1530'}}, {'close': {'day': 2, 'time': '1230'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1530'}}, {'close': {'day': 3, 'time': '1230'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1530'}}, {'close': {'day': 4, 'time': '1230'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1530'}}, {'close': {'day': 5, 'time': '1230'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1530'}}, {'close': {'day': 6, 'time': '1230'}, 'open': {'day': 6, 'time': '0900'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '1530'}}], 'weekday_text': ['星期一: 09:00 – 12:30, 15:30 – 19:00', '星期二: 09:00 – 12:30, 15:30 – 19:00', '星期三: 09:00 – 12:30, 15:30 – 19:00', '星期四: 09:00 – 12:30, 15:30 – 19:00', '星期五: 09:00 – 12:30, 15:30 – 19:00', '星期六: 09:00 – 12:30, 15:30 – 19:00', '星期日: 09:00 – 12:30, 15:30 – 19:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1230"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "1530"}}, {"close": {"day": 1, "time": "1230"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1530"}}, {"close": {"day": 2, "time": "1230"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1530"}}, {"close": {"day": 3, "time": "1230"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1530"}}, {"close": {"day": 4, "time": "1230"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1530"}}, {"close": {"day": 5, "time": "1230"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1530"}}, {"close": {"day": 6, "time": "1230"}, "open": {"day": 6, "time": "0900"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "1530"}}],
+            "weekday_text":['星期一: 09:00 – 12:30, 15:30 – 19:00', '星期二: 09:00 – 12:30, 15:30 – 19:00', '星期三: 09:00 – 12:30, 15:30 – 19:00', '星期四: 09:00 – 12:30, 15:30 – 19:00', '星期五: 09:00 – 12:30, 15:30 – 19:00', '星期六: 09:00 – 12:30, 15:30 – 19:00', '星期日: 09:00 – 12:30, 15:30 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2148,12 +2098,12 @@ var vet = {
             "eng_address":"Shop S4 & S4E, G/F, Bauhinia Garden, 11 Tong Chun Street, Tseung Kwan O,",
             "district":"西貢區",
             "tel1":22446898,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1930'}, 'open': {'day': 0, 'time': '1030'}}, {'close': {'day': 1, 'time': '1930'}, 'open': {'day': 1, 'time': '1030'}}, {'close': {'day': 2, 'time': '1930'}, 'open': {'day': 2, 'time': '1030'}}, {'close': {'day': 3, 'time': '1930'}, 'open': {'day': 3, 'time': '1030'}}, {'close': {'day': 4, 'time': '1930'}, 'open': {'day': 4, 'time': '1030'}}, {'close': {'day': 5, 'time': '1930'}, 'open': {'day': 5, 'time': '1030'}}, {'close': {'day': 6, 'time': '1930'}, 'open': {'day': 6, 'time': '1030'}}], 'weekday_text': ['星期一: 10:30 – 19:30', '星期二: 10:30 – 19:30', '星期三: 10:30 – 19:30', '星期四: 10:30 – 19:30', '星期五: 10:30 – 19:30', '星期六: 10:30 – 19:30', '星期日: 10:30 – 19:30']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1930"}, "open": {"day": 0, "time": "1030"}}, {"close": {"day": 1, "time": "1930"}, "open": {"day": 1, "time": "1030"}}, {"close": {"day": 2, "time": "1930"}, "open": {"day": 2, "time": "1030"}}, {"close": {"day": 3, "time": "1930"}, "open": {"day": 3, "time": "1030"}}, {"close": {"day": 4, "time": "1930"}, "open": {"day": 4, "time": "1030"}}, {"close": {"day": 5, "time": "1930"}, "open": {"day": 5, "time": "1030"}}, {"close": {"day": 6, "time": "1930"}, "open": {"day": 6, "time": "1030"}}],
+            "weekday_text":['星期一: 10:30 – 19:30', '星期二: 10:30 – 19:30', '星期三: 10:30 – 19:30', '星期四: 10:30 – 19:30', '星期五: 10:30 – 19:30', '星期六: 10:30 – 19:30', '星期日: 10:30 – 19:30'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2172,12 +2122,12 @@ var vet = {
             "eng_address":"Flat B, 2/F, Block 5, Hang Hau Village, Tseung Kwan O, NT",
             "district":"西貢區",
             "tel1":22430080,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 1, 'time': '1730'}, 'open': {'day': 1, 'time': '0850'}}, {'close': {'day': 2, 'time': '1730'}, 'open': {'day': 2, 'time': '0850'}}, {'close': {'day': 3, 'time': '1730'}, 'open': {'day': 3, 'time': '0850'}}, {'close': {'day': 4, 'time': '1730'}, 'open': {'day': 4, 'time': '0850'}}, {'close': {'day': 5, 'time': '1730'}, 'open': {'day': 5, 'time': '0850'}}, {'close': {'day': 6, 'time': '1230'}, 'open': {'day': 6, 'time': '0850'}}], 'weekday_text': ['星期一: 08:50 – 17:30', '星期二: 08:50 – 17:30', '星期三: 08:50 – 17:30', '星期四: 08:50 – 17:30', '星期五: 08:50 – 17:30', '星期六: 08:50 – 12:30', '星期日: 休息']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 1, "time": "1730"}, "open": {"day": 1, "time": "0850"}}, {"close": {"day": 2, "time": "1730"}, "open": {"day": 2, "time": "0850"}}, {"close": {"day": 3, "time": "1730"}, "open": {"day": 3, "time": "0850"}}, {"close": {"day": 4, "time": "1730"}, "open": {"day": 4, "time": "0850"}}, {"close": {"day": 5, "time": "1730"}, "open": {"day": 5, "time": "0850"}}, {"close": {"day": 6, "time": "1230"}, "open": {"day": 6, "time": "0850"}}],
+            "weekday_text":['星期一: 08:50 – 17:30', '星期二: 08:50 – 17:30', '星期三: 08:50 – 17:30', '星期四: 08:50 – 17:30', '星期五: 08:50 – 17:30', '星期六: 08:50 – 12:30', '星期日: 休息'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2196,12 +2146,12 @@ var vet = {
             "eng_address":"Shop B01A, Park Central, Tseung Kwan O, NT",
             "district":"西貢區",
             "tel1":22446684,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1930'}, 'open': {'day': 0, 'time': '0930'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '1930'}, 'open': {'day': 6, 'time': '0930'}}], 'weekday_text': ['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 09:30 – 19:30', '星期日: 09:30 – 19:30']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1930"}, "open": {"day": 0, "time": "0930"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "1930"}, "open": {"day": 6, "time": "0930"}}],
+            "weekday_text":['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 09:30 – 19:30', '星期日: 09:30 – 19:30'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2220,12 +2170,12 @@ var vet = {
             "eng_address":"Shop G6, G/F, Metro City Phase 3, Tseung Kwan O, NT",
             "district":"西貢區",
             "tel1":31946001,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 19:00', '星期日: 09:00 – 19:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 19:00', '星期二: 09:00 – 19:00', '星期三: 09:00 – 19:00', '星期四: 09:00 – 19:00', '星期五: 09:00 – 19:00', '星期六: 09:00 – 19:00', '星期日: 09:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2244,12 +2194,12 @@ var vet = {
             "eng_address":"Flat A, 1/F, Block 4, Hang Hau Village, Tseung Kwan O, NT",
             "district":"西貢區",
             "tel1":27191019,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2268,12 +2218,12 @@ var vet = {
             "eng_address":"G/F, 21 Wo Tai Street, Luen Wo Market, Fanling, NT",
             "district":"新界北區",
             "tel1":26756899,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1700'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 17:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1700"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 17:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2292,12 +2242,12 @@ var vet = {
             "eng_address":"6 San Shing Avenue, Sheung Shui , NT",
             "district":"新界北區",
             "tel1":26392229,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2130'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 1, 'time': '2130'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '2130'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '2130'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '2130'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '2130'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '2130'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 21:30', '星期二: 09:00 – 21:30', '星期三: 09:00 – 21:30', '星期四: 09:00 – 21:30', '星期五: 09:00 – 21:30', '星期六: 09:00 – 21:30', '星期日: 09:00 – 21:30']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "2130"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 1, "time": "2130"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "2130"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "2130"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "2130"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "2130"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "2130"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 21:30', '星期二: 09:00 – 21:30', '星期三: 09:00 – 21:30', '星期四: 09:00 – 21:30', '星期五: 09:00 – 21:30', '星期六: 09:00 – 21:30', '星期日: 09:00 – 21:30'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2316,12 +2266,12 @@ var vet = {
             "eng_address":"Shop A and B, G/F, 20 San Shing Avenue, Sheung Shui, NT",
             "district":"新界北區",
             "tel1":26686556,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2130'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 1, 'time': '2130'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '2130'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '2130'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '2130'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '2130'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '2130'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 21:30', '星期二: 09:00 – 21:30', '星期三: 09:00 – 21:30', '星期四: 09:00 – 21:30', '星期五: 09:00 – 21:30', '星期六: 09:00 – 21:30', '星期日: 09:00 – 21:30']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2130"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 1, "time": "2130"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "2130"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "2130"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "2130"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "2130"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "2130"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 21:30', '星期二: 09:00 – 21:30', '星期三: 09:00 – 21:30', '星期四: 09:00 – 21:30', '星期五: 09:00 – 21:30', '星期六: 09:00 – 21:30', '星期日: 09:00 – 21:30'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2340,12 +2290,12 @@ var vet = {
             "eng_address":"G/F, 111 San Shing Avenue, Sheung Shui, NT",
             "district":"新界北區",
             "tel1":23111707,
-            "tel2":"26731727",
-            "tel3":"-",
+            "tel2":26731727.0,
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1830'}, 'open': {'day': 0, 'time': '1030'}}, {'close': {'day': 1, 'time': '1400'}, 'open': {'day': 1, 'time': '1030'}}, {'close': {'day': 1, 'time': '2100'}, 'open': {'day': 1, 'time': '1500'}}, {'close': {'day': 2, 'time': '1400'}, 'open': {'day': 2, 'time': '1030'}}, {'close': {'day': 2, 'time': '2100'}, 'open': {'day': 2, 'time': '1500'}}, {'close': {'day': 3, 'time': '1400'}, 'open': {'day': 3, 'time': '1030'}}, {'close': {'day': 3, 'time': '2100'}, 'open': {'day': 3, 'time': '1500'}}, {'close': {'day': 4, 'time': '1400'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 4, 'time': '2100'}, 'open': {'day': 4, 'time': '1500'}}, {'close': {'day': 5, 'time': '1400'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 5, 'time': '2100'}, 'open': {'day': 5, 'time': '1500'}}, {'close': {'day': 6, 'time': '1400'}, 'open': {'day': 6, 'time': '1000'}}, {'close': {'day': 6, 'time': '2100'}, 'open': {'day': 6, 'time': '1500'}}], 'weekday_text': ['星期一: 10:30 – 14:00, 15:00 – 21:00', '星期二: 10:30 – 14:00, 15:00 – 21:00', '星期三: 10:30 – 14:00, 15:00 – 21:00', '星期四: 10:00 – 14:00, 15:00 – 21:00', '星期五: 10:00 – 14:00, 15:00 – 21:00', '星期六: 10:00 – 14:00, 15:00 – 21:00', '星期日: 10:30 – 18:30']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1830"}, "open": {"day": 0, "time": "1030"}}, {"close": {"day": 1, "time": "1400"}, "open": {"day": 1, "time": "1030"}}, {"close": {"day": 1, "time": "2100"}, "open": {"day": 1, "time": "1500"}}, {"close": {"day": 2, "time": "1400"}, "open": {"day": 2, "time": "1030"}}, {"close": {"day": 2, "time": "2100"}, "open": {"day": 2, "time": "1500"}}, {"close": {"day": 3, "time": "1400"}, "open": {"day": 3, "time": "1030"}}, {"close": {"day": 3, "time": "2100"}, "open": {"day": 3, "time": "1500"}}, {"close": {"day": 4, "time": "1400"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 4, "time": "2100"}, "open": {"day": 4, "time": "1500"}}, {"close": {"day": 5, "time": "1400"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 5, "time": "2100"}, "open": {"day": 5, "time": "1500"}}, {"close": {"day": 6, "time": "1400"}, "open": {"day": 6, "time": "1000"}}, {"close": {"day": 6, "time": "2100"}, "open": {"day": 6, "time": "1500"}}],
+            "weekday_text":['星期一: 10:30 – 14:00, 15:00 – 21:00', '星期二: 10:30 – 14:00, 15:00 – 21:00', '星期三: 10:30 – 14:00, 15:00 – 21:00', '星期四: 10:00 – 14:00, 15:00 – 21:00', '星期五: 10:00 – 14:00, 15:00 – 21:00', '星期六: 10:00 – 14:00, 15:00 – 21:00', '星期日: 10:30 – 18:30'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2364,12 +2314,12 @@ var vet = {
             "eng_address":"G/F, 42 Po Heung Street, Tai Po, NT",
             "district":"大埔區",
             "tel1":26382869,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'open': {'day': 0, 'time': '0000'}}], 'weekday_text': ['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業']},
-            "cat":"S"
+            "opening_hours":[{"open": {"day": 0, "time": "0000"}}],
+            "weekday_text":['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2388,12 +2338,12 @@ var vet = {
             "eng_address":"G/F, 3 Hei Yuen Street, Tai Po, NT",
             "district":"大埔區",
             "tel1":26506332,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '1930'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '1930'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '1930'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '1930'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '1930'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '1930'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 19:30', '星期二: 09:00 – 19:30', '星期三: 09:00 – 19:30', '星期四: 09:00 – 19:30', '星期五: 09:00 – 19:30', '星期六: 09:00 – 19:30', '星期日: 10:00 – 19:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "1930"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "1930"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "1930"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "1930"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "1930"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "1930"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 19:30', '星期二: 09:00 – 19:30', '星期三: 09:00 – 19:30', '星期四: 09:00 – 19:30', '星期五: 09:00 – 19:30', '星期六: 09:00 – 19:30', '星期日: 10:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2412,12 +2362,12 @@ var vet = {
             "eng_address":"G/F, Shop B, 149-155 Kwong Fuk Road, Tai Po, NT",
             "district":"大埔區",
             "tel1":26539399,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2436,12 +2386,12 @@ var vet = {
             "eng_address":"163 Wai Tau Tsuen, Tai Po, NT",
             "district":"大埔區",
             "tel1":26539297,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2460,12 +2410,12 @@ var vet = {
             "eng_address":"Shop 2A, G/F, No. 39 Kwong Fuk Square, Tai Po, NT",
             "district":"大埔區",
             "tel1":23629988,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1300'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '1400'}}, {'close': {'day': 1, 'time': '1300'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1400'}}, {'close': {'day': 2, 'time': '1300'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1400'}}, {'close': {'day': 3, 'time': '1300'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1400'}}, {'close': {'day': 4, 'time': '1300'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1400'}}, {'close': {'day': 5, 'time': '1300'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1400'}}, {'close': {'day': 6, 'time': '1300'}, 'open': {'day': 6, 'time': '1000'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '1400'}}], 'weekday_text': ['星期一: 10:00 – 13:00, 14:00 – 19:00', '星期二: 10:00 – 13:00, 14:00 – 19:00', '星期三: 10:00 – 13:00, 14:00 – 19:00', '星期四: 10:00 – 13:00, 14:00 – 19:00', '星期五: 10:00 – 13:00, 14:00 – 19:00', '星期六: 10:00 – 13:00, 14:00 – 19:00', '星期日: 10:00 – 13:00, 14:00 – 19:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1300"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "1400"}}, {"close": {"day": 1, "time": "1300"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1400"}}, {"close": {"day": 2, "time": "1300"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1400"}}, {"close": {"day": 3, "time": "1300"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1400"}}, {"close": {"day": 4, "time": "1300"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1400"}}, {"close": {"day": 5, "time": "1300"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1400"}}, {"close": {"day": 6, "time": "1300"}, "open": {"day": 6, "time": "1000"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "1400"}}],
+            "weekday_text":['星期一: 10:00 – 13:00, 14:00 – 19:00', '星期二: 10:00 – 13:00, 14:00 – 19:00', '星期三: 10:00 – 13:00, 14:00 – 19:00', '星期四: 10:00 – 13:00, 14:00 – 19:00', '星期五: 10:00 – 13:00, 14:00 – 19:00', '星期六: 10:00 – 13:00, 14:00 – 19:00', '星期日: 10:00 – 13:00, 14:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2484,12 +2434,12 @@ var vet = {
             "eng_address":"Shop 5B, G/F, Hilton Plaza, Shatin Centre Street, Shatin, NT",
             "district":"沙田區",
             "tel1":26011219,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1000'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 1, 'time': '1100'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1500'}}, {'close': {'day': 2, 'time': '1100'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1500'}}, {'close': {'day': 3, 'time': '1300'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '1100'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1500'}}, {'close': {'day': 5, 'time': '1100'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1500'}}, {'close': {'day': 6, 'time': '1100'}, 'open': {'day': 6, 'time': '0900'}}, {'close': {'day': 6, 'time': '1800'}, 'open': {'day': 6, 'time': '1500'}}], 'weekday_text': ['星期一: 09:00 – 11:00, 15:00 – 19:00', '星期二: 09:00 – 11:00, 15:00 – 19:00', '星期三: 09:00 – 13:00', '星期四: 09:00 – 11:00, 15:00 – 19:00', '星期五: 09:00 – 11:00, 15:00 – 19:00', '星期六: 09:00 – 11:00, 15:00 – 18:00', '星期日: 09:00 – 10:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1000"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 1, "time": "1100"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1500"}}, {"close": {"day": 2, "time": "1100"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1500"}}, {"close": {"day": 3, "time": "1300"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "1100"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1500"}}, {"close": {"day": 5, "time": "1100"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1500"}}, {"close": {"day": 6, "time": "1100"}, "open": {"day": 6, "time": "0900"}}, {"close": {"day": 6, "time": "1800"}, "open": {"day": 6, "time": "1500"}}],
+            "weekday_text":['星期一: 09:00 – 11:00, 15:00 – 19:00', '星期二: 09:00 – 11:00, 15:00 – 19:00', '星期三: 09:00 – 13:00', '星期四: 09:00 – 11:00, 15:00 – 19:00', '星期五: 09:00 – 11:00, 15:00 – 19:00', '星期六: 09:00 – 11:00, 15:00 – 18:00', '星期日: 09:00 – 10:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2508,12 +2458,12 @@ var vet = {
             "eng_address":"Shop 10, G/F, Block A, Chuen Fai Centre, 9-11 Kong Pui Street, Shatin, NT",
             "district":"沙田區",
             "tel1":39550110,
-            "tel2":"39550111",
-            "tel3":"39550112",
+            "tel2":39550111.0,
+            "tel3":39550112.0,
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 19:00', '星期二: 10:00 – 19:00', '星期三: 10:00 – 19:00', '星期四: 10:00 – 19:00', '星期五: 10:00 – 19:00', '星期六: 10:00 – 19:00', '星期日: 10:00 – 19:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 19:00', '星期二: 10:00 – 19:00', '星期三: 10:00 – 19:00', '星期四: 10:00 – 19:00', '星期五: 10:00 – 19:00', '星期六: 10:00 – 19:00', '星期日: 10:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2532,12 +2482,12 @@ var vet = {
             "eng_address":"G/F, Shop C & D, 75 Chik Shun Street, Tai Wai, NT",
             "district":"沙田區",
             "tel1":26871030,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'open': {'day': 0, 'time': '0000'}}], 'weekday_text': ['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業']},
-            "cat":"S"
+            "opening_hours":[{"open": {"day": 0, "time": "0000"}}],
+            "weekday_text":['星期一: 24 小時營業', '星期二: 24 小時營業', '星期三: 24 小時營業', '星期四: 24 小時營業', '星期五: 24 小時營業', '星期六: 24 小時營業', '星期日: 24 小時營業'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2556,12 +2506,12 @@ var vet = {
             "eng_address":"G/F, Kwai Wai Building, 46 Chik Chuen Street, Tai Wai, NT",
             "district":"沙田區",
             "tel1":26982185,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1300'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '1500'}}, {'close': {'day': 1, 'time': '1300'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1500'}}, {'close': {'day': 2, 'time': '1300'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1500'}}, {'close': {'day': 3, 'time': '1300'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1500'}}, {'close': {'day': 4, 'time': '1300'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1500'}}, {'close': {'day': 5, 'time': '1300'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1500'}}, {'close': {'day': 6, 'time': '1300'}, 'open': {'day': 6, 'time': '0900'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '1500'}}], 'weekday_text': ['星期一: 09:00 – 13:00, 15:00 – 19:00', '星期二: 09:00 – 13:00, 15:00 – 19:00', '星期三: 09:00 – 13:00, 15:00 – 19:00', '星期四: 09:00 – 13:00, 15:00 – 19:00', '星期五: 09:00 – 13:00, 15:00 – 19:00', '星期六: 09:00 – 13:00, 15:00 – 19:00', '星期日: 09:00 – 13:00, 15:00 – 19:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1300"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "1500"}}, {"close": {"day": 1, "time": "1300"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1500"}}, {"close": {"day": 2, "time": "1300"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1500"}}, {"close": {"day": 3, "time": "1300"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1500"}}, {"close": {"day": 4, "time": "1300"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1500"}}, {"close": {"day": 5, "time": "1300"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1500"}}, {"close": {"day": 6, "time": "1300"}, "open": {"day": 6, "time": "0900"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "1500"}}],
+            "weekday_text":['星期一: 09:00 – 13:00, 15:00 – 19:00', '星期二: 09:00 – 13:00, 15:00 – 19:00', '星期三: 09:00 – 13:00, 15:00 – 19:00', '星期四: 09:00 – 13:00, 15:00 – 19:00', '星期五: 09:00 – 13:00, 15:00 – 19:00', '星期六: 09:00 – 13:00, 15:00 – 19:00', '星期日: 09:00 – 13:00, 15:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2580,12 +2530,12 @@ var vet = {
             "eng_address":"Shop B, G/F, Kwai Wai Building, 54 Chik Chuen Street, Tai Wai, NT",
             "district":"沙田區",
             "tel1":26870226,
-            "tel2":"26870260",
-            "tel3":"-",
+            "tel2":26870260.0,
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2200'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2200'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2200'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2200'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2200'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2200'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2200'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2200"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2200"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2200"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2200"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2200"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2200"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2200"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2604,12 +2554,12 @@ var vet = {
             "eng_address":"Shop B, G/F, Hing Wan House, 74-76 Chik Chuen Street, Tai Wai, NT",
             "district":"沙田區",
             "tel1":26941452,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1300'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '1500'}}, {'close': {'day': 1, 'time': '1300'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1500'}}, {'close': {'day': 2, 'time': '1300'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1500'}}, {'close': {'day': 3, 'time': '1300'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1500'}}, {'close': {'day': 4, 'time': '1300'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1500'}}, {'close': {'day': 5, 'time': '1300'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1500'}}, {'close': {'day': 6, 'time': '1300'}, 'open': {'day': 6, 'time': '0900'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '1500'}}], 'weekday_text': ['星期一: 09:00 – 13:00, 15:00 – 19:00', '星期二: 09:00 – 13:00, 15:00 – 19:00', '星期三: 09:00 – 13:00, 15:00 – 19:00', '星期四: 09:00 – 13:00, 15:00 – 19:00', '星期五: 09:00 – 13:00, 15:00 – 19:00', '星期六: 09:00 – 13:00, 15:00 – 19:00', '星期日: 09:00 – 13:00, 15:00 – 19:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1300"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "1500"}}, {"close": {"day": 1, "time": "1300"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1500"}}, {"close": {"day": 2, "time": "1300"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1500"}}, {"close": {"day": 3, "time": "1300"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1500"}}, {"close": {"day": 4, "time": "1300"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1500"}}, {"close": {"day": 5, "time": "1300"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1500"}}, {"close": {"day": 6, "time": "1300"}, "open": {"day": 6, "time": "0900"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "1500"}}],
+            "weekday_text":['星期一: 09:00 – 13:00, 15:00 – 19:00', '星期二: 09:00 – 13:00, 15:00 – 19:00', '星期三: 09:00 – 13:00, 15:00 – 19:00', '星期四: 09:00 – 13:00, 15:00 – 19:00', '星期五: 09:00 – 13:00, 15:00 – 19:00', '星期六: 09:00 – 13:00, 15:00 – 19:00', '星期日: 09:00 – 13:00, 15:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2628,12 +2578,12 @@ var vet = {
             "eng_address":"Shop 6-7, G/F, Sunshine Baazar, Ma On Shan, NT",
             "district":"沙田區",
             "tel1":26305980,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2100'}, 'open': {'day': 0, 'time': '1100'}}, {'close': {'day': 1, 'time': '2100'}, 'open': {'day': 1, 'time': '1100'}}, {'close': {'day': 2, 'time': '2100'}, 'open': {'day': 2, 'time': '1100'}}, {'close': {'day': 3, 'time': '2100'}, 'open': {'day': 3, 'time': '1100'}}, {'close': {'day': 4, 'time': '2100'}, 'open': {'day': 4, 'time': '1100'}}, {'close': {'day': 5, 'time': '2100'}, 'open': {'day': 5, 'time': '1100'}}, {'close': {'day': 6, 'time': '2100'}, 'open': {'day': 6, 'time': '1100'}}], 'weekday_text': ['星期一: 11:00 – 21:00', '星期二: 11:00 – 21:00', '星期三: 11:00 – 21:00', '星期四: 11:00 – 21:00', '星期五: 11:00 – 21:00', '星期六: 11:00 – 21:00', '星期日: 11:00 – 21:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2100"}, "open": {"day": 0, "time": "1100"}}, {"close": {"day": 1, "time": "2100"}, "open": {"day": 1, "time": "1100"}}, {"close": {"day": 2, "time": "2100"}, "open": {"day": 2, "time": "1100"}}, {"close": {"day": 3, "time": "2100"}, "open": {"day": 3, "time": "1100"}}, {"close": {"day": 4, "time": "2100"}, "open": {"day": 4, "time": "1100"}}, {"close": {"day": 5, "time": "2100"}, "open": {"day": 5, "time": "1100"}}, {"close": {"day": 6, "time": "2100"}, "open": {"day": 6, "time": "1100"}}],
+            "weekday_text":['星期一: 11:00 – 21:00', '星期二: 11:00 – 21:00', '星期三: 11:00 – 21:00', '星期四: 11:00 – 21:00', '星期五: 11:00 – 21:00', '星期六: 11:00 – 21:00', '星期日: 11:00 – 21:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2652,12 +2602,12 @@ var vet = {
             "eng_address":"Shop 12, Kei Hei Land Building, 385 Castle Peak Road, Tuen Mun, NT",
             "district":"屯門區",
             "tel1":24042511,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 19:00', '星期二: 10:00 – 19:00', '星期三: 10:00 – 19:00', '星期四: 10:00 – 19:00', '星期五: 10:00 – 19:00', '星期六: 10:00 – 19:00', '星期日: 10:00 – 19:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 19:00', '星期二: 10:00 – 19:00', '星期三: 10:00 – 19:00', '星期四: 10:00 – 19:00', '星期五: 10:00 – 19:00', '星期六: 10:00 – 19:00', '星期日: 10:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2676,12 +2626,12 @@ var vet = {
             "eng_address":"G/F, No. 58 Leung Tin Chuen, Area 36B, Tuen Mun, NT",
             "district":"屯門區",
             "tel1":24309581,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1330'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 0, 'time': '2000'}, 'open': {'day': 0, 'time': '1530'}}, {'close': {'day': 1, 'time': '1330'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '1530'}}, {'close': {'day': 2, 'time': '1330'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '1530'}}, {'close': {'day': 3, 'time': '1330'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '1530'}}, {'close': {'day': 5, 'time': '1330'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '1530'}}, {'close': {'day': 6, 'time': '1330'}, 'open': {'day': 6, 'time': '1000'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '1530'}}], 'weekday_text': ['星期一: 10:00 – 13:30, 15:30 – 20:00', '星期二: 10:00 – 13:30, 15:30 – 20:00', '星期三: 10:00 – 13:30, 15:30 – 20:00', '星期四: 休息', '星期五: 10:00 – 13:30, 15:30 – 20:00', '星期六: 10:00 – 13:30, 15:30 – 20:00', '星期日: 10:00 – 13:30, 15:30 – 20:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1330"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 0, "time": "2000"}, "open": {"day": 0, "time": "1530"}}, {"close": {"day": 1, "time": "1330"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "1530"}}, {"close": {"day": 2, "time": "1330"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "1530"}}, {"close": {"day": 3, "time": "1330"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1530"}}, {"close": {"day": 5, "time": "1330"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "1530"}}, {"close": {"day": 6, "time": "1330"}, "open": {"day": 6, "time": "1000"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "1530"}}],
+            "weekday_text":['星期一: 10:00 – 13:30, 15:30 – 20:00', '星期二: 10:00 – 13:30, 15:30 – 20:00', '星期三: 10:00 – 13:30, 15:30 – 20:00', '星期四: 休息', '星期五: 10:00 – 13:30, 15:30 – 20:00', '星期六: 10:00 – 13:30, 15:30 – 20:00', '星期日: 10:00 – 13:30, 15:30 – 20:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2700,12 +2650,12 @@ var vet = {
             "eng_address":"Shop 13, G/F, Rainbow Garden, Tuen Mun, NT",
             "district":"屯門區",
             "tel1":24301758,
-            "tel2":"24301728",
-            "tel3":"-",
+            "tel2":24301728.0,
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1330'}, 'open': {'day': 0, 'time': '1030'}}, {'close': {'day': 0, 'time': '2000'}, 'open': {'day': 0, 'time': '1530'}}, {'close': {'day': 1, 'time': '1330'}, 'open': {'day': 1, 'time': '1030'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '1530'}}, {'close': {'day': 2, 'time': '1330'}, 'open': {'day': 2, 'time': '1030'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '1530'}}, {'close': {'day': 3, 'time': '1330'}, 'open': {'day': 3, 'time': '1030'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '1530'}}, {'close': {'day': 4, 'time': '1330'}, 'open': {'day': 4, 'time': '1030'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '1530'}}, {'close': {'day': 5, 'time': '1330'}, 'open': {'day': 5, 'time': '1030'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '1530'}}, {'close': {'day': 6, 'time': '1330'}, 'open': {'day': 6, 'time': '1030'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '1530'}}], 'weekday_text': ['星期一: 10:30 – 13:30, 15:30 – 20:00', '星期二: 10:30 – 13:30, 15:30 – 20:00', '星期三: 10:30 – 13:30, 15:30 – 20:00', '星期四: 10:30 – 13:30, 15:30 – 20:00', '星期五: 10:30 – 13:30, 15:30 – 20:00', '星期六: 10:30 – 13:30, 15:30 – 20:00', '星期日: 10:30 – 13:30, 15:30 – 20:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1330"}, "open": {"day": 0, "time": "1030"}}, {"close": {"day": 0, "time": "2000"}, "open": {"day": 0, "time": "1530"}}, {"close": {"day": 1, "time": "1330"}, "open": {"day": 1, "time": "1030"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "1530"}}, {"close": {"day": 2, "time": "1330"}, "open": {"day": 2, "time": "1030"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "1530"}}, {"close": {"day": 3, "time": "1330"}, "open": {"day": 3, "time": "1030"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1530"}}, {"close": {"day": 4, "time": "1330"}, "open": {"day": 4, "time": "1030"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "1530"}}, {"close": {"day": 5, "time": "1330"}, "open": {"day": 5, "time": "1030"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "1530"}}, {"close": {"day": 6, "time": "1330"}, "open": {"day": 6, "time": "1030"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "1530"}}],
+            "weekday_text":['星期一: 10:30 – 13:30, 15:30 – 20:00', '星期二: 10:30 – 13:30, 15:30 – 20:00', '星期三: 10:30 – 13:30, 15:30 – 20:00', '星期四: 10:30 – 13:30, 15:30 – 20:00', '星期五: 10:30 – 13:30, 15:30 – 20:00', '星期六: 10:30 – 13:30, 15:30 – 20:00', '星期日: 10:30 – 13:30, 15:30 – 20:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2724,12 +2674,12 @@ var vet = {
             "eng_address":"Shop 3, G/F Hoi Shing Building, 18 Tak Ching Court, Tuen Mun, NT",
             "district":"屯門區",
             "tel1":24597217,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 1, 'time': '1930'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '1930'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '1930'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '1930'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '1930'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 10:00 – 19:30', '星期二: 10:00 – 19:30', '星期三: 10:00 – 19:30', '星期四: 10:00 – 19:30', '星期五: 10:00 – 19:30', '星期六: 09:00 – 19:00', '星期日: 09:00 – 19:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 1, "time": "1930"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "1930"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "1930"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "1930"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "1930"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 10:00 – 19:30', '星期二: 10:00 – 19:30', '星期三: 10:00 – 19:30', '星期四: 10:00 – 19:30', '星期五: 10:00 – 19:30', '星期六: 09:00 – 19:00', '星期日: 09:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2748,12 +2698,12 @@ var vet = {
             "eng_address":"E1, Tuen King Building, No. 8 Tsing Hoi Circuit, Tuen Mun, NT",
             "district":"屯門區",
             "tel1":26408138,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1400'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 0, 'time': '2200'}, 'open': {'day': 0, 'time': '1600'}}, {'close': {'day': 1, 'time': '1400'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 1, 'time': '2200'}, 'open': {'day': 1, 'time': '1600'}}, {'close': {'day': 2, 'time': '1400'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 2, 'time': '2200'}, 'open': {'day': 2, 'time': '1600'}}, {'close': {'day': 4, 'time': '1400'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 4, 'time': '2200'}, 'open': {'day': 4, 'time': '1600'}}, {'close': {'day': 5, 'time': '1400'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 5, 'time': '2200'}, 'open': {'day': 5, 'time': '1600'}}, {'close': {'day': 6, 'time': '1400'}, 'open': {'day': 6, 'time': '1000'}}, {'close': {'day': 6, 'time': '2200'}, 'open': {'day': 6, 'time': '1600'}}], 'weekday_text': ['星期一: 10:00 – 14:00, 16:00 – 22:00', '星期二: 10:00 – 14:00, 16:00 – 22:00', '星期三: 休息', '星期四: 10:00 – 14:00, 16:00 – 22:00', '星期五: 10:00 – 14:00, 16:00 – 22:00', '星期六: 10:00 – 14:00, 16:00 – 22:00', '星期日: 10:00 – 14:00, 16:00 – 22:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1400"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 0, "time": "2200"}, "open": {"day": 0, "time": "1600"}}, {"close": {"day": 1, "time": "1400"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 1, "time": "2200"}, "open": {"day": 1, "time": "1600"}}, {"close": {"day": 2, "time": "1400"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 2, "time": "2200"}, "open": {"day": 2, "time": "1600"}}, {"close": {"day": 4, "time": "1400"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 4, "time": "2200"}, "open": {"day": 4, "time": "1600"}}, {"close": {"day": 5, "time": "1400"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 5, "time": "2200"}, "open": {"day": 5, "time": "1600"}}, {"close": {"day": 6, "time": "1400"}, "open": {"day": 6, "time": "1000"}}, {"close": {"day": 6, "time": "2200"}, "open": {"day": 6, "time": "1600"}}],
+            "weekday_text":['星期一: 10:00 – 14:00, 16:00 – 22:00', '星期二: 10:00 – 14:00, 16:00 – 22:00', '星期三: 休息', '星期四: 10:00 – 14:00, 16:00 – 22:00', '星期五: 10:00 – 14:00, 16:00 – 22:00', '星期六: 10:00 – 14:00, 16:00 – 22:00', '星期日: 10:00 – 14:00, 16:00 – 22:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2772,12 +2722,12 @@ var vet = {
             "eng_address":"G/F, 107-108 Leung Tin San Tsuen, Tuen Mun, NT",
             "district":"屯門區",
             "tel1":24419816,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1300'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 0, 'time': '1930'}, 'open': {'day': 0, 'time': '1530'}}, {'close': {'day': 1, 'time': '1300'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 1, 'time': '1930'}, 'open': {'day': 1, 'time': '1530'}}, {'close': {'day': 2, 'time': '1300'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 2, 'time': '1930'}, 'open': {'day': 2, 'time': '1530'}}, {'close': {'day': 3, 'time': '1300'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 3, 'time': '1930'}, 'open': {'day': 3, 'time': '1530'}}, {'close': {'day': 4, 'time': '1300'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 4, 'time': '1930'}, 'open': {'day': 4, 'time': '1530'}}, {'close': {'day': 5, 'time': '1300'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 5, 'time': '1930'}, 'open': {'day': 5, 'time': '1530'}}, {'close': {'day': 6, 'time': '1300'}, 'open': {'day': 6, 'time': '0900'}}, {'close': {'day': 6, 'time': '1930'}, 'open': {'day': 6, 'time': '1530'}}], 'weekday_text': ['星期一: 09:00 – 13:00, 15:30 – 19:30', '星期二: 09:00 – 13:00, 15:30 – 19:30', '星期三: 09:00 – 13:00, 15:30 – 19:30', '星期四: 09:00 – 13:00, 15:30 – 19:30', '星期五: 09:00 – 13:00, 15:30 – 19:30', '星期六: 09:00 – 13:00, 15:30 – 19:30', '星期日: 09:00 – 13:00, 15:30 – 19:30']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1300"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 0, "time": "1930"}, "open": {"day": 0, "time": "1530"}}, {"close": {"day": 1, "time": "1300"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 1, "time": "1930"}, "open": {"day": 1, "time": "1530"}}, {"close": {"day": 2, "time": "1300"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 2, "time": "1930"}, "open": {"day": 2, "time": "1530"}}, {"close": {"day": 3, "time": "1300"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 3, "time": "1930"}, "open": {"day": 3, "time": "1530"}}, {"close": {"day": 4, "time": "1300"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 4, "time": "1930"}, "open": {"day": 4, "time": "1530"}}, {"close": {"day": 5, "time": "1300"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 5, "time": "1930"}, "open": {"day": 5, "time": "1530"}}, {"close": {"day": 6, "time": "1300"}, "open": {"day": 6, "time": "0900"}}, {"close": {"day": 6, "time": "1930"}, "open": {"day": 6, "time": "1530"}}],
+            "weekday_text":['星期一: 09:00 – 13:00, 15:30 – 19:30', '星期二: 09:00 – 13:00, 15:30 – 19:30', '星期三: 09:00 – 13:00, 15:30 – 19:30', '星期四: 09:00 – 13:00, 15:30 – 19:30', '星期五: 09:00 – 13:00, 15:30 – 19:30', '星期六: 09:00 – 13:00, 15:30 – 19:30', '星期日: 09:00 – 13:00, 15:30 – 19:30'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2796,12 +2746,12 @@ var vet = {
             "eng_address":"Shop 6-7, G/F, Hip Pont Building, 21 Tseng Choi Street, Tuen Mun, NT",
             "district":"屯門區",
             "tel1":23631860,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1900'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '1900'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 19:00', '星期二: 10:00 – 19:00', '星期三: 10:00 – 19:00', '星期四: 10:00 – 19:00', '星期五: 10:00 – 19:00', '星期六: 10:00 – 19:00', '星期日: 10:00 – 19:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "1900"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 19:00', '星期二: 10:00 – 19:00', '星期三: 10:00 – 19:00', '星期四: 10:00 – 19:00', '星期五: 10:00 – 19:00', '星期六: 10:00 – 19:00', '星期日: 10:00 – 19:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2820,12 +2770,12 @@ var vet = {
             "eng_address":"1808, 18/F, Tuen Mun Central Square, No.22 Hoi Wing Road, Tuen Mun, NT",
             "district":"屯門區",
             "tel1":37096097,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2000'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "2000"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2844,12 +2794,12 @@ var vet = {
             "eng_address":"Shop 5, G/F, Yen Wai Garden, 28 Heung Shing Street, Tsuen Wan, NT",
             "district":"荃灣區",
             "tel1":24988102,
-            "tel2":"24988103",
-            "tel3":"-",
+            "tel2":24988103.0,
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2030'}, 'open': {'day': 0, 'time': '0930'}}, {'close': {'day': 1, 'time': '2030'}, 'open': {'day': 1, 'time': '0930'}}, {'close': {'day': 2, 'time': '2030'}, 'open': {'day': 2, 'time': '0930'}}, {'close': {'day': 3, 'time': '2030'}, 'open': {'day': 3, 'time': '0930'}}, {'close': {'day': 4, 'time': '2030'}, 'open': {'day': 4, 'time': '0930'}}, {'close': {'day': 5, 'time': '2030'}, 'open': {'day': 5, 'time': '0930'}}, {'close': {'day': 6, 'time': '2030'}, 'open': {'day': 6, 'time': '0930'}}], 'weekday_text': ['星期一: 09:30 – 20:30', '星期二: 09:30 – 20:30', '星期三: 09:30 – 20:30', '星期四: 09:30 – 20:30', '星期五: 09:30 – 20:30', '星期六: 09:30 – 20:30', '星期日: 09:30 – 20:30']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2030"}, "open": {"day": 0, "time": "0930"}}, {"close": {"day": 1, "time": "2030"}, "open": {"day": 1, "time": "0930"}}, {"close": {"day": 2, "time": "2030"}, "open": {"day": 2, "time": "0930"}}, {"close": {"day": 3, "time": "2030"}, "open": {"day": 3, "time": "0930"}}, {"close": {"day": 4, "time": "2030"}, "open": {"day": 4, "time": "0930"}}, {"close": {"day": 5, "time": "2030"}, "open": {"day": 5, "time": "0930"}}, {"close": {"day": 6, "time": "2030"}, "open": {"day": 6, "time": "0930"}}],
+            "weekday_text":['星期一: 09:30 – 20:30', '星期二: 09:30 – 20:30', '星期三: 09:30 – 20:30', '星期四: 09:30 – 20:30', '星期五: 09:30 – 20:30', '星期六: 09:30 – 20:30', '星期日: 09:30 – 20:30'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2868,12 +2818,12 @@ var vet = {
             "eng_address":"G/F, 1 Tsuen Lok Street, Tsuen Wan, NT",
             "district":"荃灣區",
             "tel1":34812781,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2100'}, 'open': {'day': 0, 'time': '1400'}}, {'close': {'day': 1, 'time': '2100'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2100'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2100'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2100'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2100'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2100'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 21:00', '星期二: 10:00 – 21:00', '星期三: 10:00 – 21:00', '星期四: 10:00 – 21:00', '星期五: 10:00 – 21:00', '星期六: 10:00 – 21:00', '星期日: 14:00 – 21:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "2100"}, "open": {"day": 0, "time": "1400"}}, {"close": {"day": 1, "time": "2100"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2100"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2100"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2100"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2100"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2100"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 21:00', '星期二: 10:00 – 21:00', '星期三: 10:00 – 21:00', '星期四: 10:00 – 21:00', '星期五: 10:00 – 21:00', '星期六: 10:00 – 21:00', '星期日: 14:00 – 21:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2892,12 +2842,12 @@ var vet = {
             "eng_address":"No.168 Sha Tsui Road, Tsuen Wan, NT",
             "district":"荃灣區",
             "tel1":25730028,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2200'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2200'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2200'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2200'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2200'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2200'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2200'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2200"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2200"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2200"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2200"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2200"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2200"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2200"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2911,17 +2861,41 @@ var vet = {
          "type":"Feature",
          "properties":{  
             "chi_name":"Pets Central 流動寵物醫療車",
-            "chi_address":"新界荃灣馬灣珀麗灣及元朗錦繡花園",
+            "chi_address":"新界荃灣馬灣珀麗灣",
             "eng_name":"Pets Central Mobile Vet Clinic",
-            "eng_address":"Park Island and Fairview Park, NT",
+            "eng_address":"Park Island, NT",
             "district":"荃灣區",
             "tel1":62230903,
-            "tel2":"-",
-            "tel3":"-",
-            "website":"",
-            "remarks":"",
-            "opening_hours":"",
-            "cat":"H"
+            "tel2":"",
+            "tel3":"",
+            "website":"https://www.pets-central.com/hk/zh-hant/",
+            "opening_hours":[{"close": {"day": 0, "time": "1600"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1400"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "1400"}}, {"close": {"day": 6, "time": "2200"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 休息', '星期二: 休息', '星期三: 14:00 – 20:00', '星期四: 休息', '星期五: 14:00 – 20:00', '星期六: 休息', '每月第二及第四個星期日: 10:00 – 16:00'],
+            "remarks":"流動診所"
+         },
+         "geometry":{  
+            "type":"Point",
+            "coordinates":[  
+               "",
+               ""
+            ]
+         }
+      },
+      {  
+         "type":"Feature",
+         "properties":{  
+            "chi_name":"Pets Central 流動寵物醫療車",
+            "chi_address":"新界元朗錦繡花園",
+            "eng_name":"Pets Central Mobile Vet Clinic",
+            "eng_address":"Fairview Park, NT",
+            "district":"元朗區",
+            "tel1":62230903,
+            "tel2":"",
+            "tel3":"",
+            "website":"https://www.pets-central.com/hk/zh-hant/",
+            "opening_hours":[{"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 6, "time": "1900"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 休息', '星期二: 10:00 – 19:00', '星期三: 休息', '星期四: 休息', '星期五: 休息', '星期六: 10:00 – 19:00', '星期日: 休息'],
+            "remarks":"流動診所"
          },
          "geometry":{  
             "type":"Point",
@@ -2940,12 +2914,12 @@ var vet = {
             "eng_address":"Shop 14, G/F, Union Building, 186 Sha Tsui Road, Tsuen Wan, NT",
             "district":"荃灣區",
             "tel1":26235500,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2000'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2000"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2964,12 +2938,12 @@ var vet = {
             "eng_address":"G/F, 136-138 Sha Tsui Road, Tsuen Wan, NT",
             "district":"荃灣區",
             "tel1":24903732,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2200'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2200'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2200'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2200'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2200'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2200'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2200'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "2200"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2200"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2200"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2200"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2200"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2200"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2200"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -2988,12 +2962,12 @@ var vet = {
             "eng_address":"G/F, On Fung Building, No. 84 Heung Wo Street, Tsuen Wan, NT",
             "district":"荃灣區",
             "tel1":24932178,
-            "tel2":"24932179",
-            "tel3":"-",
+            "tel2":24932179.0,
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3012,12 +2986,12 @@ var vet = {
             "eng_address":"G/F, 322 Ma Wan Main Street Village North, Ma Wan, NT",
             "district":"荃灣區",
             "tel1":67383280,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3036,12 +3010,12 @@ var vet = {
             "eng_address":"G/F, 40 Tsing Yu New Village, Tsing Yi, NT",
             "district":"荃灣區",
             "tel1":24350322,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2000'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 20:00', '星期二: 09:00 – 20:00', '星期三: 09:00 – 20:00', '星期四: 09:00 – 20:00', '星期五: 09:00 – 20:00', '星期六: 09:00 – 20:00', '星期日: 09:00 – 20:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2000"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 20:00', '星期二: 09:00 – 20:00', '星期三: 09:00 – 20:00', '星期四: 09:00 – 20:00', '星期五: 09:00 – 20:00', '星期六: 09:00 – 20:00', '星期日: 09:00 – 20:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3054,42 +3028,18 @@ var vet = {
       {  
          "type":"Feature",
          "properties":{  
-            "chi_name":"優獸生活 Paws@Quality Of Life",
-            "chi_address":"新界荃灣荃灣街巿街146號坤成樓地下3號鋪",
-            "eng_name":"",
-            "eng_address":"Shop No. 3, G/F, Kwan Shing Building, 146 Tsuen Wan Market Street, Tsuen Wan, NT",
-            "district":"荃灣區",
-            "tel1":27820999,
-            "tel2":"-",
-            "tel3":"-",
-            "website":"",
-            "remarks":"Permantly closed",
-            "opening_hours":"",
-            "cat":"H"
-         },
-         "geometry":{  
-            "type":"Point",
-            "coordinates":[  
-               114.1205716,
-               22.3696901
-            ]
-         }
-      },
-      {  
-         "type":"Feature",
-         "properties":{  
             "chi_name":"柏圖獸醫診所",
             "chi_address":"新界元朗鳳攸北街5-7號順豐大廈36號鋪地下",
             "eng_name":"Patel Veterinary Clinic",
             "eng_address":"G/F, Shop 36, Shun Fung Building, 5-7 Fung Yan North Street, Yuen Long, NT",
             "district":"元朗區",
             "tel1":24439893,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1330'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 0, 'time': '2000'}, 'open': {'day': 0, 'time': '1500'}}, {'close': {'day': 1, 'time': '1330'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '1500'}}, {'close': {'day': 2, 'time': '1330'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '1500'}}, {'close': {'day': 3, 'time': '1330'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '1500'}}, {'close': {'day': 5, 'time': '1330'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '1500'}}, {'close': {'day': 6, 'time': '1330'}, 'open': {'day': 6, 'time': '1000'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '1500'}}], 'weekday_text': ['星期一: 10:00 – 13:30, 15:00 – 20:00', '星期二: 10:00 – 13:30, 15:00 – 20:00', '星期三: 10:00 – 13:30, 15:00 – 20:00', '星期四: 休息', '星期五: 10:00 – 13:30, 15:00 – 20:00', '星期六: 10:00 – 13:30, 15:00 – 20:00', '星期日: 10:00 – 13:30, 15:00 – 20:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1330"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 0, "time": "2000"}, "open": {"day": 0, "time": "1500"}}, {"close": {"day": 1, "time": "1330"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "1500"}}, {"close": {"day": 2, "time": "1330"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "1500"}}, {"close": {"day": 3, "time": "1330"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1500"}}, {"close": {"day": 5, "time": "1330"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "1500"}}, {"close": {"day": 6, "time": "1330"}, "open": {"day": 6, "time": "1000"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "1500"}}],
+            "weekday_text":['星期一: 10:00 – 13:30, 15:00 – 20:00', '星期二: 10:00 – 13:30, 15:00 – 20:00', '星期三: 10:00 – 13:30, 15:00 – 20:00', '星期四: 休息', '星期五: 10:00 – 13:30, 15:00 – 20:00', '星期六: 10:00 – 13:30, 15:00 – 20:00', '星期日: 10:00 – 13:30, 15:00 – 20:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3108,12 +3058,12 @@ var vet = {
             "eng_address":"Shop 11, G/F, Hing Fook Building, Phase II, 8 Man Hop Path, Yuen Long, NT",
             "district":"元朗區",
             "tel1":24778929,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3132,12 +3082,12 @@ var vet = {
             "eng_address":"G/F, Shop F, Tai Hing Building, Tai Hang Street, Yuen Long, NT",
             "district":"元朗區",
             "tel1":24762988,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"http://jeffreyyip1028.mysinablog.com",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2200'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2200'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2200'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2200'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2200'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2200'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2200'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "2200"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2200"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2200"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2200"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2200"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2200"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2200"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3156,12 +3106,12 @@ var vet = {
             "eng_address":"G/F, 39 Yau San Street, Yuen Long, NT",
             "district":"元朗區",
             "tel1":24788733,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3180,12 +3130,12 @@ var vet = {
             "eng_address":"G/F, Lee Kwan Building, No. 35-47 On Lok Road, Yuen Long, NT",
             "district":"元朗區",
             "tel1":24752231,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"http://www.saa.org.hk",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2000'}, 'open': {'day': 0, 'time': '0900'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '0900'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '0900'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '0900'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '0900'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '0900'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '0900'}}], 'weekday_text': ['星期一: 09:00 – 20:00', '星期二: 09:00 – 20:00', '星期三: 09:00 – 20:00', '星期四: 09:00 – 20:00', '星期五: 09:00 – 20:00', '星期六: 09:00 – 20:00', '星期日: 09:00 – 20:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "2000"}, "open": {"day": 0, "time": "0900"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "0900"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "0900"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "0900"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "0900"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "0900"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "0900"}}],
+            "weekday_text":['星期一: 09:00 – 20:00', '星期二: 09:00 – 20:00', '星期三: 09:00 – 20:00', '星期四: 09:00 – 20:00', '星期五: 09:00 – 20:00', '星期六: 09:00 – 20:00', '星期日: 09:00 – 20:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3204,12 +3154,12 @@ var vet = {
             "eng_address":"G/F, Shop 19, Kin Fai Building, 69 Fung Cheung Road, Yuen Long, NT",
             "district":"元朗區",
             "tel1":24706683,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2000'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2000"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3228,12 +3178,12 @@ var vet = {
             "eng_address":"G/F, 108 Kam Tin Shi, Kam Tin, Yuen Long, NT",
             "district":"元朗區",
             "tel1":24752851,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"http://www.petelements.com.hk",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2000'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "2000"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3252,12 +3202,12 @@ var vet = {
             "eng_address":"201 Ma Tin Tsuen, Yuen Long, NT",
             "district":"元朗區",
             "tel1":24718980,
-            "tel2":"23883205",
-            "tel3":"-",
+            "tel2":23883205.0,
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3276,12 +3226,12 @@ var vet = {
             "eng_address":"Shop 2, G/F, Fook Shun Building, 25 Ping Wui Street, Yuen Long, NT",
             "district":"元朗區",
             "tel1":24779990,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"http://www.ylvet.com.hk",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2030'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2030'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2030'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2030'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2030'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2030'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2030'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 20:30', '星期二: 10:00 – 20:30', '星期三: 10:00 – 20:30', '星期四: 10:00 – 20:30', '星期五: 10:00 – 20:30', '星期六: 10:00 – 20:30', '星期日: 10:00 – 20:30']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "2030"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2030"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2030"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2030"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2030"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2030"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2030"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 20:30', '星期二: 10:00 – 20:30', '星期三: 10:00 – 20:30', '星期四: 10:00 – 20:30', '星期五: 10:00 – 20:30', '星期六: 10:00 – 20:30', '星期日: 10:00 – 20:30'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3300,12 +3250,12 @@ var vet = {
             "eng_address":"Shop 36 & 37, G/F Ho Shun Yee Building, 9 Fung Yau Street East, Yuen Long, NT",
             "district":"元朗區",
             "tel1":29659518,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"http://www.yl.hk/blah",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2200'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2200'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2200'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2200'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2200'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2200'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2200'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2200"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2200"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2200"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2200"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2200"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2200"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2200"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3324,12 +3274,12 @@ var vet = {
             "eng_address":"Fairview Boulevard and Kam Po Road Junction, Yuen Long, NT",
             "district":"元朗區",
             "tel1":24822770,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"http://www.spca.org.hk/ch/about-us/spca-centres/fairview-centre",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 1, 'time': '1800'}, 'open': {'day': 1, 'time': '0845'}}, {'close': {'day': 2, 'time': '1800'}, 'open': {'day': 2, 'time': '0845'}}, {'close': {'day': 3, 'time': '1800'}, 'open': {'day': 3, 'time': '0845'}}, {'close': {'day': 4, 'time': '1800'}, 'open': {'day': 4, 'time': '0845'}}, {'close': {'day': 5, 'time': '1800'}, 'open': {'day': 5, 'time': '0845'}}, {'close': {'day': 6, 'time': '1300'}, 'open': {'day': 6, 'time': '0845'}}], 'weekday_text': ['星期一: 08:45 – 18:00', '星期二: 08:45 – 18:00', '星期三: 08:45 – 18:00', '星期四: 08:45 – 18:00', '星期五: 08:45 – 18:00', '星期六: 08:45 – 13:00', '星期日: 休息']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 1, "time": "1800"}, "open": {"day": 1, "time": "0845"}}, {"close": {"day": 2, "time": "1800"}, "open": {"day": 2, "time": "0845"}}, {"close": {"day": 3, "time": "1800"}, "open": {"day": 3, "time": "0845"}}, {"close": {"day": 4, "time": "1800"}, "open": {"day": 4, "time": "0845"}}, {"close": {"day": 5, "time": "1800"}, "open": {"day": 5, "time": "0845"}}, {"close": {"day": 6, "time": "1300"}, "open": {"day": 6, "time": "0845"}}],
+            "weekday_text":['星期一: 08:45 – 18:00', '星期二: 08:45 – 18:00', '星期三: 08:45 – 18:00', '星期四: 08:45 – 18:00', '星期五: 08:45 – 18:00', '星期六: 08:45 – 13:00', '星期日: 休息'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3348,12 +3298,12 @@ var vet = {
             "eng_address":"Shop 2, G/F, Cheong Wai Mansion, 9A Fung Yau North Street, Yuen Long, NT",
             "district":"元朗區",
             "tel1":24758802,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2200'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2200'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2200'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2200'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2200'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2200'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2200'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2200"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2200"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2200"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2200"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2200"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2200"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2200"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3372,12 +3322,12 @@ var vet = {
             "eng_address":"Shop 12, G/F, Ho King House, 110-136A On Ning Road, Yuen Long, NT",
             "district":"元朗區",
             "tel1":23947300,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"http://www.petcore-vet.com",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2200'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2200'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2200'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2200'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2200'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2200'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2200'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 0, "time": "2200"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2200"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2200"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2200"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2200"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2200"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2200"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 22:00', '星期二: 10:00 – 22:00', '星期三: 10:00 – 22:00', '星期四: 10:00 – 22:00', '星期五: 10:00 – 22:00', '星期六: 10:00 – 22:00', '星期日: 10:00 – 22:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3396,12 +3346,12 @@ var vet = {
             "eng_address":"Shop G-H, G/F, Hung Fat House, 87-99 Kau Yuk Road, Yuen Long, NT",
             "district":"元朗區",
             "tel1":29822181,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"http://www.facebook.com/casulavet",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '2000'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '2000'}, 'open': {'day': 1, 'time': '1000'}}, {'close': {'day': 2, 'time': '2000'}, 'open': {'day': 2, 'time': '1000'}}, {'close': {'day': 3, 'time': '2000'}, 'open': {'day': 3, 'time': '1000'}}, {'close': {'day': 4, 'time': '2000'}, 'open': {'day': 4, 'time': '1000'}}, {'close': {'day': 5, 'time': '2000'}, 'open': {'day': 5, 'time': '1000'}}, {'close': {'day': 6, 'time': '2000'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "2000"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "2000"}, "open": {"day": 1, "time": "1000"}}, {"close": {"day": 2, "time": "2000"}, "open": {"day": 2, "time": "1000"}}, {"close": {"day": 3, "time": "2000"}, "open": {"day": 3, "time": "1000"}}, {"close": {"day": 4, "time": "2000"}, "open": {"day": 4, "time": "1000"}}, {"close": {"day": 5, "time": "2000"}, "open": {"day": 5, "time": "1000"}}, {"close": {"day": 6, "time": "2000"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 10:00 – 20:00', '星期二: 10:00 – 20:00', '星期三: 10:00 – 20:00', '星期四: 10:00 – 20:00', '星期五: 10:00 – 20:00', '星期六: 10:00 – 20:00', '星期日: 10:00 – 20:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3420,12 +3370,12 @@ var vet = {
             "eng_address":"Tung Wan, Cheung Chau",
             "district":"長洲",
             "tel1":29814176,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"http://www.spca.org.hk/ch/about-us/spca-centres/cheung-chau-centre",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 2, 'time': '1630'}, 'open': {'day': 2, 'time': '0930'}}, {'close': {'day': 4, 'time': '1630'}, 'open': {'day': 4, 'time': '0930'}}], 'weekday_text': ['星期一: 休息', '星期二: 09:30 – 16:30', '星期三: 休息', '星期四: 09:30 – 16:30', '星期五: 休息', '星期六: 休息', '星期日: 休息']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 2, "time": "1630"}, "open": {"day": 2, "time": "0930"}}, {"close": {"day": 4, "time": "1630"}, "open": {"day": 4, "time": "0930"}}],
+            "weekday_text":['星期一: 休息', '星期二: 09:30 – 16:30', '星期三: 休息', '星期四: 09:30 – 16:30', '星期五: 休息', '星期六: 休息', '星期日: 休息'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3444,12 +3394,12 @@ var vet = {
             "eng_address":"103 Pak She San Tsuen, Cheung Chau",
             "district":"長洲",
             "tel1":98073910,
-            "tel2":"69734595",
-            "tel3":"-",
+            "tel2":69734595.0,
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3468,12 +3418,12 @@ var vet = {
             "eng_address":"No.31, Ma Po Tsuen, Mui Wo, Lantau Island",
             "district":"大嶼山",
             "tel1":82022633,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"http://www.drnature123.com",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3492,12 +3442,12 @@ var vet = {
             "eng_address":"Shop 14, Mui Wo Centre, Mui Wo, Lantau Island",
             "district":"大嶼山",
             "tel1":29840060,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"http://www.spca.org.hk/ch/about-us/spca-centres/mui-wo-centre",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 1, 'time': '1715'}, 'open': {'day': 1, 'time': '0850'}}, {'close': {'day': 3, 'time': '1715'}, 'open': {'day': 3, 'time': '0945'}}, {'close': {'day': 4, 'time': '1715'}, 'open': {'day': 4, 'time': '0945'}}, {'close': {'day': 5, 'time': '1715'}, 'open': {'day': 5, 'time': '0945'}}, {'close': {'day': 6, 'time': '1215'}, 'open': {'day': 6, 'time': '0945'}}], 'weekday_text': ['星期一: 08:50 – 17:15', '星期二: 休息', '星期三: 09:45 – 17:15', '星期四: 09:45 – 17:15', '星期五: 09:45 – 17:15', '星期六: 09:45 – 12:15', '星期日: 休息']},
-            "cat":"H"
+            "opening_hours":[{"close": {"day": 1, "time": "1715"}, "open": {"day": 1, "time": "0850"}}, {"close": {"day": 3, "time": "1715"}, "open": {"day": 3, "time": "0945"}}, {"close": {"day": 4, "time": "1715"}, "open": {"day": 4, "time": "0945"}}, {"close": {"day": 5, "time": "1715"}, "open": {"day": 5, "time": "0945"}}, {"close": {"day": 6, "time": "1215"}, "open": {"day": 6, "time": "0945"}}],
+            "weekday_text":['星期一: 08:50 – 17:15', '星期二: 休息', '星期三: 09:45 – 17:15', '星期四: 09:45 – 17:15', '星期五: 09:45 – 17:15', '星期六: 09:45 – 12:15', '星期日: 休息'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3516,12 +3466,12 @@ var vet = {
             "eng_address":"Shop Q2, Seaview Crescent Retail Shops, 8 Tung Chung Waterfront Road, Tung Chung, Lantau Island",
             "district":"大嶼山",
             "tel1":23287282,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"https://www.facebook.com/tungchungvetcentre",
-            "remarks":"",
-            "opening_hours":{'periods': [{'close': {'day': 0, 'time': '1800'}, 'open': {'day': 0, 'time': '1000'}}, {'close': {'day': 1, 'time': '1900'}, 'open': {'day': 1, 'time': '1100'}}, {'close': {'day': 2, 'time': '1900'}, 'open': {'day': 2, 'time': '1100'}}, {'close': {'day': 3, 'time': '1900'}, 'open': {'day': 3, 'time': '1100'}}, {'close': {'day': 4, 'time': '1900'}, 'open': {'day': 4, 'time': '1100'}}, {'close': {'day': 5, 'time': '1900'}, 'open': {'day': 5, 'time': '1100'}}, {'close': {'day': 6, 'time': '1800'}, 'open': {'day': 6, 'time': '1000'}}], 'weekday_text': ['星期一: 11:00 – 19:00', '星期二: 11:00 – 19:00', '星期三: 11:00 – 19:00', '星期四: 11:00 – 19:00', '星期五: 11:00 – 19:00', '星期六: 10:00 – 18:00', '星期日: 10:00 – 18:00']},
-            "cat":"S"
+            "opening_hours":[{"close": {"day": 0, "time": "1800"}, "open": {"day": 0, "time": "1000"}}, {"close": {"day": 1, "time": "1900"}, "open": {"day": 1, "time": "1100"}}, {"close": {"day": 2, "time": "1900"}, "open": {"day": 2, "time": "1100"}}, {"close": {"day": 3, "time": "1900"}, "open": {"day": 3, "time": "1100"}}, {"close": {"day": 4, "time": "1900"}, "open": {"day": 4, "time": "1100"}}, {"close": {"day": 5, "time": "1900"}, "open": {"day": 5, "time": "1100"}}, {"close": {"day": 6, "time": "1800"}, "open": {"day": 6, "time": "1000"}}],
+            "weekday_text":['星期一: 11:00 – 19:00', '星期二: 11:00 – 19:00', '星期三: 11:00 – 19:00', '星期四: 11:00 – 19:00', '星期五: 11:00 – 19:00', '星期六: 10:00 – 18:00', '星期日: 10:00 – 18:00'],
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3540,12 +3490,12 @@ var vet = {
             "eng_address":"G/F, San Wai Tsuen, Pui O, Lantau Island (opposite to San Wai Village Office)",
             "district":"大嶼山",
             "tel1":29840311,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3564,12 +3514,12 @@ var vet = {
             "eng_address":"Block B, G10, DB Plaza, Discovery Bay, Lantau Island",
             "district":"大嶼山",
             "tel1":29879003,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3588,12 +3538,12 @@ var vet = {
             "eng_address":"G/F, San Wai Tsuen, Pui O, Lantau Island (opposite to San Wai Village Office)",
             "district":"大嶼山",
             "tel1":34866100,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"H"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
@@ -3612,12 +3562,12 @@ var vet = {
             "eng_address":"G/F, 64 Main Street, Yung Shue Wan, Lamma Island",
             "district":"南丫島",
             "tel1":29822481,
-            "tel2":"-",
-            "tel3":"-",
+            "tel2":"",
+            "tel3":"",
             "website":"",
-            "remarks":"",
             "opening_hours":"",
-            "cat":"S"
+            "weekday_text":"",
+            "remarks":""
          },
          "geometry":{  
             "type":"Point",
