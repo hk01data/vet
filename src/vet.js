@@ -2876,8 +2876,8 @@ var vet = {
          "geometry":{  
             "type":"Point",
             "coordinates":[  
-               "",
-               ""
+               114.060212,
+               22.351111
             ]
          }
       },
@@ -2900,8 +2900,8 @@ var vet = {
          "geometry":{  
             "type":"Point",
             "coordinates":[  
-               "",
-               ""
+               114.046408,
+               22.477169
             ]
          }
       },
