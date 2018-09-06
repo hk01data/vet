@@ -38,6 +38,7 @@
                     <li id="opening_hour_title"><span class="fa-li"><i class="fas fa-clock fa-fw"></i></span>開放時間</li>
                 </ul>
                 <ul id="opening_hours"></ul>
+                <p id="remarks">備註：</p>
 
                 <a id="issueReport" href="#" target="_blank">資料有誤？請報料 ⟶</a>
             </div>
@@ -304,6 +305,9 @@
             if (prop["tel1"]) tele.innerHTML += prop["tel1"];
             if (prop["tel2"]) tele.innerHTML += "／" + prop["tel2"];
             if (prop["tel3"]) tele.innerHTML += "／" + prop["tel3"];
+            
+            if (prop["remarks"]) document.getElementById("remarks").textContent = "備註：" + (prop["remarks"]);
+
             var issueReport_url = `https://docs.google.com/forms/d/e/1FAIpQLSfb7iTwVeGGaSbER9PocNqhihbR3SVerUbW593ud5QhWiOFqA/viewform?usp=pp_url&entry.149864145=${prop["chi_name"]}&entry.759571823=${prop["chi_address"]}`;
             document.getElementById("issueReport").setAttribute("href", issueReport_url);
             document.getElementById("branchStatus").classList.add(branchStatus);
