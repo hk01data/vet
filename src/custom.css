@@ -1,5 +1,5 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+/* @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans'); */
 body {
     margin: 0;
     padding: 0;
@@ -17,19 +17,21 @@ body {
 }
 
 #mapid {
-    height: 100vh;
+    height: calc(100vh - 50px);
+}
+
+#vet-nav {
+    height:50px;
 }
 
 .card-header {
-    background-color: #f6f6f6;
+    background-color: #fff;
     padding: 1rem 2rem 0rem !important;
     border: none;
 }
 .card--custom {
-    left: 0;
-    right: 0;
     position: fixed;
-    background-color: #f6f6f6;
+    /* background-color: #f6f6f6; */
     z-index: 5010;
     visibility: visible;
     opacity: 1;
@@ -37,12 +39,11 @@ body {
     border-top-left-radius: 8px !important;
     border-top-right-radius: 8px !important;
     border: none;
-    line-height: 1.8rem;
 }
 
 .card-body {
     overflow-y: auto;
-    max-height: calc(100vh - 220px);
+    /* max-height: calc(100vh - 220px); */
     background: url(../images/hk01watermark.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -52,28 +53,110 @@ body {
 .card-footer {
     border: none !important;
     padding: .75rem 1.25rem !important;
-
 }
-@media only screen and (max-width: 835px) {
+
+@media only screen and (max-width: 700px) {
     .card--custom {
-        width: 100%;
         bottom: 0;
-        max-height: 60%;
+        height: 65%;
+        left: 0;
+        right: 0;
+        line-height: 1.8rem;
+        /* max-height: 100%; */
+        -webkit-transition: all .3s ease-in-out,top .3s ease-out; 
+        transition: all .3s ease-in-out,top .3s ease-out;
     }
+
+    .card--expanded:not(.card--hidden) {
+        bottom: 0;
+        height: calc(100% - 50px);
+        max-height: 100%;
+    }
+
+    .card--hidden {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all .5s ease-in-out,top .5s ease-out; 
+        transition: all .5s ease-in-out,top .5s ease-out;
+    }
+
+
+    .card-footer {
+        height: 50px;
+        padding: 0.05rem 1.25rem;
+        font-size: 0.9rem;
+        background-color: #F8F8F8;
+        visibility: visible;
+        border: none;
+        width: 100%;
+        /* position: fixed; */
+        position: relative;
+        /* bottom:0; */
+        z-index: 5020;
+        -webkit-transition: all .3s ease-in-out,top .3s ease-out; 
+        transition: all .3s ease-in-out,top .3s ease-out;
+    }
+
+    .card #branchStatus {
+        border-radius: 0.8rem;
+        font-size: 1rem;
+        padding: 6px 9px;
+        font-weight: 300;
+    }
+
+    .card #branchName {
+        margin-top: 0.5rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        display: block;
+        
+    }
+
+    
 }
 
-@media only screen and (min-width: 835px) {
+
+@media only screen and (min-width: 700px) {
     .card--custom {
-        max-width: 350px;
-        max-height: 80%;
-        top: 130px;
+        max-width: 400px;
+        max-height: 60%;
+        top: 200px;
         left: 10px;
+        font-size: 0.9rem;
+        line-height: 1.4rem;
         border-top-left-radius: 8px !important;
         border-top-right-radius: 8px !important;
         border-bottom-left-radius: 8px !important;
         border-bottom-right-radius: 8px !important;
     }
+
+    .card--hidden {
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all .5s ease-in-out,top .5s ease-out; 
+        transition: all .5s ease-in-out,top .5s ease-out;
+    }
+
+    .card #branchStatus {
+        border-radius: 0.6rem;
+        font-size: 0.5rem;
+        padding: 5px 5px;
+        font-weight: 300;
+    }
+
+    .card #branchName {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        display: block;
+    }
+    
+    .card-title {
+        margin-bottom: 0.3rem;
+    }
 }
+
 
 
 .close {
@@ -90,18 +173,8 @@ body {
     cursor: pointer;
 }
 
-.card-hidden {
-    opacity: 0;
-    visibility: hidden;
-    transition: visibility 0s 0.33s, opacity 0.33s linear;
-}
-
 .card #branchStatus {
-    padding: 1px 10px;
-    margin-bottom: 1rem;
-    border-radius: 0.8rem;
-    font-weight: 300;
-    display: inline-block;
+    display: inline;
     color: black;
 }
 
@@ -117,14 +190,8 @@ body {
     background: plum;
 }
 
-.card #branchName {
-    font-size: 1.6rem;
-    font-weight: 500;
-    display: block;
-    margin-bottom: .8rem;
-}
 
-.card .fas {
+.card .fas, .card .fab  {
     margin-right: 1rem;
 }
 
@@ -140,6 +207,54 @@ body {
 }
 
 #issueReport {
-    display: block;
     margin-top: 0.75rem;
+}
+
+
+.navbar {
+    padding: .5rem 0 .5rem 1rem !important;
+}
+
+.modal {
+    z-index: 5200 !important;
+}
+
+.nav_modal.modal-dialog {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+.nav_modal.modal-content {
+    border: none;
+    border-radius: 0;
+    height: 100%;
+}
+
+.inline_img {
+    height: 1rem;
+    margin: 0 5px;
+}
+
+
+svg.hk01logo_black {
+    height: 1.1rem;
+    margin: 0 0.25rem 0;
+}
+
+svg.hk01logo_black {
+    height: 1rem;
+    margin: 0 0.25rem 0;
+}
+
+.icon {
+    display: inline-flex;
+    align-self: center;
+}
+
+.icon.baseline svg, .icon img {
+    top: .15rem;
+    margin-right: 1rem;
+    position: relative;
 }
