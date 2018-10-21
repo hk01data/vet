@@ -6,6 +6,10 @@ body {
     font-family: 'Noto Sans TC', sans-serif;
 }
 
+a {
+    color: teal;
+}
+
 .leaflet-control-layers {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1rem;
@@ -258,3 +262,9 @@ svg.hk01logo_black {
     margin-right: 1rem;
     position: relative;
 }
+
+#navModal {
+    animation-duration: .1s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+  }
