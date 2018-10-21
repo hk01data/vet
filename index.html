@@ -481,17 +481,17 @@
                     close_method = 'button';
                 });
 
-                myModal.addEventListener('hide.bs.modal', function (event) {
-                    // Send Map Event
-                    fireEvent("psc_map_welcome", "close", {
-                        'close_method': close_method,
-                        'anonymous_id': getAnonymousId(),
-                        'ts': Date.now()
-                    });
+                // myModal.addEventListener('hide.bs.modal', function (event) {
+                //     // Send Map Event
+                //     fireEvent("psc_map_welcome", "close", {
+                //         'close_method': close_method,
+                //         'anonymous_id': getAnonymousId(),
+                //         'ts': Date.now()
+                //     });
 
-                    // Send Article PV if the map is embed into article
-                    if (entrySource == "article" | entrySource == "issue") fireArticlePV(removehash(window.location.href));
-                }, false);
+                //     // Send Article PV if the map is embed into article
+                //     if (entrySource == "article" | entrySource == "issue") fireArticlePV(removehash(window.location.href));
+                // }, false);
             // }
 
         }
