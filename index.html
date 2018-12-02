@@ -36,7 +36,7 @@
     <!-- Tracking -->
     <script src="https://tracking-lib.hk01.com/piwik/piwik.min.js"></script>
     <script src="https://tracking-lib.hk01.com/classic-piwik/trackerClient.lastest.js"></script>
-    <script src="src/trackEvent.js"></script>
+    <script src="src/trackEvent_staging.js"></script>
     <script src="https://www.googletagmanager.com/gtag/js"></script>
 
 </head>
@@ -143,7 +143,7 @@
         var vetLayer;
         var entrySource;
         var initialID = 0;
-        var currentID = -1;
+        var currentID = 1;
         var currentMkr = {};
         var card = document.querySelector('.card--custom');
         var defaultSizeIcon = L.Icon.extend({
@@ -381,8 +381,14 @@
                 <h6 id="branchStatus" class="${prop.status}">${
                 (prop.status == "noData") ? "沒有營業時間資料" : (prop.status == "active") ? " 營業中" : "休息"
                 }</h6>
+                <span class="head_box">
+					<span><a href="https://www.hk01.com/" target="_blank"><img src="images/64x64.png"></a></span>
+					<span><a href="https://www.hk01.com/" target="_blank"><img src="images/64x64.png"></a></span>
+				</span>
                 <h5 class="card-title">${prop.chi_name}</h5>
+                
             </div>
+            
             <div class="card-body">
                 <button type="button" class="close" id="close-card" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -394,7 +400,8 @@
                         <li><span class="fa-li"><i class="fas fa-phone fa-fw"></i></span>
                             ${prop.tel1}${(prop.tel2) ? '/' + prop.tel2 : ''}${(prop.tel3) ? '/' + prop.tel3 : ''}
                             </li>
-                        ${(prop.fb_page) ? `<li id="facebook"><span class="fa-li"><i class="fab fa-facebook fa-fw"></i></span><a href="${prop.fb_page}" target="_blank">Facebook</a></li>` : ''}
+                            ${(prop.website) ? `<li><span class="fa-li"><i class="fas fa-link fa-fw"></i></span><a href="${prop.website}" target="_blank">網站</a></li>` : ''}
+                            ${(prop.fb_page) ? `<li><span class="fa-li"><i class="fab fa-facebook fa-fw"></i></span><a href="${prop.fb_page}" target="_blank">Facebook</a></li>` : ''}
                         ${(prop.opening_hours) ? `<li id="opening_hour_title"><span class="fa-li"><i class="fas fa-clock fa-fw"></i></span>開放時間</li>` : ''}
                         
                     </ul>
@@ -406,9 +413,9 @@
 
                 </div>
             </div>
-            ${(prop.website) ? `<div class="card-footer">
-                <a id="branchWebsite" href="${prop.website}" target="_blank">前往網站 ⟶</a>
-            </div>`: ''}
+            ${`<div class="card-footer">
+                <a href="https://www.hk01.com/" target="_blank"><img src="images/260x64.png"></a>
+            </div>`}
             `;
 
 

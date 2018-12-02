@@ -5,3 +5,4 @@
 2. Add Ad
 3. Fix desktop marker pan location
 4. Add current Distict
+5. initial ID -1 problem

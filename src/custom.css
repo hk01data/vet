@@ -29,7 +29,6 @@ a {
 }
 
 
-
 #opening_hours {
     list-style-type: none;
     margin: 0;
@@ -140,8 +139,10 @@ svg.hk01logo_black {
     }
 
 .card-footer {
+    height: 64px;
+    text-align: center;
     border: none !important;
-    padding: .75rem 1.25rem !important;
+    padding: 0 !important;
 }
 
 @media only screen and (max-width: 700px) {
@@ -172,16 +173,11 @@ svg.hk01logo_black {
 
 
     .card-footer {
-        height: 50px;
-        padding: 0.05rem 1.25rem;
         font-size: 0.9rem;
-        background-color: #F8F8F8;
         visibility: visible;
         border: none;
         width: 100%;
-        /* position: fixed; */
         position: relative;
-        /* bottom:0; */
         z-index: 5020;
         -webkit-transition: all .3s ease-in-out,top .3s ease-out; 
         transition: all .3s ease-in-out,top .3s ease-out;
@@ -272,7 +268,6 @@ svg.hk01logo_black {
     background: plum;
 }
 
-
 .card .fas, .card .fab  {
     margin-right: 1rem;
 }
@@ -280,4 +275,8 @@ svg.hk01logo_black {
 .card #branchDetail {
     margin-left: 2rem;
     margin-bottom: 0;
+}
+
+.card .head_box {
+    float: right;
 }
