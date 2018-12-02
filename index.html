@@ -4,254 +4,421 @@
 <head>
 
     <meta charset='utf-8' />
-    <title>Hong Kong Veterinarian Map</title>
+    <title>獸醫診所地圖 | 香港01</title>
+    <meta name="author" content="香港01">
+    <meta name="description" content="全港27個體育會設施有幾多人用？每年收入有幾多？《香港01》逐一統計，透過這個互動地圖，「貴族俱樂部」的秘密，現在揭曉">
+    <meta name="publisher" content="HK01">
+
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="https://www.hk01.com/favicon.ico" />
+
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin="" />
+
+
     <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
-    <script src="src/vet.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <style>
-        @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
-        @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-        
-        #mapid {
-            height: 100vh;
-        }
-        
-        .card--custom {
-            left: 0;
-            right: 0;
-            position: fixed;
-            max-height: 40%;
-            background-color: #f6f6f6;
-            z-index: 5010;
-            visibility: visible;
-            visibility: visible;
-            opacity: 1;
-            transition: opacity 0.33s linear;
-            border-top-left-radius: 8px !important;
-            border-top-right-radius: 8px !important;
-            border: none;
-        }
-        
-        @media only screen and (max-width: 768px) {
-            .card--custom {
-                width: 100%;
-                bottom: 0;
-            }
-        }
-        
-        @media only screen and (min-width: 768px) {
-            .card--custom {
-                width: 55%;
-                max-width: 576px;
-                margin: 0 auto;
-                bottom: 3%;
-                border-top-left-radius: 8px !important;
-                border-top-right-radius: 8px !important;
-                border-bottom-left-radius: 8px !important;
-                border-bottom-right-radius: 8px !important;
-            }
-            .card-body {
-                padding: 1em 1rem 0.5em;
-                background: url(/images/hk01watermark.png);
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-        }
-        
-        .container>div {
-            border-bottom: 5px;
-            border-left: 2px solid transparent;
-        }
-        
-        .close {
-            float: right;
-            font-size: 1.5rem;
-            font-weight: 700;
-            line-height: 1;
-            color: #000;
-            text-shadow: 0 1px 0 #fff;
-            opacity: .5;
-            cursor: pointer;
-        }
-        
-        .card-hidden {
-            opacity: 0;
-            visibility: hidden;
-            transition: visibility 0s 0.33s, opacity 0.33s linear;
-        }
-    </style>
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+        crossorigin=""></script>
+    <script src="src/vet.js?v=20180906"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="src/custom.css?v=20180906">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+    <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+    <script src='src/bootstrap-native-v4.min.js'></script>
+    <link rel="stylesheet" href="src/animate.css" />
 </head>
 
 <body>
-    <div id='mapid'></div>
-    <div class="card card--custom card-hidden">
-        <div class="card-body">
-            <button type="button" class="close" id="close-card" data-dismiss="modal" aria-label="Close">
+
+    <!-- Welcome Modal -->
+    <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="welcomeModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title mx-auto" id="welcomeModal">香港01｜獸醫診所地圖</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-            <div class="container">
-                <h5 class="card-title" id="branchName">Card title</h5>
-                <div>
-                    <i class="fas fa-phone-volume"></i><span class="text-secondary" id="telephone"></span></div>
-                <div>
-                    <i class="fas fa-map-marker-alt"></i><span class="text-secondary" id="addrName">district</span>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p>這是教學</p>
+                        <ul class="list-unstyled list-inline">
+                                <li class="list-inline-item"></li><img src="icon/green.png" class="inline_img">營業中</li>
+                                <li class="list-inline-item"></li><img src="icon/brown.png" class="inline_img">休息</li>
+                                <li class="list-inline-item"></li><img src="icon/grey.png" class="inline_img">沒有資料</li>
+                            </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger mx-auto" data-dismiss="modal">好的</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Attribution Modal -->
+    <div class="modal fade" id="attributionModal" tabindex="-1" role="dialog" aria-labelledby="attributionModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centegreen" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="attributionModal">獸醫診所地圖</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5>資料來源</h5>
+                    <ul class="list-unstyled">
+                        <li>漁護署獸醫診所名單</li>
+                        <li>Google 地圖</li>
+                    </ul>
+                    <p>註：此地圖只涵蓋已簽署同意被列入漁護署「獸醫診所名單」的獸醫診所，未必包括全港所有診所。</p>
+                    <p>最後更新：2018年9月10日</p>
+                    <p>工具：<a href="https://leafletjs.com/" target="_blank">Leaflet</a>, &copy; <a href="https://www.openstreetmap.org/copyright"
+                            target="_blank">OpenStreetMap</a></p>
+
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Menu Modal -->
+    <!-- Check this for effect:  https://stackoverflow.com/questions/32168234/change-the-bootstrap-modal-effect -->
+    <div class="modal animated slideInRight" id="navModal" tabindex="-1" role="dialog" aria-labelledby="navModal" aria-hidden="true">
+        <div class="modal-dialog nav_modal" role="document">
+            <div class="modal-content nav_modal">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="navModal">獸醫診所地圖</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item"></li><img src="icon/green.png" class="inline_img">營業中</li>
+                        <li class="list-inline-item"></li><img src="icon/brown.png" class="inline_img">休息</li>
+                        <li class="list-inline-item"></li><img src="icon/grey.png" class="inline_img">沒有資料</li>
+                    </ul>
+                    <ul class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action attribution" data-toggle="modal" data-target="#attributionModal">資料來源</a>
+                        <a href="https://www.facebook.com/hk01.anistoryhk/" target="_blank" class="list-group-item list-group-item-action">毛孩子：我們的故事</a>
+                    </ul>
+                </div>
+                <div class="modal-footer">香港01有限公司版權所有 © 2018</div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-light bg-light" id="vet-nav">
+        <a class="navbar-brand" href="#"><div class="icon baseline"><svg class="hk01logo_black" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 104 59"><g stroke="none" fill-rule="evenodd">
+                        <path d="M91.51 15.136v37.706a5.839 5.839 0 0 0 11.677 0V1.22L91.51 15.136zM45.055 57.047l8.367-9.97C42.13 46.156 33.84 34.63 38.547 22.472c1.684-4.348 5.187-7.782 9.551-9.418 10.956-4.107 21.355 2.307 23.877 11.912l8.358-9.96v-.003C73.773 3.482 59.631-3.16 44.689 1.907 36.592 4.654 30.17 11.017 27.38 19.1c-5.837 16.911 3.346 32.845 17.667 37.95.003 0 .006 0 .007-.002M54.382 58.74c16.4.272 29.776-12.939 29.776-29.274 0-1.906-.188-3.769-.536-5.573L54.382 58.74zM11.103 40.445h3.285v-2.562h-3.285v2.562zm3.149 1.812h-2.65l-1.225 2.04h5.099l-1.224-2.04zm-4.304 6.3h5.822V46.11H9.948v2.447zm8.88-1.134v2.947h-8.88v1.88h10.58l-.883 1.813H6.888v-6.64H5.167l3.058-5.166H5.189v-1.812h2.854v-2.562H5.665v-1.811h2.378v-1.858h3.06v1.858h3.285v-1.858h3.06v1.858h2.4v1.811h-2.4v2.562h2.9v1.812h-2.72l3.059 5.166h-1.858zM2.402 45.158L.25 39.856h3.24l2.153 5.302h-3.24zm.794 8.905H.046l2.106-8.044h3.15l-2.107 8.044zm-.839-14.955L0 34.19h3.24l2.357 4.917h-3.24zM4.668 24.243h11.306V22.52H4.668v1.723zm0-3.49h11.306v-1.7H4.668v1.7zm7.183-8.7v4.713H8.79v-4.713H.453v-1.768h8.338V8.858H.974V7.09h15.68l.317-.951h3.195l-.93 2.719h-7.385v1.427h8.315v1.768H11.85zm7.182 5.822v8.135H1.609v-8.135H.023l3.421-5.052h3.512l-3.014 4.464h12.802l-3.058-4.464h3.511l3.467 5.052h-1.631z"></path>
+                    </g></svg></div>獸醫診所地圖</a>
+        <button class="navbar-toggler animated slideInRight faster" type="button" data-toggle="modal" data-target="#navModal" aria-controls="navModal"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+    </nav>
+
+    <div id='mapid'></div>
+    <div class="card card--custom card--hidden"></div>
 
     <script>
-        var mymap = L.map('mapid', {
-            center: (screen.width >= 768) ? [22.367949, 114.103668] : [22.309763, 114.179704],
-            // [22.367949, 114.103668],
-            zoom: (screen.width >= 768) ? 10 : 9,
+        // welcome();
+        var vetmap = L.map('mapid', {
+            center: (screen.width >= 768) ? [22.316538, 114.174007] : [22.316538, 114.174007],
+            zoom: (screen.width >= 768) ? 14 : 13,
+            zoomSnap: 0.25,
             maxBounds: ([
-                [22.868269, 113.073929],
-                [21.795661, 114.940146]
+                [21.795661, 113.073929],
+                [23.113786, 115.230749]
             ]),
+            attributionControl: false,
+            keyboard: false // Prevent jumping in iframe
         });
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        var osm = L.tileLayer('https://maptile.hk01.com/tile/{z}/{x}/{y}.png', {
             maxZoom: 18,
-            minZoom: 9,
-            id: 'mapbox.streets',
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | 資料截至2018年X月X日'
-        }).addTo(mymap);
+            minZoom: 10
+        }).addTo(vetmap);
 
-        var green = L.icon({
-            iconUrl: 'icon/green_dot.png',
-            iconSize: [12, 12]
-        });
-
-        var brown = L.icon({
-            iconUrl: 'icon/brown_dot.png',
-            iconSize: [12, 12]
-        });
-
-        s_lay = L.geoJSON(vet, {
-            onEachFeature: onEachFeature,
-
-            pointToLayer: function(geoJsonPoint, latlng) {
-                return L.marker(latlng, {
-                    icon: brown
-                });
-            },
-            filter: function(geoJsonFeature) {
-                return geoJsonFeature.properties.cat == 'S';
-            },
-        }).addTo(mymap);
-
-        h_lay = L.geoJSON(vet, {
-            onEachFeature: onEachFeature,
-            pointToLayer: function(geoJsonPoint, latlng) {
-                return L.marker(latlng, {
-                    icon: green
-                });
-            },
-            filter: function(geoJsonFeature) {
-                return geoJsonFeature.properties.cat == 'H';
+        var defaultSizeIcon = L.Icon.extend({
+            options: {
+                iconSize: [25, 25]
             }
-        }).addTo(mymap);
+        });
 
-        var overlayMaps = {
-            "s": s_lay,
-            "h": h_lay
-        };
+        var smallSizeIcon = L.Icon.extend({
+            options: {
+                iconSize: [12, 12]
+            }
+        });
 
-        L.control.layers({}, overlayMaps, {
+        var mediumSizeIcon = L.Icon.extend({
+            options: {
+                iconSize: [35, 35]
+            }
+        });
+
+        var largeSizeIcon = L.Icon.extend({
+            options: {
+                iconSize: [45, 45]
+            }
+        });
+
+        var green = new defaultSizeIcon({iconUrl: 'icon/green.png'});
+        var brown = new defaultSizeIcon({iconUrl: 'icon/brown.png'});
+        var grey = new defaultSizeIcon({iconUrl: 'icon/grey.png'});
+        
+        vet.features.forEach(feature => 
+            feature.properties.status = calcBranchstatus(feature)
+        );
+
+        var vetLayer = L.geoJSON(vet, {
+            onEachFeature: onEachFeature,
+            pointToLayer: function (feature, latlng) {
+                let options = {};
+                switch (feature["properties"]["status"]) {
+                    case 'active':
+                        options.icon = green;
+                        break;
+                    case 'inActive':
+                        options.icon = brown;
+                        break;
+                    case 'noData':
+                        options.icon = grey;
+                        break;
+                }
+                return L.marker(latlng, options);
+            }
+        }).addTo(vetmap);
+
+        L.control.locate({
             collapsed: false,
-            position: 'topright'
-        }).addTo(mymap);
+            position: 'topleft',
+            setView: false,
+            flyTo: true,
+            showPopup: false
+        }).addTo(vetmap);
 
-        mymap.on('zoomend', function() {
-            var currentZoom = mymap.getZoom();
-            console.log(currentZoom);
-            if (currentZoom >= 12 && currentZoom < 14) {
-                green = L.icon({
-                    iconUrl: 'icon/green.png',
-                    iconSize: [20, 20]
+        function calDistance(loca_info) {
+            var options = {
+                units: 'kilometers'
+            };
+
+            vet.features.forEach(function (f) {
+                Object.defineProperty(f.properties, 'distance', {
+                    value: turf.distance(loca_info, f.geometry, options),
+                    writable: true,
+                    enumerable: true,
+                    configurable: true
                 });
-                brown = L.icon({
-                    iconUrl: 'icon/brown.png',
-                    iconSize: [20, 20]
-                });
+            })
+
+            vet.features.sort(function (a, b) {
+                if (a.properties.distance > b.properties.distance) {
+                    return 1;
+                }
+                if (a.properties.distance < b.properties.distance) {
+                    return -1;
+                }
+                // a must be equal to b
+                return 0;
+            });
+
+        }
+
+        vetmap.once('locationfound', function (e) {
+            var glatlng = [e.latlng.lng, e.latlng.lat];
+            calDistance(glatlng);
+
+            var line = turf.lineString([vet.features[3].geometry.coordinates, glatlng]); // Closest 3 features
+            var bbox = turf.bbox(line);
+
+            temp_bound = [[bbox[1], bbox[0]], [bbox[3], bbox[2]]];
+
+            vetmap.fitBounds(temp_bound, {
+                padding: [80, 80]
+            });
+        });
+
+        vetmap.on('zoomend', function () {
+            var currentZoom = vetmap.getZoom();
+            if (currentZoom >= 11.5 && currentZoom < 14) {
+                green = new defaultSizeIcon({iconUrl: 'icon/green.png'});
+                brown = new defaultSizeIcon({iconUrl: 'icon/brown.png'});
+                grey = new defaultSizeIcon({iconUrl: 'icon/grey.png'});
             } else if (currentZoom >= 14 && currentZoom < 15) {
-                green = L.icon({
-                    iconUrl: 'icon/green.png',
-                    iconSize: [30, 30]
-                });
-                brown = L.icon({
-                    iconUrl: 'icon/brown.png',
-                    iconSize: [30, 30]
-                });
+                green = new mediumSizeIcon({iconUrl: 'icon/green.png'});
+                brown = new mediumSizeIcon({iconUrl: 'icon/brown.png'});
+                grey = new mediumSizeIcon({iconUrl: 'icon/grey.png'});
             } else if (currentZoom >= 15) {
-                green = L.icon({
-                    iconUrl: 'icon/green.png',
-                    iconSize: [40, 40]
-                });
-                brown = L.icon({
-                    iconUrl: 'icon/brown.png',
-                    iconSize: [40, 40]
-                });
+                green = new largeSizeIcon({iconUrl: 'icon/green.png'});
+                brown = new largeSizeIcon({iconUrl: 'icon/brown.png'});
+                grey = new largeSizeIcon({iconUrl: 'icon/grey.png'});
             } else {
-                green = L.icon({
-                    iconUrl: 'icon/green_dot.png',
-                    iconSize: [12, 12]
-                });
-                brown = L.icon({
-                    iconUrl: 'icon/brown_dot.png',
-                    iconSize: [12, 12]
-                });
+                green = new smallSizeIcon({iconUrl: 'icon/green_dot.png'});
+                brown = new smallSizeIcon({iconUrl: 'icon/brown_dot.png'});
+                grey = new smallSizeIcon({iconUrl: 'icon/grey_dot.png'});
             }
-            h_lay.eachLayer(mkr => mkr.setIcon(green));
-            s_lay.eachLayer(mkr => mkr.setIcon(brown));
+            
+            vetLayer.eachLayer(mkr => {
+                switch (mkr.feature["properties"]["status"]) {
+                    case 'active':
+                        icon = green;
+                        break;
+                    case 'inActive':
+                        icon = brown;
+                        break;
+                    case 'noData':
+                        icon = grey;
+                        break;
+                }
+                mkr.setIcon(icon);
+            });
         })
 
-        var card = document.querySelector('.card');
+        var card = document.querySelector('.card--custom');
+        // card.addEventListener('click', () => {
+        //     if ()
+        //     card.style.maxHeight = "100%";
+        //     card.style.height = "100%";
+        // });
 
         function onEachFeature(feature, layer) {
             layer.on({
                 click: pop_info
             })
         }
+        
 
-        function pop_info(e) {
-            console.log(e.target);
-            mymap.panTo([e.target.feature.geometry.coordinates[1], e.target.feature.geometry.coordinates[0]], {
-                offset: [0, -45]
-            });
-            prop = e['target']["feature"]["properties"];
-            document.getElementById("branchName").textContent = prop["獸醫診所名稱"];
-            document.getElementById("addrName").textContent = (prop["營業地址"]) ? prop["營業地址"] : "没有提供";
-            var tele = document.getElementById("telephone");
-            tele.innerHTML = "";
-            if (prop["營業電話號碼1"] != "-") {
-                tele.innerHTML += prop["營業電話號碼1"] + ";";
-                //+'&nbsp;'
-            }
-            if (prop["營業電話號碼2"] != "-") {
-                tele.innerHTML += prop["營業電話號碼2"] + ";";
-            }
-            if (prop["營業電話號碼3"] != "-") {
-                tele.innerHTML += prop["營業電話號碼3"] + ";";
-            }
-            card.classList.remove("card-hidden");
+        function calcBranchstatus(feature) {
+            // Return if no information
+            if (feature.properties["opening_hours"] == "") return "noData";
+            let date = new Date();
+            let weekDay = date.getDay();
+            let time = date.getHours() * 100 + date.getMinutes();
+            let periods = feature.properties["opening_hours"];
+            let filValue = "inActive";
+            periods.forEach(days => {
+                // Always Open
+                if (days['open']['day'] == 0 && days['open']['time'] == '0000' && days['close'] == null) return filValue = "active";
+                if (days['open']['day'] == weekDay) {
+                    let open = parseInt(days['open']['time']);
+                    let close = parseInt(days['close']['time']);
+                    if (time >= open && time <= close) {
+                        filValue = "active";
+                    }
+                }
+            })
+            return filValue;
         }
 
-        var closeCard = document.querySelector('#close-card');
-        closeCard.addEventListener('click', () => {
-            card.classList.add("card-hidden");
+        function pop_info(e) {
+            prop = e['target']["feature"]["properties"];
+            //offset the centre
+            bounds = vetmap.getBounds();
+            lat_bounds = bounds._northEast.lat - bounds._southWest.lat;
+            var centre = e.target.feature.geometry.coordinates //.reverse();
+            vetmap.panTo([centre[1] - lat_bounds * 0.3, centre[0]]);
+            
+            card.innerHTML = `
+         <div class="card-header">
+             <h6 id="branchStatus" class="${prop.status}">${
+                (prop.status == "noData") ? "沒有營業時間資料" : (prop.status == "active") ? " 營業中" : "休息"
+                }</h6>
+            <h5 class="card-title">${prop.chi_name}</h5>
+        </div>
+        <div class="card-body">
+            <button type="button" class="close" id="close-card" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="card-text">
+                <ul class="fa-ul" id="branchDetail">
+                    <li><span class="fa-li"><i class="fas fa-map-marker-alt fa-fw"></i></span><span id="cal_distance"></span></li>
+                    <li><span class="fa-li"><i class="fas fa-map-marker-alt fa-fw"></i></span>${prop.chi_address}</li>
+                    <li><span class="fa-li"><i class="fas fa-phone fa-fw"></i></span>
+                        ${prop.tel1}${(prop.tel2)? '/' + prop.tel2 : ''}${(prop.tel3)? '/' + prop.tel3 : ''}
+                        </li>
+                    ${(prop.fb_page) ? `<li id="facebook"><span class="fa-li"><i class="fab fa-facebook fa-fw"></i></span><a href="${prop.fb_page}" target="_blank">Facebook</a></li>` : ''}
+                    <li id="opening_hour_title"><span class="fa-li"><i class="fas fa-clock fa-fw"></i></span>開放時間</li>
+                </ul>
+                ${(prop.weekday_text)? `<ul id="opening_hours">${prop.weekday_text.map(
+                    day => `<li>${day}</li>`.trim()).join('')}</ul>`: ''}
+                <p id="remarks"></p>
+
+                <a id="issueReport" href="#" target="_blank">資料有誤？請報料 ⟶</a>
+
+            </div>
+        </div>
+        ${(prop.website) ? `<div class="card-footer">
+            <a id="branchWebsite" href="${prop.website}" target="_blank">前往網站 ⟶</a>
+        </div>`:''}
+        
+    `;
+
+            var closeCard = document.querySelector('#close-card');
+            closeCard.addEventListener('click', (event) => {
+                card.classList.remove('card--expanded');
+                card.classList.add("card--hidden");
+                event.stopPropagation();
+            });
+
+            card.classList.remove("card--hidden");
+        }
+
+        
+
+
+        var card = document.querySelector('.card--custom');
+        card.addEventListener('click', (event) => {
+            event.stopPropagation();
+            if (matchMedia('screen and (max-width: 700px)').matches) {
+                card.classList.toggle('card--expanded');
+            }
         });
+
+        var allLink = document.querySelectorAll('a');
+        allLink.forEach(item => {
+            item.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+        });
+
+    function welcome() {
+            // if (initialID == 0) {
+                var myModal = document.getElementById('welcomeModal');
+
+                var options = { backdrop: true }
+                // OR initialize and show the modal right away
+                var myModalInstance = new Modal(myModal, options);
+                myModalInstance.show();
+
+                var close_method = 'backdrop';
+                document.querySelector('#welcomeModal .btn').addEventListener('click', function () {
+                    close_method = 'button';
+                });
+
+                // myModal.addEventListener('hide.bs.modal', function (event) {
+                //     // Send Map Event
+                //     fireEvent("psc_map_welcome", "close", {
+                //         'close_method': close_method,
+                //         'anonymous_id': getAnonymousId(),
+                //         'ts': Date.now()
+                //     });
+
+                //     // Send Article PV if the map is embed into article
+                //     if (entrySource == "article" | entrySource == "issue") fireArticlePV(removehash(window.location.href));
+                // }, false);
+            // }
+
+        }
     </script>
 
 </body>
