@@ -24,7 +24,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="src/custom.css?v=20180906">
+    <link rel="stylesheet" href="src/custom.css?v=20181202">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
@@ -201,7 +201,6 @@
 
             callback(initialID);
         }
-
 
         detectSource(initMap);
 
@@ -414,7 +413,7 @@
 
 
 
-            var closeCard = document.querySelector('#close-card');
+            let closeCard = document.querySelector('#close-card');
             // User close card
             closeCard.addEventListener('click', (event) => {
                 card.classList.remove('card--expanded');
@@ -498,20 +497,6 @@
             document.querySelector('#welcomeModal .btn').addEventListener('click', function () {
                 close_method = 'button';
             });
-
-            // myModal.addEventListener('hide.bs.modal', function (event) {
-            //     // Send Map Event
-            //     fireEvent("psc_map_welcome", "close", {
-            //         'close_method': close_method,
-            //         'anonymous_id': getAnonymousId(),
-            //         'ts': Date.now()
-            //     });
-
-            //     // Send Article PV if the map is embed into article
-            //     if (entrySource == "article" | entrySource == "issue") fireArticlePV(removehash(window.location.href));
-            // }, false);
-            // }
-
         }
     </script>
 
