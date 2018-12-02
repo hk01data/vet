@@ -141,6 +141,9 @@
         // Global Variable
         var vetClinicMap;
         var vetLayer;
+        var entrySource;
+        var initialID = 0;
+        var currentID = -1;
         var currentMkr = {};
         var card = document.querySelector('.card--custom');
         var defaultSizeIcon = L.Icon.extend({
@@ -363,12 +366,15 @@
 
 
         function popCard(e) {
+            let stateObj = { playground_id: currentID };
+            window.history.pushState(stateObj, "", `#${entrySource}&id=${currentID}`);
+
             currentMkr = e.target.feature;
             let prop = currentMkr["properties"];
             //offset the centre
             bounds = vetClinicMap.getBounds();
             lat_bounds = bounds._northEast.lat - bounds._southWest.lat;
-            var centre = e.target.feature.geometry.coordinates //.reverse();
+            let centre = currentMkr.geometry.coordinates //.reverse();
             vetClinicMap.panTo([centre[1] - lat_bounds * 0.3, centre[0]]);
 
             card.innerHTML = `
