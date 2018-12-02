@@ -390,7 +390,8 @@
                             ${prop.tel1}${(prop.tel2) ? '/' + prop.tel2 : ''}${(prop.tel3) ? '/' + prop.tel3 : ''}
                             </li>
                         ${(prop.fb_page) ? `<li id="facebook"><span class="fa-li"><i class="fab fa-facebook fa-fw"></i></span><a href="${prop.fb_page}" target="_blank">Facebook</a></li>` : ''}
-                        <li id="opening_hour_title"><span class="fa-li"><i class="fas fa-clock fa-fw"></i></span>開放時間</li>
+                        ${(prop.opening_hours) ? `<li id="opening_hour_title"><span class="fa-li"><i class="fas fa-clock fa-fw"></i></span>開放時間</li>` : ''}
+                        
                     </ul>
                     ${(prop.weekday_text) ? `<ul id="opening_hours">${prop.weekday_text.map(
                     day => `<li>${day}</li>`.trim()).join('')}</ul>` : ''}
