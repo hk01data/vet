@@ -2,7 +2,6 @@
 <html>
 
 <head>
-
     <meta charset='utf-8' />
     <title>獸醫診所地圖 | 香港01</title>
     <meta name="author" content="香港01">
@@ -32,34 +31,42 @@
     <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
     <script src='src/bootstrap-native-v4.min.js'></script>
     <link rel="stylesheet" href="src/animate.css" />
+
+
+    <!-- Tracking -->
+    <script src="https://tracking-lib.hk01.com/piwik/piwik.min.js"></script>
+    <script src="https://tracking-lib.hk01.com/classic-piwik/trackerClient.lastest.js"></script>
+    <script src="src/trackEvent.js"></script>
+    <script src="https://www.googletagmanager.com/gtag/js"></script>
+
 </head>
 
 <body>
 
     <!-- Welcome Modal -->
     <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="welcomeModal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title mx-auto" id="welcomeModal">香港01｜獸醫診所地圖</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <p>這是教學</p>
-                        <ul class="list-unstyled list-inline">
-                                <li class="list-inline-item"></li><img src="icon/green.png" class="inline_img">營業中</li>
-                                <li class="list-inline-item"></li><img src="icon/brown.png" class="inline_img">休息</li>
-                                <li class="list-inline-item"></li><img src="icon/grey.png" class="inline_img">沒有資料</li>
-                            </ul>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger mx-auto" data-dismiss="modal">好的</button>
-                    </div>
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mx-auto" id="welcomeModal">香港01｜獸醫診所地圖</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <p>這是教學</p>
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item"></li><img src="icon/green.png" class="inline_img">營業中</li>
+                        <li class="list-inline-item"></li><img src="icon/brown.png" class="inline_img">休息</li>
+                        <li class="list-inline-item"></li><img src="icon/grey.png" class="inline_img">沒有資料</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger mx-auto" data-dismiss="modal">好的</button>
                 </div>
             </div>
         </div>
+    </div>
 
     <!-- Attribution Modal -->
     <div class="modal fade" id="attributionModal" tabindex="-1" role="dialog" aria-labelledby="attributionModal" aria-hidden="true">
@@ -131,23 +138,11 @@
     <div class="card card--custom card--hidden"></div>
 
     <script>
-        // welcome();
-        var vetmap = L.map('mapid', {
-            center: (screen.width >= 768) ? [22.316538, 114.174007] : [22.316538, 114.174007],
-            zoom: (screen.width >= 768) ? 14 : 13,
-            zoomSnap: 0.25,
-            maxBounds: ([
-                [21.795661, 113.073929],
-                [23.113786, 115.230749]
-            ]),
-            attributionControl: false,
-            keyboard: false // Prevent jumping in iframe
-        });
-        var osm = L.tileLayer('https://maptile.hk01.com/tile/{z}/{x}/{y}.png', {
-            maxZoom: 18,
-            minZoom: 10
-        }).addTo(vetmap);
-
+        // Global Variable
+        var vetClinicMap;
+        var vetLayer;
+        var currentMkr = {};
+        var card = document.querySelector('.card--custom');
         var defaultSizeIcon = L.Icon.extend({
             options: {
                 iconSize: [25, 25]
@@ -172,32 +167,84 @@
             }
         });
 
-        var green = new defaultSizeIcon({iconUrl: 'icon/green.png'});
-        var brown = new defaultSizeIcon({iconUrl: 'icon/brown.png'});
-        var grey = new defaultSizeIcon({iconUrl: 'icon/grey.png'});
-        
-        vet.features.forEach(feature => 
-            feature.properties.status = calcBranchstatus(feature)
-        );
+        var green = new defaultSizeIcon({ iconUrl: 'icon/green.png' });
+        var brown = new defaultSizeIcon({ iconUrl: 'icon/brown.png' });
+        var grey = new defaultSizeIcon({ iconUrl: 'icon/grey.png' });
 
-        var vetLayer = L.geoJSON(vet, {
-            onEachFeature: onEachFeature,
-            pointToLayer: function (feature, latlng) {
-                let options = {};
-                switch (feature["properties"]["status"]) {
-                    case 'active':
-                        options.icon = green;
-                        break;
-                    case 'inActive':
-                        options.icon = brown;
-                        break;
-                    case 'noData':
-                        options.icon = grey;
-                        break;
-                }
-                return L.marker(latlng, options);
+        function detectSource(callback) {
+            let linkText = window.location.href;
+            console.log(linkText);
+            entrySource = (linkText.match(/#/)) ? linkText.match(/#(.*?)(&|$|\?)/)[1] : "organic";
+            initialID = (linkText.match(/&id=/)) ? parseInt(linkText.match(/&id=(\d+)/)[1]) : 0;
+
+            switch (entrySource) {
+                case "article":
+                case "base":
+                case "issue":
+                    break;
+                default:
+                    entrySource = "organic";
+                    fireArticlePV(removehash(window.location.href));
             }
-        }).addTo(vetmap);
+
+            console.log(entrySource + " | initialID: " + initialID);
+
+            fireEvent("vetmap_landing", "view", {
+                'start_mode': entrySource,
+                'anonymous_id': getAnonymousId(),
+                'session_id': '',
+                'ts': Date.now()
+            });
+
+            callback(initialID);
+        }
+
+
+        detectSource(initMap);
+
+        function initMap(initialID) {
+            // welcome();
+
+            vet.features.forEach(feature =>
+                feature.properties.status = calcBranchstatus(feature)
+            );
+
+            vetClinicMap = L.map('mapid', {
+                center: (screen.width >= 768) ? [22.316538, 114.174007] : [22.316538, 114.174007],
+                zoom: (screen.width >= 768) ? 14 : 13,
+                zoomSnap: 0.25,
+                maxBounds: ([
+                    [21.795661, 113.073929],
+                    [23.113786, 115.230749]
+                ]),
+                attributionControl: false,
+                keyboard: false // Prevent jumping in iframe
+            });
+
+            L.tileLayer('https://maptile.hk01.com/tile/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                minZoom: 10
+            }).addTo(vetClinicMap);
+
+            vetLayer = L.geoJSON(vet, {
+                onEachFeature: onEachFeature,
+                pointToLayer: function (feature, latlng) {
+                    let options = {};
+                    switch (feature["properties"]["status"]) {
+                        case 'active':
+                            options.icon = green;
+                            break;
+                        case 'inActive':
+                            options.icon = brown;
+                            break;
+                        case 'noData':
+                            options.icon = grey;
+                            break;
+                    }
+                    return L.marker(latlng, options);
+                }
+            }).addTo(vetClinicMap);
+        }
 
         L.control.locate({
             collapsed: false,
@@ -205,7 +252,7 @@
             setView: false,
             flyTo: true,
             showPopup: false
-        }).addTo(vetmap);
+        }).addTo(vetClinicMap);
 
         function calDistance(loca_info) {
             var options = {
@@ -234,7 +281,7 @@
 
         }
 
-        vetmap.once('locationfound', function (e) {
+        vetClinicMap.once('locationfound', function (e) {
             var glatlng = [e.latlng.lng, e.latlng.lat];
             calDistance(glatlng);
 
@@ -243,31 +290,31 @@
 
             temp_bound = [[bbox[1], bbox[0]], [bbox[3], bbox[2]]];
 
-            vetmap.fitBounds(temp_bound, {
+            vetClinicMap.fitBounds(temp_bound, {
                 padding: [80, 80]
             });
         });
 
-        vetmap.on('zoomend', function () {
-            var currentZoom = vetmap.getZoom();
+        vetClinicMap.on('zoomend', function () {
+            var currentZoom = vetClinicMap.getZoom();
             if (currentZoom >= 11.5 && currentZoom < 14) {
-                green = new defaultSizeIcon({iconUrl: 'icon/green.png'});
-                brown = new defaultSizeIcon({iconUrl: 'icon/brown.png'});
-                grey = new defaultSizeIcon({iconUrl: 'icon/grey.png'});
+                green = new defaultSizeIcon({ iconUrl: 'icon/green.png' });
+                brown = new defaultSizeIcon({ iconUrl: 'icon/brown.png' });
+                grey = new defaultSizeIcon({ iconUrl: 'icon/grey.png' });
             } else if (currentZoom >= 14 && currentZoom < 15) {
-                green = new mediumSizeIcon({iconUrl: 'icon/green.png'});
-                brown = new mediumSizeIcon({iconUrl: 'icon/brown.png'});
-                grey = new mediumSizeIcon({iconUrl: 'icon/grey.png'});
+                green = new mediumSizeIcon({ iconUrl: 'icon/green.png' });
+                brown = new mediumSizeIcon({ iconUrl: 'icon/brown.png' });
+                grey = new mediumSizeIcon({ iconUrl: 'icon/grey.png' });
             } else if (currentZoom >= 15) {
-                green = new largeSizeIcon({iconUrl: 'icon/green.png'});
-                brown = new largeSizeIcon({iconUrl: 'icon/brown.png'});
-                grey = new largeSizeIcon({iconUrl: 'icon/grey.png'});
+                green = new largeSizeIcon({ iconUrl: 'icon/green.png' });
+                brown = new largeSizeIcon({ iconUrl: 'icon/brown.png' });
+                grey = new largeSizeIcon({ iconUrl: 'icon/grey.png' });
             } else {
-                green = new smallSizeIcon({iconUrl: 'icon/green_dot.png'});
-                brown = new smallSizeIcon({iconUrl: 'icon/brown_dot.png'});
-                grey = new smallSizeIcon({iconUrl: 'icon/grey_dot.png'});
+                green = new smallSizeIcon({ iconUrl: 'icon/green_dot.png' });
+                brown = new smallSizeIcon({ iconUrl: 'icon/brown_dot.png' });
+                grey = new smallSizeIcon({ iconUrl: 'icon/grey_dot.png' });
             }
-            
+
             vetLayer.eachLayer(mkr => {
                 switch (mkr.feature["properties"]["status"]) {
                     case 'active':
@@ -285,18 +332,12 @@
         })
 
         var card = document.querySelector('.card--custom');
-        // card.addEventListener('click', () => {
-        //     if ()
-        //     card.style.maxHeight = "100%";
-        //     card.style.height = "100%";
-        // });
 
         function onEachFeature(feature, layer) {
             layer.on({
-                click: pop_info
+                click: popCard
             })
         }
-        
 
         function calcBranchstatus(feature) {
             // Return if no information
@@ -320,67 +361,113 @@
             return filValue;
         }
 
-        function pop_info(e) {
-            prop = e['target']["feature"]["properties"];
+
+        function popCard(e) {
+            currentMkr = e.target.feature;
+            let prop = currentMkr["properties"];
             //offset the centre
-            bounds = vetmap.getBounds();
+            bounds = vetClinicMap.getBounds();
             lat_bounds = bounds._northEast.lat - bounds._southWest.lat;
             var centre = e.target.feature.geometry.coordinates //.reverse();
-            vetmap.panTo([centre[1] - lat_bounds * 0.3, centre[0]]);
-            
+            vetClinicMap.panTo([centre[1] - lat_bounds * 0.3, centre[0]]);
+
             card.innerHTML = `
-         <div class="card-header">
-             <h6 id="branchStatus" class="${prop.status}">${
+            <div class="card-header">
+                <h6 id="branchStatus" class="${prop.status}">${
                 (prop.status == "noData") ? "沒有營業時間資料" : (prop.status == "active") ? " 營業中" : "休息"
                 }</h6>
-            <h5 class="card-title">${prop.chi_name}</h5>
-        </div>
-        <div class="card-body">
-            <button type="button" class="close" id="close-card" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <div class="card-text">
-                <ul class="fa-ul" id="branchDetail">
-                    <li><span class="fa-li"><i class="fas fa-map-marker-alt fa-fw"></i></span><span id="cal_distance"></span></li>
-                    <li><span class="fa-li"><i class="fas fa-map-marker-alt fa-fw"></i></span>${prop.chi_address}</li>
-                    <li><span class="fa-li"><i class="fas fa-phone fa-fw"></i></span>
-                        ${prop.tel1}${(prop.tel2)? '/' + prop.tel2 : ''}${(prop.tel3)? '/' + prop.tel3 : ''}
-                        </li>
-                    ${(prop.fb_page) ? `<li id="facebook"><span class="fa-li"><i class="fab fa-facebook fa-fw"></i></span><a href="${prop.fb_page}" target="_blank">Facebook</a></li>` : ''}
-                    <li id="opening_hour_title"><span class="fa-li"><i class="fas fa-clock fa-fw"></i></span>開放時間</li>
-                </ul>
-                ${(prop.weekday_text)? `<ul id="opening_hours">${prop.weekday_text.map(
-                    day => `<li>${day}</li>`.trim()).join('')}</ul>`: ''}
-                <p id="remarks"></p>
-
-                <a id="issueReport" href="#" target="_blank">資料有誤？請報料 ⟶</a>
-
+                <h5 class="card-title">${prop.chi_name}</h5>
             </div>
-        </div>
-        ${(prop.website) ? `<div class="card-footer">
-            <a id="branchWebsite" href="${prop.website}" target="_blank">前往網站 ⟶</a>
-        </div>`:''}
-        
-    `;
+            <div class="card-body">
+                <button type="button" class="close" id="close-card" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="card-text">
+                    <ul class="fa-ul" id="branchDetail">
+                        <li><span class="fa-li"><i class="fas fa-map-marker-alt fa-fw"></i></span><span id="cal_distance"></span></li>
+                        <li><span class="fa-li"><i class="fas fa-map-marker-alt fa-fw"></i></span>${prop.chi_address}</li>
+                        <li><span class="fa-li"><i class="fas fa-phone fa-fw"></i></span>
+                            ${prop.tel1}${(prop.tel2) ? '/' + prop.tel2 : ''}${(prop.tel3) ? '/' + prop.tel3 : ''}
+                            </li>
+                        ${(prop.fb_page) ? `<li id="facebook"><span class="fa-li"><i class="fab fa-facebook fa-fw"></i></span><a href="${prop.fb_page}" target="_blank">Facebook</a></li>` : ''}
+                        <li id="opening_hour_title"><span class="fa-li"><i class="fas fa-clock fa-fw"></i></span>開放時間</li>
+                    </ul>
+                    ${(prop.weekday_text) ? `<ul id="opening_hours">${prop.weekday_text.map(
+                    day => `<li>${day}</li>`.trim()).join('')}</ul>` : ''}
+                    <p id="remarks"></p>
+
+                    <a id="issueReport" href="https://docs.google.com/forms/d/e/1FAIpQLSfb7iTwVeGGaSbER9PocNqhihbR3SVerUbW593ud5QhWiOFqA/viewform?usp=pp_url&entry.149864145=${prop.chi_name}&entry.759571823=${prop.chi_address}" target="_blank">資料有誤？請報料 ⟶</a>
+
+                </div>
+            </div>
+            ${(prop.website) ? `<div class="card-footer">
+                <a id="branchWebsite" href="${prop.website}" target="_blank">前往網站 ⟶</a>
+            </div>`: ''}
+            `;
+
+
 
             var closeCard = document.querySelector('#close-card');
+            // User close card
             closeCard.addEventListener('click', (event) => {
                 card.classList.remove('card--expanded');
                 card.classList.add("card--hidden");
                 event.stopPropagation();
+
+                // Send Map Event
+                fireEvent("vetmap_clinic", "close", {
+                    'clinic_name': currentMkr.properties.chi_name,
+                    'clinic_status': currentMkr.properties.status,
+                    'clinic_id': '',
+                    'clinic_lat': currentMkr.geometry.coordinates[1],
+                    'clinic_lng': currentMkr.geometry.coordinates[0],
+                    'clinic_district': currentMkr.properties.district,
+                    'anonymous_id': getAnonymousId(),
+                    'session_id': '',
+                    'ts': Date.now()
+                });
+
             });
 
             card.classList.remove("card--hidden");
+
+            fireEvent("vetmap_clinic", "click", {
+                'clinic_name': currentMkr.properties.chi_name,
+                'clinic_status': currentMkr.properties.status,
+                'clinic_id': '',
+                'clinic_lat': currentMkr.geometry.coordinates[1],
+                'clinic_lng': currentMkr.geometry.coordinates[0],
+                'clinic_district': currentMkr.properties.district,
+                'anonymous_id': getAnonymousId(),
+                'session_id': '',
+                'ts': Date.now()
+            });
+
+            fireMapPV(removehash(window.location.href));
+            fireArticlePV(removehash(window.location.href));
         }
 
-        
 
 
-        var card = document.querySelector('.card--custom');
+        // User expand or collase card
         card.addEventListener('click', (event) => {
             event.stopPropagation();
             if (matchMedia('screen and (max-width: 700px)').matches) {
                 card.classList.toggle('card--expanded');
+
+                // Send Map Event
+                fireEvent("vetmap_clinic", "expand", {
+                    'clinic_name': currentMkr.properties.chi_name,
+                    'clinic_status': currentMkr.properties.status,
+                    'clinic_id': '',
+                    'clinic_lat': currentMkr.geometry.coordinates[1],
+                    'clinic_lng': currentMkr.geometry.coordinates[0],
+                    'clinic_district': currentMkr.properties.district,
+                    'action': (card.classList.contains('card--expanded')) ? 'expand' : 'collapse',
+                    'anonymous_id': getAnonymousId(),
+                    'session_id': '',
+                    'ts': Date.now()
+                });
             }
         });
 
@@ -391,31 +478,31 @@
             });
         });
 
-    function welcome() {
+        function welcome() {
             // if (initialID == 0) {
-                var myModal = document.getElementById('welcomeModal');
+            var myModal = document.getElementById('welcomeModal');
 
-                var options = { backdrop: true }
-                // OR initialize and show the modal right away
-                var myModalInstance = new Modal(myModal, options);
-                myModalInstance.show();
+            var options = { backdrop: true }
+            // OR initialize and show the modal right away
+            var myModalInstance = new Modal(myModal, options);
+            myModalInstance.show();
 
-                var close_method = 'backdrop';
-                document.querySelector('#welcomeModal .btn').addEventListener('click', function () {
-                    close_method = 'button';
-                });
+            var close_method = 'backdrop';
+            document.querySelector('#welcomeModal .btn').addEventListener('click', function () {
+                close_method = 'button';
+            });
 
-                // myModal.addEventListener('hide.bs.modal', function (event) {
-                //     // Send Map Event
-                //     fireEvent("psc_map_welcome", "close", {
-                //         'close_method': close_method,
-                //         'anonymous_id': getAnonymousId(),
-                //         'ts': Date.now()
-                //     });
+            // myModal.addEventListener('hide.bs.modal', function (event) {
+            //     // Send Map Event
+            //     fireEvent("psc_map_welcome", "close", {
+            //         'close_method': close_method,
+            //         'anonymous_id': getAnonymousId(),
+            //         'ts': Date.now()
+            //     });
 
-                //     // Send Article PV if the map is embed into article
-                //     if (entrySource == "article" | entrySource == "issue") fireArticlePV(removehash(window.location.href));
-                // }, false);
+            //     // Send Article PV if the map is embed into article
+            //     if (entrySource == "article" | entrySource == "issue") fireArticlePV(removehash(window.location.href));
+            // }, false);
             // }
 
         }
