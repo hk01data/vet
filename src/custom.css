@@ -136,7 +136,7 @@ svg.hk01logo_black {
     background: url(../images/hk01watermark.png);
     background-repeat: no-repeat;
     background-position: center;
-    padding: 0 1.25rem 1rem !important;
+    padding: 0 2rem 1rem !important;
     }
 
 .card-footer {
@@ -202,14 +202,12 @@ svg.hk01logo_black {
         display: block;
         
     }
-
-    
 }
 
 
 @media only screen and (min-width: 700px) {
     .card--custom {
-        max-width: 400px;
+        min-width: 400px;
         max-height: 60%;
         top: 200px;
         left: 10px;
