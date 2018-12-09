@@ -56,9 +56,9 @@
                 <div class="modal-body text-center">
                     <p>這是教學</p>
                     <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item"></li><img src="icon/red.png" class="inline_img">營業中</li>
-                        <li class="list-inline-item"></li><img src="icon/green.png" class="inline_img">休息</li>
-                        <li class="list-inline-item"></li><img src="icon/grey.png" class="inline_img">沒有資料</li>
+                        <li class="list-inline-item"></li><img src="icon/pin-247.png" class="inline_img">營業中</li>
+                        <li class="list-inline-item"></li><img src="icon/pin-available.png" class="inline_img">休息</li>
+                        <li class="list-inline-item"></li><img src="icon/pin-closed.png" class="inline_img">沒有資料</li>
                     </ul>
                 </div>
                 <div class="modal-footer">
@@ -107,9 +107,9 @@
                 </div>
                 <div class="modal-body">
                     <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item"></li><img src="icon/red.png" class="inline_img">營業中</li>
-                        <li class="list-inline-item"></li><img src="icon/green.png" class="inline_img">休息</li>
-                        <li class="list-inline-item"></li><img src="icon/grey.png" class="inline_img">沒有資料</li>
+                        <li class="list-inline-item"></li><img src="icon/pin-247.png" class="inline_img">營業中</li>
+                        <li class="list-inline-item"></li><img src="icon/pin-available.png" class="inline_img">休息</li>
+                        <li class="list-inline-item"></li><img src="icon/pin-closed.png" class="inline_img">沒有資料</li>
                     </ul>
                     <ul class="list-group list-group-flush">
                         <a href="#" class="list-group-item list-group-item-action attribution" data-toggle="modal" data-target="#attributionModal">資料來源</a>
@@ -300,17 +300,17 @@
         vetClinicMap.on('zoomend', function () {
             var currentZoom = vetClinicMap.getZoom();
             if (currentZoom >= 11.5 && currentZoom < 14) {
-                red = new defaultSizeIcon({ iconUrl: 'icon/red.png' });
-                green = new defaultSizeIcon({ iconUrl: 'icon/green.png' });
-                grey = new defaultSizeIcon({ iconUrl: 'icon/grey.png' });
+                red = new defaultSizeIcon({ iconUrl: 'icon/pin-247.png' });
+                green = new defaultSizeIcon({ iconUrl: 'icon/pin-available.png' });
+                grey = new defaultSizeIcon({ iconUrl: 'icon/pin-closed.png' });
             } else if (currentZoom >= 14 && currentZoom < 15) {
-                red = new mediumSizeIcon({ iconUrl: 'icon/red.png' });
-                green = new mediumSizeIcon({ iconUrl: 'icon/green.png' });
-                grey = new mediumSizeIcon({ iconUrl: 'icon/grey.png' });
+                red = new mediumSizeIcon({ iconUrl: 'icon/pin-247.png' });
+                green = new mediumSizeIcon({ iconUrl: 'icon/pin-available.png' });
+                grey = new mediumSizeIcon({ iconUrl: 'icon/pin-closed.png' });
             } else if (currentZoom >= 15) {
-                red = new largeSizeIcon({ iconUrl: 'icon/red.png' });
-                green = new largeSizeIcon({ iconUrl: 'icon/green.png' });
-                grey = new largeSizeIcon({ iconUrl: 'icon/grey.png' });
+                red = new largeSizeIcon({ iconUrl: 'icon/pin-247.png' });
+                green = new largeSizeIcon({ iconUrl: 'icon/pin-available.png' });
+                grey = new largeSizeIcon({ iconUrl: 'icon/pin-closed.png' });
             } else {
                 red = new smallSizeIcon({ iconUrl: 'icon/red_dot.png' });
                 green = new smallSizeIcon({ iconUrl: 'icon/green_dot.png' });
