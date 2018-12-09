@@ -56,8 +56,8 @@
                 <div class="modal-body text-center">
                     <p>這是教學</p>
                     <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item"></li><img src="icon/green.png" class="inline_img">營業中</li>
-                        <li class="list-inline-item"></li><img src="icon/brown.png" class="inline_img">休息</li>
+                        <li class="list-inline-item"></li><img src="icon/red.png" class="inline_img">營業中</li>
+                        <li class="list-inline-item"></li><img src="icon/green.png" class="inline_img">休息</li>
                         <li class="list-inline-item"></li><img src="icon/grey.png" class="inline_img">沒有資料</li>
                     </ul>
                 </div>
@@ -70,7 +70,7 @@
 
     <!-- Attribution Modal -->
     <div class="modal fade" id="attributionModal" tabindex="-1" role="dialog" aria-labelledby="attributionModal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centegreen" role="document">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="attributionModal">獸醫診所地圖</h5>
@@ -107,8 +107,8 @@
                 </div>
                 <div class="modal-body">
                     <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item"></li><img src="icon/green.png" class="inline_img">營業中</li>
-                        <li class="list-inline-item"></li><img src="icon/brown.png" class="inline_img">休息</li>
+                        <li class="list-inline-item"></li><img src="icon/red.png" class="inline_img">營業中</li>
+                        <li class="list-inline-item"></li><img src="icon/green.png" class="inline_img">休息</li>
                         <li class="list-inline-item"></li><img src="icon/grey.png" class="inline_img">沒有資料</li>
                     </ul>
                     <ul class="list-group list-group-flush">
@@ -170,9 +170,9 @@
             }
         });
 
-        var green = new defaultSizeIcon({ iconUrl: 'icon/green.png' });
-        var brown = new defaultSizeIcon({ iconUrl: 'icon/brown.png' });
-        var grey = new defaultSizeIcon({ iconUrl: 'icon/grey.png' });
+        var red = new defaultSizeIcon({ iconUrl: 'icon/pin-247.png' });
+        var green = new defaultSizeIcon({ iconUrl: 'icon/pin-available.png' });
+        var grey = new defaultSizeIcon({ iconUrl: 'icon/pin-closed.png' });
 
         function detectSource(callback) {
             let linkText = window.location.href;
@@ -233,13 +233,13 @@
                 pointToLayer: function (feature, latlng) {
                     let options = {};
                     switch (feature["properties"]["status"]) {
-                        case 'active':
+                        case 'always_available':
+                            options.icon = red;
+                            break;
+                        case 'available':
                             options.icon = green;
                             break;
-                        case 'inActive':
-                            options.icon = brown;
-                            break;
-                        case 'noData':
+                        case 'closed':
                             options.icon = grey;
                             break;
                     }
@@ -300,30 +300,30 @@
         vetClinicMap.on('zoomend', function () {
             var currentZoom = vetClinicMap.getZoom();
             if (currentZoom >= 11.5 && currentZoom < 14) {
+                red = new defaultSizeIcon({ iconUrl: 'icon/red.png' });
                 green = new defaultSizeIcon({ iconUrl: 'icon/green.png' });
-                brown = new defaultSizeIcon({ iconUrl: 'icon/brown.png' });
                 grey = new defaultSizeIcon({ iconUrl: 'icon/grey.png' });
             } else if (currentZoom >= 14 && currentZoom < 15) {
+                red = new mediumSizeIcon({ iconUrl: 'icon/red.png' });
                 green = new mediumSizeIcon({ iconUrl: 'icon/green.png' });
-                brown = new mediumSizeIcon({ iconUrl: 'icon/brown.png' });
                 grey = new mediumSizeIcon({ iconUrl: 'icon/grey.png' });
             } else if (currentZoom >= 15) {
+                red = new largeSizeIcon({ iconUrl: 'icon/red.png' });
                 green = new largeSizeIcon({ iconUrl: 'icon/green.png' });
-                brown = new largeSizeIcon({ iconUrl: 'icon/brown.png' });
                 grey = new largeSizeIcon({ iconUrl: 'icon/grey.png' });
             } else {
+                red = new smallSizeIcon({ iconUrl: 'icon/red_dot.png' });
                 green = new smallSizeIcon({ iconUrl: 'icon/green_dot.png' });
-                brown = new smallSizeIcon({ iconUrl: 'icon/brown_dot.png' });
                 grey = new smallSizeIcon({ iconUrl: 'icon/grey_dot.png' });
             }
 
             vetLayer.eachLayer(mkr => {
                 switch (mkr.feature["properties"]["status"]) {
-                    case 'active':
-                        icon = green;
+                    case 'available':
+                        icon = red;
                         break;
-                    case 'inActive':
-                        icon = brown;
+                    case 'closed':
+                        icon = green;
                         break;
                     case 'noData':
                         icon = grey;
@@ -343,20 +343,20 @@
 
         function calcBranchstatus(feature) {
             // Return if no information
-            if (feature.properties["opening_hours"] == "") return "noData";
+            if (feature.properties["opening_hours"] == "") return "available";
             let date = new Date();
             let weekDay = date.getDay();
             let time = date.getHours() * 100 + date.getMinutes();
             let periods = feature.properties["opening_hours"];
-            let filValue = "inActive";
+            let filValue = "closed";
             periods.forEach(days => {
                 // Always Open
-                if (days['open']['day'] == 0 && days['open']['time'] == '0000' && days['close'] == null) return filValue = "active";
+                if (days['open']['day'] == 0 && days['open']['time'] == '0000' && days['close'] == null) return filValue = "always_available";
                 if (days['open']['day'] == weekDay) {
                     let open = parseInt(days['open']['time']);
                     let close = parseInt(days['close']['time']);
                     if (time >= open && time <= close) {
-                        filValue = "active";
+                        filValue = "available";
                     }
                 }
             })
@@ -379,7 +379,7 @@
             card.innerHTML = `
             <div class="card-header">
                 <h6 id="branchStatus" class="${prop.status}">${
-                (prop.status == "noData") ? "沒有營業時間資料" : (prop.status == "active") ? " 營業中" : "休息"
+                (prop.status == "noData") ? "沒有營業時間資料" : (prop.status == "available") ? " 營業中" : "休息"
                 }</h6>
                 <span class="head_box">
 					<span><a href="https://www.hk01.com/" target="_blank"><img src="images/64x64.png"></a></span>
