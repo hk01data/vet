@@ -117,7 +117,8 @@ svg.hk01logo_black {
     padding: 1rem 2rem 0rem !important;
     border: none;
 }
-.card--custom {
+
+.vet-card {
     position: fixed;
     /* background-color: #f6f6f6; */
     z-index: 5010;
@@ -129,7 +130,7 @@ svg.hk01logo_black {
     border: none;
 }
 
-.card-body {
+.vet-card-body {
     overflow-y: auto;
     /* max-height: calc(100vh - 220px); */
     background: url(../images/hk01watermark.png);
@@ -146,7 +147,7 @@ svg.hk01logo_black {
 }
 
 @media only screen and (max-width: 700px) {
-    .card--custom {
+    .vet-card {
         bottom: 0;
         height: 65%;
         left: 0;
@@ -202,7 +203,7 @@ svg.hk01logo_black {
 
 
 @media only screen and (min-width: 700px) {
-    .card--custom {
+    .vet-card {
         min-width: 400px;
         max-height: 60%;
         top: 200px;
@@ -280,3 +281,32 @@ svg.hk01logo_black {
 .card .head_box {
     float: right;
 }
+
+#subDistrictMenu div {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+#subDistrictMenu a {
+    display: inline-block;
+}
+
+/* #districtMenu li a {
+    color: white;
+    text-decoration: none;
+}
+
+#districtMenu li:hover {
+    border-bottom: 3px solid white;
+}      
+
+#districtMenu li.active {
+    border-bottom: 3px solid white;
+} */
+
+  
+  
+  
+  
