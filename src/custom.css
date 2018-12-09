@@ -256,16 +256,16 @@ svg.hk01logo_black {
     color: black;
 }
 
-.card .active {
+.card .always_available {
+    background: rgb(245, 69, 92);
+}
+
+.card .available {
     background: springgreen;
 }
 
-.card .inActive {
-    background: orange;
-}
-
-.card .noData {
-    background: plum;
+.card .closed {
+    background: lightgray;
 }
 
 .card .fas, .card .fab  {

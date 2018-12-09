@@ -28,8 +28,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+
     <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
     <script src='src/bootstrap-native-v4.min.js'></script>
+    <script src='src/luxon.min.js'></script>
     <link rel="stylesheet" href="src/animate.css" />
 
 
@@ -139,6 +141,7 @@
 
     <script>
         // Global Variable
+        var DateTime = luxon.DateTime;
         var vetClinicMap;
         var vetLayer;
         var entrySource;
@@ -148,7 +151,7 @@
         var card = document.querySelector('.card--custom');
         var defaultSizeIcon = L.Icon.extend({
             options: {
-                iconSize: [25, 25]
+                iconSize: [30, 30]
             }
         });
 
@@ -160,13 +163,13 @@
 
         var mediumSizeIcon = L.Icon.extend({
             options: {
-                iconSize: [35, 35]
+                iconSize: [40, 40]
             }
         });
 
         var largeSizeIcon = L.Icon.extend({
             options: {
-                iconSize: [45, 45]
+                iconSize: [55, 55]
             }
         });
 
@@ -207,9 +210,12 @@
         function initMap(initialID) {
             // welcome();
 
-            vet.features.forEach(feature =>
-                feature.properties.status = calcBranchstatus(feature)
-            );
+            vet.features.forEach(feature => {
+                feature.properties.status = calcBranchstatus(feature);
+                feature.properties.head_ad1 = checkAdStatus(feature, "head_ad1");
+                feature.properties.head_ad2 = checkAdStatus(feature, "head_ad2");
+                feature.properties.footer_ad1 = checkAdStatus(feature, "footer_ad1");
+            });
 
             vetClinicMap = L.map('mapid', {
                 center: (screen.width >= 768) ? [22.316538, 114.174007] : [22.316538, 114.174007],
@@ -319,13 +325,13 @@
 
             vetLayer.eachLayer(mkr => {
                 switch (mkr.feature["properties"]["status"]) {
-                    case 'available':
+                    case 'always_available':
                         icon = red;
                         break;
-                    case 'closed':
+                    case 'available':
                         icon = green;
                         break;
-                    case 'noData':
+                    case 'closed':
                         icon = grey;
                         break;
                 }
@@ -363,6 +369,14 @@
             return filValue;
         }
 
+        function checkAdStatus(feature, ad) {
+            if (feature.properties[ad+"_image"]) {
+                let now = DateTime.local().setZone('UTC+8');
+                if (now > DateTime.fromISO(feature.properties[ad+"_end"], { zone: "UTC+8" }) || DateTime.fromISO(feature.properties[ad+"_start"], { zone: "UTC+8" }) > now) return false;
+                return true;
+            }
+            return false;
+        }
 
         function popCard(e) {
             let stateObj = { playground_id: currentID };
@@ -379,11 +393,11 @@
             card.innerHTML = `
             <div class="card-header">
                 <h6 id="branchStatus" class="${prop.status}">${
-                (prop.status == "noData") ? "沒有營業時間資料" : (prop.status == "available") ? " 營業中" : "休息"
+                (prop.status == "always_available") ? "24小時營業" : (prop.status == "available") ? " 營業中" : "休息"
                 }</h6>
                 <span class="head_box">
-					<span><a href="https://www.hk01.com/" target="_blank"><img src="images/64x64.png"></a></span>
-					<span><a href="https://www.hk01.com/" target="_blank"><img src="images/64x64.png"></a></span>
+                    ${(prop.head_ad1) ? `<span><a href="${prop.head_ad1_href}" target="_blank"><img src="images/ad/${prop.head_ad1_image}"></a></span>` : ''}
+					${(prop.head_ad2) ? `<span><a href="${prop.head_ad2_href}" target="_blank"><img src="images/ad/${prop.head_ad2_image}"></a></span>` : ''}
 				</span>
                 <h5 class="card-title">${prop.chi_name}</h5>
                 
@@ -413,9 +427,7 @@
 
                 </div>
             </div>
-            ${`<div class="card-footer">
-                <a href="https://www.hk01.com/" target="_blank"><img src="images/260x64.png"></a>
-            </div>`}
+            ${(prop.footer_ad1) ? `<div class="card-footer"><a href="${prop.footer_ad1_href}" target="_blank"><img src="images/ad/${prop.footer_ad1_image}"></a></div>` : ''}
             `;
 
 
