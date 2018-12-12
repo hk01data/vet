@@ -1,0 +1,302 @@
+/* @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans'); */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+a {
+    color: teal;
+}
+
+.leaflet-control-layers {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1rem;
+    padding: .25rem .8rem;
+}
+
+.leaflet-control-layers label {
+    margin-bottom: .25rem;
+}
+
+#mapid {
+    height: calc(100vh - 88px);
+}
+
+#vet-nav {
+    height:50px;
+}
+
+
+#opening_hours {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 2rem;
+}
+
+#issueReport {
+    margin-top: 0.75rem;
+}
+
+
+#vet-nav {
+    padding: .5rem 0 .5rem 1rem !important;
+}
+
+.modal {
+    z-index: 5200 !important;
+}
+
+.nav_modal.modal-dialog {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+.nav_modal.modal-content {
+    border: none;
+    border-radius: 0;
+    height: 100%;
+}
+
+.inline_img {
+    height: 1rem;
+    margin: 0 5px;
+}
+
+.navbar-brand {
+    height: 37px;
+    padding: 0;
+    vertical-align: top;
+}
+.navbar-name {
+    margin-left: 1rem;
+    vertical-align: top;
+    font-size: 1.5rem;
+}
+
+svg.hk01logo {
+    width: auto;
+    height: 37px;
+    margin: 0;
+}
+
+.navbar-brand .icon {
+    display: inline-flex;
+    align-self: center;
+    color: rgb(0, 51, 232);
+}
+
+.icon.baseline svg, .icon img {
+    position: relative;
+    fill: currentcolor;
+}
+
+
+#navModal {
+    animation-duration: .1s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+  }
+
+.navbar-light {
+    background: white !important;
+}
+
+
+  .leaflet-popup {
+      margin: 0;
+  }
+
+  .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+      background: none;
+      color: black;
+      box-shadow: none;
+      padding: 0;
+      border: none;
+  }
+
+  .leaflet-popup-content {
+      margin: 0;
+      line-height: 1rem;
+  }
+
+  .card-header {
+    background-color: #fff;
+    padding: 1rem 2rem 0rem !important;
+    border: none;
+}
+
+.vet-card {
+    position: fixed;
+    /* background-color: #f6f6f6; */
+    z-index: 5010;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.33s linear;
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+    border: none;
+}
+
+.vet-card-body {
+    overflow-y: auto;
+    /* max-height: calc(100vh - 220px); */
+    background: url(../images/hk01watermark.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0 2rem 1rem !important;
+    }
+
+.card-footer {
+    height: 64px;
+    text-align: center;
+    border: none !important;
+    padding: 0 !important;
+}
+
+@media only screen and (max-width: 700px) {
+    .vet-card {
+        bottom: 0;
+        height: 65%;
+        left: 0;
+        right: 0;
+        line-height: 1.8rem;
+        /* max-height: 100%; */
+        -webkit-transition: all .3s ease-in-out,top .3s ease-out; 
+        transition: all .3s ease-in-out,top .3s ease-out;
+    }
+
+    .card--expanded:not(.card--hidden) {
+        bottom: 0;
+        height: calc(100% - 50px);
+        max-height: 100%;
+    }
+
+    .card--hidden {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all .5s ease-in-out,top .5s ease-out; 
+        transition: all .5s ease-in-out,top .5s ease-out;
+    }
+
+
+    .card-footer {
+        font-size: 0.9rem;
+        visibility: visible;
+        border: none;
+        width: 100%;
+        position: relative;
+        z-index: 5020;
+        -webkit-transition: all .3s ease-in-out,top .3s ease-out; 
+        transition: all .3s ease-in-out,top .3s ease-out;
+    }
+
+    .card #branchStatus {
+        border-radius: 0.8rem;
+        font-size: 1rem;
+        padding: 6px 9px;
+        margin-bottom: 1rem;
+        font-weight: 300;
+    }
+
+    .card #branchName {
+        margin-top: 0.5rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        display: block;
+        
+    }
+}
+
+
+@media only screen and (min-width: 700px) {
+    .vet-card {
+        min-width: 400px;
+        max-height: 60%;
+        top: 250px;
+        left: 10px;
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+        border-top-left-radius: 8px !important;
+        border-top-right-radius: 8px !important;
+        border-bottom-left-radius: 8px !important;
+        border-bottom-right-radius: 8px !important;
+    }
+
+    .card--hidden {
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all .5s ease-in-out,top .5s ease-out; 
+        transition: all .5s ease-in-out,top .5s ease-out;
+    }
+
+    .card #branchStatus {
+        border-radius: 0.6rem;
+        font-size: 0.5rem;
+        padding: 5px 5px;
+        font-weight: 300;
+    }
+
+    .card #branchName {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        display: block;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 2;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.card #branchStatus {
+    display: inline-block;
+    color: black;
+}
+
+.card .always_available {
+    background: rgb(245, 69, 92);
+}
+
+.card .available {
+    background: springgreen;
+}
+
+.card .closed {
+    background: lightgray;
+}
+
+.card .fas, .card .fab  {
+    margin-right: 1rem;
+}
+
+.card #branchDetail {
+    margin-left: 2rem;
+    margin-bottom: 0;
+}
+
+.card .head_box {
+    float: right;
+}
+
+/* .sub-district-nav  {
+    position: static;
+} */
+
+.sub-district-nav .dropdown-menu {
+    z-index: 5050;
+}
