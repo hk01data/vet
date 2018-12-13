@@ -172,9 +172,9 @@
             </button>
             <div class="dropdown-menu">
                 <a class="dropdown-item" data-sub-district="mongkok" data-lat="22.31926" data-lng="114.16932">旺角</a>
-                <a class="dropdown-item" data-sub-district="tsimshatsui" data-lat="22.299668" data-lng="114.174544">尖沙咀</a>
                 <a class="dropdown-item" data-sub-district="kwuntong" data-lat="22.313683" data-lng="114.221671">觀塘</a>
-                <a class="dropdown-item" data-sub-district="northpoint" data-lat="22.335666" data-lng="114.159903">深水埗</a>
+                <a class="dropdown-item" data-sub-district="shamshuipo" data-lat="22.335666" data-lng="114.159903">深水埗</a>
+                <a class="dropdown-item" data-sub-district="tsimshatsui" data-lat="22.299668" data-lng="114.174544">尖沙咀</a>
               </div>
           </div>
         </li>
@@ -481,8 +481,8 @@
                         <li><span class="fa-li"><i class="fas fa-phone fa-fw"></i></span>
                             ${prop.tel1}${(prop.tel2) ? '/' + prop.tel2 : ''}${(prop.tel3) ? '/' + prop.tel3 : ''}
                             </li>
-                            ${(prop.website) ? `<li><span class="fa-li"><i class="fas fa-link fa-fw"></i></span><a data-link-type="facebook" class="external_link" href="${prop.website}" target="_blank">網站</a></li>` : ''}
-                            ${(prop.fb_page) ? `<li><span class="fa-li"><i class="fab fa-facebook fa-fw"></i></span><a data-link-type="website" class="external_link"  href="${prop.fb_page}" target="_blank">Facebook</a></li>` : ''}
+                            ${(prop.website) ? `<li><span class="fa-li"><i class="fas fa-link fa-fw"></i></span><a data-link-type="website" class="external_link" href="${prop.website}" target="_blank">網站</a></li>` : ''}
+                            ${(prop.fb_page) ? `<li><span class="fa-li"><i class="fab fa-facebook fa-fw"></i></span><a data-link-type="facebook" class="external_link"  href="${prop.fb_page}" target="_blank">Facebook</a></li>` : ''}
                         ${(prop.opening_hours) ? `<li id="opening_hour_title"><span class="fa-li"><i class="fas fa-clock fa-fw"></i></span>開放時間</li>` : ''}
                         
                     </ul>

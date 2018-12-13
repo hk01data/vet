@@ -1,4 +1,4 @@
-var vet = {
+{
     "type": "FeatureCollection",
     "features": [
         {
@@ -19500,4 +19500,4 @@ var vet = {
             }
         }
     ]
-};
+}

@@ -236,7 +236,7 @@ svg.hk01logo {
 
     .card #branchStatus {
         border-radius: 0.6rem;
-        font-size: 0.5rem;
+        font-size: 0.8rem;
         padding: 5px 5px;
         font-weight: 300;
     }
@@ -298,5 +298,32 @@ svg.hk01logo {
 } */
 
 .sub-district-nav .dropdown-menu {
+    width: 100%;
+    margin: 0;
+    border: 0;
     z-index: 5050;
+    text-align: center;
+    background-color: #FAFAFA;
+}
+
+.nav-tabs {
+    position: relative;
+}
+
+.nav-tabs .dropdown {
+    position: initial;
+}
+
+.dropdown .btn-link {
+    width: 100%;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown.show .btn-link {
+    background-color: #FAFAFA;
+}
+
+.dropdown-item:hover {
+    background-color: #FFF;
 }
