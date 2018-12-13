@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -253,7 +254,7 @@
             fireEvent("vetmap_landing", "view", {
                 'start_mode': entrySource,
                 'anonymous_id': getAnonymousId(),
-                'session_id': '',
+                'session_id': getSessionId(),
                 'ts': Date.now()
             });
 
@@ -362,7 +363,7 @@
                 'lat': e.latlng.lat,
                 'lng': e.latlng.lng,
                 'anonymous_id': getAnonymousId(),
-                'session_id': '',
+                'session_id': getSessionId(),
                 'ts': Date.now()
             });
 
@@ -514,7 +515,7 @@
                     'clinic_lng': currentMkr.geometry.coordinates[0],
                     'clinic_district': currentMkr.properties.district,
                     'anonymous_id': getAnonymousId(),
-                    'session_id': '',
+                    'session_id': getSessionId(),
                     'ts': Date.now()
                 });
 
@@ -531,7 +532,7 @@
                 'clinic_lng': currentMkr.geometry.coordinates[0],
                 'clinic_district': currentMkr.properties.district,
                 'anonymous_id': getAnonymousId(),
-                'session_id': '',
+                'session_id': getSessionId(),
                 'ts': Date.now()
             });
 
@@ -563,7 +564,7 @@
                         'link_type': el.getAttribute("data-link-type"),
                         'target_url': el.getAttribute("href"),
                         'anonymous_id': getAnonymousId(),
-                        'session_id': '',
+                        'session_id': getSessionId(),
                         'ts': Date.now()
                     });
                 })
@@ -591,7 +592,7 @@
                     'clinic_district': currentMkr.properties.district,
                     'action': (card.classList.contains('card--expanded')) ? 'expand' : 'collapse',
                     'anonymous_id': getAnonymousId(),
-                    'session_id': '',
+                    'session_id': getSessionId(),
                     'ts': Date.now()
                 });
             }
@@ -618,6 +619,7 @@
                     fireEvent("vetmap_welcome", "close", {
                         'close_method': close_method,
                         'anonymous_id': getAnonymousId(),
+						'session_id': getSessionId(),
                         'ts': Date.now()
                     });
 
@@ -643,7 +645,7 @@
                 fireEvent("vetmap_menu_subdistrict", "click", {
                     'sub_district': s.getAttribute("data-sub-district"),
                     'anonymous_id': getAnonymousId(),
-                    'session_id': '',
+                    'session_id': getSessionId(),
                     'ts': Date.now()
                 });
             })

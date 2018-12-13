@@ -1,3 +1,24 @@
+// Function to get session_id
+function getSessionId() {
+    function s4() {
+        return Math.floor((1 + Math.random()) * 0x10000)
+            .toString(16)
+            .substring(1);
+    }
+
+    if (document.cookie.match(/hk01_session/)) {
+        return (document.cookie.match(/hk01_session=([\w\-]+)/)[1]);
+    } else {
+        var temp_uid = s4() + s4() + "-" + s4() + "-" + s4() + "-" + s4() + "-" + s4() + s4() + s4();
+        var d = new Date();
+        d.setTime(d.getTime() + (30 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = "hk01_session=" + temp_uid + ";" + expires +
+            ";path=/;domain=." + window.location.host.match(/([^\.]+(\.[^\.]+)?)$/)[1];
+        return (temp_uid);
+    }
+}
+
 // Function to get anonymous_id from cookie
 function getAnonymousId() {
     function s4() {
