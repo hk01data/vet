@@ -43,22 +43,22 @@ function getAnonymousId() {
 // Initialize the tracker client
 var myTracker = new trackerClient({
     GA: {
-        trackingId: ["UA-70981149-9", "UA-70981149-36", "UA-125354638-1"] // UA-125354638-1 is the profile for hk01data editorial team
+        trackingId: ["UA-70981149-9", "UA-70981149-36", "UA-106000144-1"] // UA-106000144-1 is the profile for hk01data editorial team
     },
     Piwik: {
-        trackingUrl: "https://track.hk01.com/v1web/piwik.php",  // replace with your piwik tracking url
-        siteId: 6,  // replace with your piwik site ID
+        trackingUrl: "https://track.hktester.com/v1web/piwik.php",  // replace with your piwik tracking url
+        siteId: 5,  // replace with your piwik site ID
         userId: getAnonymousId(), // replace with user ID, should be same as MEMBER_ID/ANONYMOUS_ID
         isSPA: true // if the page is single page application
     }
 }, false);
 
-/* Config the selected article detail */ // will be implemented by omar
-const page_path = "";
-const author = "";  // 
-const channel = ""; // 
-const section = ""; // 
-const article_id = "";
+/* Config the selected article detail */
+const page_path = "/01偵查/000000/01獨家-整體逾半時間-曬太陽-27幅私人體育會全港互動地圖";
+const author = "\u6881\u9038\u98A8, \u6797\u70B3\u5764, \u9673\u4FE1\u7199, \u90B1\u9756\u6C76, \u52DE\u986F\u4EAE, \u6881\u7956\u9952";  // 梁逸風, 林炳坤, 陳信熙, 邱靖汶, 勞顯亮, 梁祖饒
+const channel = "01\u5075\u67E5"; // 01偵查
+const section = "01\u5075\u67E5"; // 01偵查
+const article_id = "000000";
 
 function fireArticlePV(url) {
     try {
@@ -85,7 +85,7 @@ function fireMapPV(url) {
     try {
         myTracker.disableGA({
             'UA-70981149-9': true, // staging
-            'UA-125354638-1': true, // hk01 data
+            'UA-106000144-1': true, // hk01 data
             'UA-70981149-36': false // data team 
         });
 
