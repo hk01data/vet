@@ -54,11 +54,11 @@ var myTracker = new trackerClient({
 }, false);
 
 /* Config the selected article detail */
-const page_path = "";
-const author = "";  // 
-const channel = ""; // 
-const section = ""; // 
-const article_id = "";
+const page_path = "/寵物/272385/【寵物地圖】";
+const author = "\u95DC\u6893\u5BE7, \u7C21\u6D69\u5FB7, \u6881\u9038\u98A8";  // 關梓寧, 簡浩德, 梁逸風
+const channel = "\u5BF5\u7269"; // 寵物
+const section = "\u5BF5\u7269"; // 寵物
+const article_id = "272385";
 
 function fireArticlePV(url) {
     try {
