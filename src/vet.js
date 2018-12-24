@@ -19186,7 +19186,7 @@ var vet = {
                 "footer_ad1_image": "260x64.png",
                 "footer_ad1_href": "www.hk01.com",
                 "footer_ad1_start": "2018-12-08T20:30:00",
-                "footer_ad1_end": "2018-12-20T20:30:00",
+                "footer_ad1_end": "2019-12-20T20:30:00",
                 "opening_hours": [
                     {
                         "close": {
@@ -19272,7 +19272,7 @@ var vet = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    114.16614299999999,
+                    114.16014299999999,
                     22.291666
                 ]
             }
@@ -19291,12 +19291,12 @@ var vet = {
                 "website": "",
                 "fb_page": "https://www.facebook.com/pg/hk01.news",
                 "remarks": "需要預約",
-                "head_ad1_image": "64x64.png",
-                "head_ad1_href": "https://www.hk01.com",
+                "head_ad1_image": "",
+                "head_ad1_href": "",
                 "head_ad1_start": "",
                 "head_ad1_end": "",
-                "head_ad2_image": "64x64.png",
-                "head_ad2_href": "https://www.hk01.com",
+                "head_ad2_image": "",
+                "head_ad2_href": "",
                 "head_ad2_start": "",
                 "head_ad2_end": "",
                 "footer_ad1_image": "",

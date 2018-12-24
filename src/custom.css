@@ -10,6 +10,19 @@ a {
     color: teal;
 }
 
+.inapp-back-button {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0 22L22 0l2.1 2.1L4.2 22l19.9 19.9L22 44 0 22z' fill='%23000'/%3E%3C/svg%3E");
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    cursor: pointer;
+    position: relative;
+    height: 37px;
+    width: 30px;
+    top: 0;
+    left: 0;
+}
+
 .leaflet-control-layers {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1rem;
@@ -72,7 +85,9 @@ a {
     vertical-align: top;
 }
 .navbar-name {
+    height: 37px;
     margin-left: 1rem;
+    display: inline-block;
     vertical-align: top;
     font-size: 1.5rem;
     line-height: 37px;
@@ -145,7 +160,7 @@ svg.hk01logo {
 .vet-card-body {
     overflow-y: auto;
     /* max-height: calc(100vh - 220px); */
-    background: url(../images/hk01watermark.png);
+    /* background: url(../images/hk01watermark.png); */
     background-repeat: no-repeat;
     background-position: center;
     padding: 0 2rem 1rem !important;
@@ -160,7 +175,7 @@ svg.hk01logo {
 
 @media only screen and (max-width: 700px) {
     .vet-card {
-        bottom: 0;
+        bottom: 50px;
         height: 65%;
         left: 0;
         right: 0;

@@ -46,7 +46,7 @@ var myTracker = new trackerClient({
         trackingId: ["UA-70981149-9", "UA-70981149-36", "UA-106000144-1"] // UA-106000144-1 is the profile for hk01data editorial team
     },
     Piwik: {
-        trackingUrl: "https://track.hktester.com/v1web/piwik.php",  // replace with your piwik tracking url
+        trackingUrl: "https://track.hktester.com/v2/piwik.php",  // replace with your piwik tracking url
         siteId: 5,  // replace with your piwik site ID
         userId: getAnonymousId(), // replace with user ID, should be same as MEMBER_ID/ANONYMOUS_ID
         isSPA: true // if the page is single page application
