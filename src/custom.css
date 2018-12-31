@@ -38,7 +38,7 @@ a {
 }
 
 #vet-nav {
-    height:50px;
+    height: 50px;
 }
 
 
@@ -74,6 +74,10 @@ a {
     height: 100%;
 }
 
+.nav_modal .list-group-item-action {
+    color: teal;
+}
+
 .inline_img {
     height: 1rem;
     margin: 0 5px;
@@ -84,9 +88,10 @@ a {
     padding: 0;
     vertical-align: top;
 }
+
 .navbar-name {
     height: 37px;
-    margin-left: 1rem;
+    margin-left: 0.5em;
     display: inline-block;
     vertical-align: top;
     font-size: 1.5rem;
@@ -105,7 +110,8 @@ svg.hk01logo {
     color: rgb(0, 51, 232);
 }
 
-.icon.baseline svg, .icon img {
+.icon.baseline svg,
+.icon img {
     position: relative;
     fill: currentcolor;
 }
@@ -115,31 +121,32 @@ svg.hk01logo {
     animation-duration: .1s;
     animation-delay: 0s;
     animation-iteration-count: 1;
-  }
+}
 
 .navbar-light {
     background: white !important;
 }
 
 
-  .leaflet-popup {
-      margin: 0;
-  }
+.leaflet-popup {
+    margin: 0;
+}
 
-  .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-      background: none;
-      color: black;
-      box-shadow: none;
-      padding: 0;
-      border: none;
-  }
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background: none;
+    color: black;
+    box-shadow: none;
+    padding: 0;
+    border: none;
+}
 
-  .leaflet-popup-content {
-      margin: 0;
-      line-height: 1rem;
-  }
+.leaflet-popup-content {
+    margin: 0;
+    line-height: 1rem;
+}
 
-  .card-header {
+.card-header {
     background-color: #fff;
     padding: 1rem 2rem 0rem !important;
     border: none;
@@ -164,16 +171,26 @@ svg.hk01logo {
     background-repeat: no-repeat;
     background-position: center;
     padding: 0 2rem 1rem !important;
-    }
+}
 
 .card-footer {
     height: 64px;
     text-align: center;
     border: none !important;
     padding: 0 !important;
+    background-color: #fff;
 }
 
 @media only screen and (max-width: 700px) {
+    .inapp-back-button {
+        width: 15px;
+        margin-left: -12px;
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+    }
+
     .vet-card {
         bottom: 50px;
         height: 65%;
@@ -181,8 +198,8 @@ svg.hk01logo {
         right: 0;
         line-height: 1.8rem;
         /* max-height: 100%; */
-        -webkit-transition: all .3s ease-in-out,top .3s ease-out; 
-        transition: all .3s ease-in-out,top .3s ease-out;
+        -webkit-transition: all .3s ease-in-out, top .3s ease-out;
+        transition: all .3s ease-in-out, top .3s ease-out;
     }
 
     .card--expanded:not(.card--hidden) {
@@ -195,8 +212,8 @@ svg.hk01logo {
         height: 0;
         visibility: hidden;
         opacity: 0;
-        -webkit-transition: all .5s ease-in-out,top .5s ease-out; 
-        transition: all .5s ease-in-out,top .5s ease-out;
+        -webkit-transition: all .5s ease-in-out, top .5s ease-out;
+        transition: all .5s ease-in-out, top .5s ease-out;
     }
 
 
@@ -207,8 +224,8 @@ svg.hk01logo {
         width: 100%;
         position: relative;
         z-index: 5020;
-        -webkit-transition: all .3s ease-in-out,top .3s ease-out; 
-        transition: all .3s ease-in-out,top .3s ease-out;
+        -webkit-transition: all .3s ease-in-out, top .3s ease-out;
+        transition: all .3s ease-in-out, top .3s ease-out;
     }
 
     .card #branchStatus {
@@ -224,7 +241,7 @@ svg.hk01logo {
         font-size: 1.6rem;
         font-weight: 500;
         display: block;
-        
+
     }
 }
 
@@ -246,8 +263,8 @@ svg.hk01logo {
     .card--hidden {
         visibility: hidden;
         opacity: 0;
-        -webkit-transition: all .5s ease-in-out,top .5s ease-out; 
-        transition: all .5s ease-in-out,top .5s ease-out;
+        -webkit-transition: all .5s ease-in-out, top .5s ease-out;
+        transition: all .5s ease-in-out, top .5s ease-out;
     }
 
     .card #branchStatus {
@@ -270,7 +287,7 @@ svg.hk01logo {
     top: 0.75rem;
     right: 0.75rem;
     z-index: 2;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1;
     color: #000;
@@ -296,7 +313,8 @@ svg.hk01logo {
     background: lightgray;
 }
 
-.card .fas, .card .fab  {
+.card .fas,
+.card .fab {
     margin-right: 1rem;
 }
 

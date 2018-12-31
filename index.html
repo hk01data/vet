@@ -43,13 +43,13 @@
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
         crossorigin=""></script>
-    <script src="src/vet.js?v=201812211722"></script>
+    <script src="src/vet.js?v=201812311150"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="src/custom.css?v=201812211740">
+    <link rel="stylesheet" href="src/custom.css?v=201812311150">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
@@ -126,28 +126,28 @@
             switch (true) {
                 case (iframeWidth >= 970): //1280
                     console.log(970, 90);
-                    googletag.defineSlot('/108346865/HK01_Marksixmap_Leaderboard_1', [[970, 90]], 'div-gpt-ad-1536895837023-0')
-                        .addService(googletag.pubads());
+                    googletag.defineSlot('/108346865/HK01_Map_Component', [[970, 90]], 'div-gpt-ad-1536895837023-0')
+                        .setTargeting('map_id', ['petcare']).addService(googletag.pubads());
                     break;
                 case (iframeWidth >= 728 && iframeWidth < 970): // (iframeWidth >= 960 && iframeWidth < 1280):
                     console.log(728, 90);
-                    googletag.defineSlot('/108346865/HK01_Marksixmap_Leaderboard_1', [[728, 90]], 'div-gpt-ad-1536895837023-0')
-                        .addService(googletag.pubads());
+                    googletag.defineSlot('/108346865/HK01_Map_Component', [[728, 90]], 'div-gpt-ad-1536895837023-0')
+                        .setTargeting('map_id', ['petcare']).addService(googletag.pubads());
                     break;
                 case (iframeWidth >= 468 && iframeWidth < 728): // (iframeWidth >= 640 && iframeWidth < 960):
                     console.log(468, 60);
-                    googletag.defineSlot('/108346865/HK01_Marksixmap_Leaderboard_1', [[468, 60]], 'div-gpt-ad-1536895837023-0')
-                        .addService(googletag.pubads());
+                    googletag.defineSlot('/108346865/HK01_Map_Component', [[468, 60]], 'div-gpt-ad-1536895837023-0')
+                        .setTargeting('map_id', ['petcare']).addService(googletag.pubads());
                     break;
                 case (iframeWidth >= 320 && iframeWidth < 468):
                     console.log(320, 50);
-                    googletag.defineSlot('/108346865/HK01_Marksixmap_Leaderboard_1', [[320, 50]], 'div-gpt-ad-1536895837023-0')
-                        .addService(googletag.pubads());
+                    googletag.defineSlot('/108346865/HK01_Map_Component', [[320, 50]], 'div-gpt-ad-1536895837023-0')
+                        .setTargeting('map_id', ['petcare']).addService(googletag.pubads());
                     break;
                 default:
                     console.log("default");
-                    googletag.defineSlot('/108346865/HK01_Marksixmap_Leaderboard_1', [[320, 50]], 'div-gpt-ad-1536895837023-0')
-                        .addService(googletag.pubads());
+                    googletag.defineSlot('/108346865/HK01_Map_Component', [[320, 50]], 'div-gpt-ad-1536895837023-0')
+                        .setTargeting('map_id', ['petcare']).addService(googletag.pubads());
             }
             googletag.pubads().enableSingleRequest();
             googletag.enableServices();
@@ -168,7 +168,7 @@
     <!-- Tracking -->
     <script src="https://tracking-lib.hk01.com/piwik/piwik.min.js"></script>
     <script src="https://tracking-lib.hk01.com/classic-piwik/trackerClient.lastest.js"></script>
-    <script src="src/trackEvent_staging.js"></script>
+    <script src="src/trackEvent.js?v=201812311150"></script>
     <script src="https://www.googletagmanager.com/gtag/js"></script>
 
 </head>
@@ -361,7 +361,7 @@
         <div id='mapid'></div>
         <div class="card vet-card card--hidden"></div>
 
-        <script src="src/reactWeb.js?v=2018120121826"></script>
+        <script src="src/reactWeb.js?v=201812311150"></script>
         <script>
             // Global Variable
             var DateTime = luxon.DateTime;
@@ -786,14 +786,20 @@
                     })
                 });
 
-                var collaspeButton = document.querySelectorAll('a[data-toggle="collapse"]');
+                var collaspeButton = document.querySelectorAll('a[data-toggle="collapse"]')[0];
 
-                collaspeButton.forEach(s => {
-                    s.addEventListener('click', (event) => {
-                        var href = s.getAttribute("href");
-                        var target = document.querySelectorAll(href)[0];
-                        var status = target.classList.contains('collapse') ? 'open' : 'close';
-                        target.classList.toggle('collapse');
+                // collaspeButton.forEach(s => {
+                    collaspeButton.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        var href = collaspeButton.getAttribute('href');
+                        var target = document.querySelectorAll(`${href}`)[0];
+                        var status = target.className === 'collapse' ? 'open' : 'close';
+
+                        if (status === 'open') {
+                            target.className = '';
+                        } else {
+                            target.className = 'collapse';
+                        }
 
                         // Send Map Event
                         fireEvent("vetmap_opening_hour", "click", {
@@ -809,7 +815,7 @@
                             'ts': Date.now()
                         });
                     });
-                });
+                // });
 
                 if (prop.footer_ad1) {
                     googletag.cmd.push(function () {
@@ -817,40 +823,40 @@
                         switch (true) {
                             // case (iframeWidth >= 970): //1280
                             //     console.log(970, 90);
-                            //     googletag.defineSlot('/108346865/HK01_HouseSlave_Leaderboard_1', [
+                            //     googletag.defineSlot('/108346865/HK01_Map_Component/info_card', [
                             //             [970, 90]
                             //         ], 'div-gpt-ad-1528861904168-0')
-                            //         .addService(googletag.pubads());
+                            //         .setTargeting('map_id', ['petcare']).addService(googletag.pubads());
                             //     break;
                             // case (iframeWidth >= 728 && iframeWidth < 970): // (iframeWidth >= 960 && iframeWidth < 1280):
                             //     console.log(728, 90);
-                            //     googletag.defineSlot('/108346865/HK01_HouseSlave_Leaderboard_1', [
+                            //     googletag.defineSlot('/108346865/HK01_Map_Component/info_card', [
                             //             [728, 90]
                             //         ], 'div-gpt-ad-1528861904168-0')
-                            //         .addService(googletag.pubads());
+                            //         .setTargeting('map_id', ['petcare']).addService(googletag.pubads());
                             //     break;
                             // case (iframeWidth >= 468 && iframeWidth < 728): // (iframeWidth >= 640 && iframeWidth < 960):
                             //     console.log(468, 60);
-                            //     googletag.defineSlot('/108346865/HK01_HouseSlave_Leaderboard_1', [
+                            //     googletag.defineSlot('/108346865/HK01_Map_Component/info_card', [
                             //             [468, 60]
                             //         ], 'div-gpt-ad-1528861904168-0')
-                            //         .addService(googletag.pubads());
+                            //         .setTargeting('map_id', ['petcare']).addService(googletag.pubads());
                             //     break;
                             // case (iframeWidth >= 320 && iframeWidth < 468):
                             //     console.log(320, 50);
-                            //     googletag.defineSlot('/108346865/HK01_HouseSlave_Leaderboard_1', [
+                            //     googletag.defineSlot('/108346865/HK01_Map_Component/info_card', [
                             //             [320, 50]
                             //         ], 'div-gpt-ad-1528861904168-0')
-                            //         .addService(googletag.pubads());
+                            //         .setTargeting('map_id', ['petcare']).addService(googletag.pubads());
                             //     break;
                             default:
                                 console.log("default-card");
-                                var slot = googletag.defineSlot('/108346865/HK01_HouseSlave_Leaderboard_1', [
+                                var slot = googletag.defineSlot('/108346865/HK01_Map_Component/info_card', [
                                         [320, 50]
                                     ], 'div-gpt-ad-1528861904168-0');
 
                                 if (slot) {
-                                    slot.addService(googletag.pubads());
+                                    slot.setTargeting('map_id', ['petcare']).addService(googletag.pubads());
                                 }
                         }
                         googletag.pubads().enableSingleRequest();
@@ -1022,7 +1028,7 @@
         </script>
     </main>
     <footer class="hg-footer">
-        <!-- /108346865/HK01_Marksixmap_Leaderboard_1 -->
+        <!-- /108346865/HK01_Map_Component -->
         <div id='div-gpt-ad-1536895837023-0'>
             <script>
                 googletag.cmd.push(function () {

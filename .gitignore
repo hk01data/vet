@@ -1,6 +1,7 @@
 node_modules
 sass-cache
 backup
+_untracked
 _current-folder.bat
 
 dist
