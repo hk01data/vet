@@ -1,8 +1,15 @@
 /* @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans'); */
 body {
+    height: auto !important;
     margin: 0;
     padding: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    overflow: hidden;
     font-family: 'Noto Sans TC', sans-serif;
 }
 
