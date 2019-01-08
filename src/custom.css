@@ -305,19 +305,19 @@ svg.hk01logo {
 
 .card #branchStatus {
     display: inline-block;
-    color: black;
 }
 
 .card .always_available {
-    background: rgb(245, 69, 92);
+    background: #0038B2;
+    color: #FFF;
 }
 
 .card .available {
-    background: springgreen;
+    background: #DE7F00;
 }
 
 .card .closed {
-    background: lightgray;
+    background: #D3D3D3;
 }
 
 .card .fas,

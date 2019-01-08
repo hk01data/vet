@@ -10,7 +10,11 @@
 .hg-main { grid-area: main; }
 .hg-left { grid-area: navigation; }
 .hg-right { grid-area: ads; }
-
+#div-gpt-ad-1536895837023-0,
+.hg-footer {
+	max-width: 100%;
+	overflow: hidden;
+}
 
 /* .hg {
 	display: grid;
