@@ -28,6 +28,7 @@ a {
     width: 30px;
     top: 0;
     left: 0;
+    display: none !important;
 }
 
 .leaflet-control-layers {
@@ -251,7 +252,21 @@ svg.hk01logo {
 
     }
 }
+.dropdown-item {
+    width: 33.3%;
+    padding: .25rem 4px;
+}
+.sub-district-nav:first-child .dropdown-menu {
+    align-items: flex-start;
+}
 
+.sub-district-nav:first-child + .sub-district-nav .dropdown-menu {
+    align-items: center;
+}
+
+.sub-district-nav:last-child .dropdown-menu {
+    align-items: flex-end;
+}
 
 @media only screen and (min-width: 700px) {
     .vet-card {
@@ -346,6 +361,10 @@ svg.hk01logo {
     text-align: center;
     background-color: #FAFAFA;
 }
+.sub-district-nav .dropdown-menu.show {
+    display: flex;
+    flex-direction: column;
+}
 
 .nav-tabs {
     position: relative;
@@ -367,4 +386,5 @@ svg.hk01logo {
 
 .dropdown-item:hover {
     background-color: #FFF;
+    cursor: pointer;
 }

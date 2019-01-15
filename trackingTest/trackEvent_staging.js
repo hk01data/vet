@@ -71,7 +71,7 @@ function fireArticlePV(url) {
                 2: section,
                 3: channel,
                 5: article_id
-            }, "https://hk01.com/" + page_path, page_path);
+            }, "https://hk01.com/" + page_path + url, page_path + url);
 
         console.log("fire Article PV");
     }
