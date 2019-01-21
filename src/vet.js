@@ -19160,6 +19160,122 @@ var vet = {
                     22.225444
                 ]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "last_updated": "2019年1月17日",
+                "id": 161,
+                "chi_name": "荔枝角獸醫診所",
+                "chi_address": "荔枝角福華街571號曉悅地下8號舖",
+                "district": "深水埗區",
+                "tel1": 23686888,
+                "tel2": "",
+                "tel3": "",
+                "website": "https://lai-chi-kok-veterinary-clinic.business.site/",
+                "fb_page": "https://www.facebook.com/laichikokvetclinic/",
+                "remarks": "",
+                "head_ad1_image": "",
+                "head_ad1_href": "",
+                "head_ad1_start": "",
+                "head_ad1_end": "",
+                "head_ad2_image": "",
+                "head_ad2_href": "",
+                "head_ad2_start": "",
+                "head_ad2_end": "",
+                "footer_ad1_image": "",
+                "footer_ad1_href": "",
+                "footer_ad1_start": "",
+                "footer_ad1_end": "",
+                "opening_hours": [
+                    {
+                        "close": {
+                            "day": 0,
+                            "time": "2300"
+                        },
+                        "open": {
+                            "day": 0,
+                            "time": "0900"
+                        }
+                    },
+                    {
+                        "close": {
+                            "day": 1,
+                            "time": "2300"
+                        },
+                        "open": {
+                            "day": 1,
+                            "time": "0900"
+                        }
+                    },
+                    {
+                        "close": {
+                            "day": 2,
+                            "time": "2300"
+                        },
+                        "open": {
+                            "day": 2,
+                            "time": "0900"
+                        }
+                    },
+                    {
+                        "close": {
+                            "day": 3,
+                            "time": "2300"
+                        },
+                        "open": {
+                            "day": 3,
+                            "time": "0900"
+                        }
+                    },
+                    {
+                        "close": {
+                            "day": 4,
+                            "time": "2300"
+                        },
+                        "open": {
+                            "day": 4,
+                            "time": "0900"
+                        }
+                    },
+                    {
+                        "close": {
+                            "day": 5,
+                            "time": "2300"
+                        },
+                        "open": {
+                            "day": 5,
+                            "time": "0900"
+                        }
+                    },
+                    {
+                        "close": {
+                            "day": 6,
+                            "time": "2300"
+                        },
+                        "open": {
+                            "day": 6,
+                            "time": "0900"
+                        }
+                    }
+                ],
+                "weekday_text": [
+                    "星期一: 09:00 – 23:00",
+                    "星期二: 09:00 – 23:00",
+                    "星期三: 09:00 – 23:00",
+                    "星期四: 09:00 – 23:00",
+                    "星期五: 09:00 – 23:00",
+                    "星期六: 09:00 – 23:00",
+                    "星期日: 09:00 – 23:00"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.15281499999999,
+                    22.338817000000002
+                ]
+            }
         }
     ]
 };

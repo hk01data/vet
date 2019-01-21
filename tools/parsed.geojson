@@ -7787,10 +7787,10 @@
                 "head_ad2_href": "",
                 "head_ad2_start": "",
                 "head_ad2_end": "",
-                "footer_ad1_image": "260x64.png",
-                "footer_ad1_href": "www.hk01.com",
-                "footer_ad1_start": "2018-12-08T20:30:00",
-                "footer_ad1_end": "2018-12-20T20:30:00",
+                "footer_ad1_image": "",
+                "footer_ad1_href": "",
+                "footer_ad1_start": "",
+                "footer_ad1_end": "",
                 "opening_hours": [
                     {
                         "close": {
@@ -8343,12 +8343,12 @@
                 "website": "",
                 "fb_page": "https://www.facebook.com/pg/KManimalclinic",
                 "remarks": "",
-                "head_ad1_image": "64x64.png",
-                "head_ad1_href": "www.hk01.com",
+                "head_ad1_image": "",
+                "head_ad1_href": "",
                 "head_ad1_start": "",
                 "head_ad1_end": "",
-                "head_ad2_image": "64x64.png",
-                "head_ad2_href": "www.hk01.com",
+                "head_ad2_image": "",
+                "head_ad2_href": "",
                 "head_ad2_start": "",
                 "head_ad2_end": "",
                 "footer_ad1_image": "",
@@ -8501,10 +8501,10 @@
                 "website": "http://meifoovet.com/",
                 "fb_page": "",
                 "remarks": "",
-                "head_ad1_image": "64x64.png",
-                "head_ad1_href": "www.hk01.com",
+                "head_ad1_image": "",
+                "head_ad1_href": "",
                 "head_ad1_start": "",
-                "head_ad1_end": "2018-12-07T20:30:00",
+                "head_ad1_end": "",
                 "head_ad2_image": "",
                 "head_ad2_href": "",
                 "head_ad2_start": "",
@@ -19158,6 +19158,122 @@
                 "coordinates": [
                     114.111721,
                     22.225444
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "last_updated": "2019年1月17日",
+                "id": 161,
+                "chi_name": "荔枝角獸醫診所",
+                "chi_address": "荔枝角福華街571號曉悅地下8號舖",
+                "district": "深水埗區",
+                "tel1": 23686888,
+                "tel2": "",
+                "tel3": "",
+                "website": "https://lai-chi-kok-veterinary-clinic.business.site/",
+                "fb_page": "https://www.facebook.com/laichikokvetclinic/",
+                "remarks": "",
+                "head_ad1_image": "",
+                "head_ad1_href": "",
+                "head_ad1_start": "",
+                "head_ad1_end": "",
+                "head_ad2_image": "",
+                "head_ad2_href": "",
+                "head_ad2_start": "",
+                "head_ad2_end": "",
+                "footer_ad1_image": "",
+                "footer_ad1_href": "",
+                "footer_ad1_start": "",
+                "footer_ad1_end": "",
+                "opening_hours": [
+                    {
+                        "close": {
+                            "day": 0,
+                            "time": "2300"
+                        },
+                        "open": {
+                            "day": 0,
+                            "time": "0900"
+                        }
+                    },
+                    {
+                        "close": {
+                            "day": 1,
+                            "time": "2300"
+                        },
+                        "open": {
+                            "day": 1,
+                            "time": "0900"
+                        }
+                    },
+                    {
+                        "close": {
+                            "day": 2,
+                            "time": "2300"
+                        },
+                        "open": {
+                            "day": 2,
+                            "time": "0900"
+                        }
+                    },
+                    {
+                        "close": {
+                            "day": 3,
+                            "time": "2300"
+                        },
+                        "open": {
+                            "day": 3,
+                            "time": "0900"
+                        }
+                    },
+                    {
+                        "close": {
+                            "day": 4,
+                            "time": "2300"
+                        },
+                        "open": {
+                            "day": 4,
+                            "time": "0900"
+                        }
+                    },
+                    {
+                        "close": {
+                            "day": 5,
+                            "time": "2300"
+                        },
+                        "open": {
+                            "day": 5,
+                            "time": "0900"
+                        }
+                    },
+                    {
+                        "close": {
+                            "day": 6,
+                            "time": "2300"
+                        },
+                        "open": {
+                            "day": 6,
+                            "time": "0900"
+                        }
+                    }
+                ],
+                "weekday_text": [
+                    "星期一: 09:00 – 23:00",
+                    "星期二: 09:00 – 23:00",
+                    "星期三: 09:00 – 23:00",
+                    "星期四: 09:00 – 23:00",
+                    "星期五: 09:00 – 23:00",
+                    "星期六: 09:00 – 23:00",
+                    "星期日: 09:00 – 23:00"
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.15281499999999,
+                    22.338817000000002
                 ]
             }
         }
