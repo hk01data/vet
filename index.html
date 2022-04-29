@@ -2,10 +2,34 @@
 <html>
 
 <head>
-    <meta charset='utf-8' />
-    <title>獸醫診所地圖 | 話你知香港獸醫診所位置、營業時間 | 香港01 </title>
-    <meta name="author" content="香港01">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <meta property="fb:app_id" content="1651866545051541">
+    <meta property="og:title" content="獸醫診所地圖 | 話你知香港獸醫診所位置、營業時間 | 香港01" />
+    <meta property="og:description" content="獸醫診所地圖 | 話你知香港獸醫診所位置、營業時間 | 香港01" />
+    <meta property="og:site_name" content="獸醫診所地圖 | 話你知香港獸醫診所位置、營業時間 | 香港01 x 01數據新聞" />
+    <meta property="og:image" content="https://datanews.hk01.com/map/petcare/images/og-image.png?v=201901111227" />
+    <meta property="article:publisher" content="https://www.facebook.com/hk01.anistoryhk/" />
+    <meta property="article:author" content="https://www.facebook.com/hk01.anistoryhk/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://datanews.hk01.com/map/petcare/index.html" />
+
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="@hk01wemedia">
+    <meta property="twitter:url" content="https://datanews.hk01.com/map/petcare/index.html">
+    <meta property="twitter:description" content="獸醫診所地圖 | 話你知香港獸醫診所位置、營業時間 | 香港01">
+    <meta property="twitter:image" content="https://datanews.hk01.com/map/petcare/images/og-image.png?v=201901111227">
+
+    <title>獸醫診所地圖 | 話你知香港獸醫診所位置、營業時間 | 香港01</title>
+    <meta name="keywords" content="貓,狗,嘔吐,瘋狗症,跳蚤,24小時,獸醫,診所,獸醫診所,地圖,最近">
     <meta name="description" content="遇到貓狗嘔吐、瘋狗症、跳蚤問題？想搵24小時獸醫診所？即刻入黎睇獸醫診所地圖睇下邊間獸醫診所最近自己！">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+
+    <meta name="author" content="香港01">
     <meta name="publisher" content="HK01">
 
     <!--favicon-->
@@ -19,14 +43,13 @@
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
         crossorigin=""></script>
-    <script src="src/vet.js?v=20181209"></script>
-    <script type="text/javascript" src="src/districts.js"></script>
+    <script src="src/vet.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="src/custom.css?v=20181202">
+    <link rel="stylesheet" href="src/custom.css?v=201901111227">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
@@ -36,546 +59,1119 @@
     <script src='src/luxon.min.js'></script>
     <link rel="stylesheet" href="src/animate.css" />
 
+    <link rel="stylesheet" href="src/sct/style.css">
+    <link rel="stylesheet" href="src/sct/holygrail.css">
+    <style>
+        .hg {
+            display: grid;
+            grid-template-areas: "main" "footer";
+            grid-template-rows: 1fr 0;
+            min-height: 100vh;
+            height: 100vh;
+            /* Fallback for browsers that do not support Custom Properties */
+            height: calc(var(--vh, 1vh) * 100);
+        }
+
+        .hg.ad {
+            grid-template-rows: 1fr 50px;
+        }
+
+        .hg.ad #mapid {
+            height: 100%;
+            width: 100%;
+        }
+
+        @media only screen and (min-width: 468px) {
+            .hg.ad {
+                grid-template-rows: 1fr 60px;
+            }
+        }
+
+        @media only screen and (min-width: 728px) {
+            .hg.ad {
+                grid-template-rows: 1fr 90px;
+            }
+        }
+
+        .hg-main {
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        // Responsive Height
+        var height;
+        function isAppView() {
+            var useragent = navigator.userAgent;
+            var regex = '(hk01)|(app)';
+            // d.getElementById('ua').textContent = useragent;
+            return Boolean(useragent.match(regex));
+        }
+
+        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+        let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        if (!isAppView()) document.documentElement.style.setProperty('--vh', `${vh}px`);
+    </script>
+    <script src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+
+    <script>
+        googletag.cmd.push(function () {
+            var iframeWidth = document.documentElement.clientWidth;
+            var adSizeMapping = googletag.sizeMapping()
+			// .addSize([1000, 200], [970,90])
+			.addSize([768, 200], [728, 90])
+			.addSize([480, 200], [468, 60])
+			.addSize([320, 400], [320, 50])
+			.addSize([0, 0], [])
+			.build();
+
+            if (window.innerWidth > 970) {
+                adSizeMapping = googletag.sizeMapping()
+                .addSize([1000, 200], [970,90])
+                .addSize([768, 200], [728, 90])
+                .addSize([480, 200], [468, 60])
+                .addSize([320, 400], [320, 50])
+                .addSize([0, 0], [])
+                .build();
+            }
+
+            window.responsive_ad1 = googletag.defineSlot('/108346865/HK01_Map_Component', ((window.innerWidth > 960) ? [970,90] : [320, 50]), 'div-gpt-ad-1536895837023-0')
+            .defineSizeMapping(adSizeMapping)
+            .setTargeting('map_id', ['petcare'])
+			.addService(googletag.pubads())
+			.setCollapseEmptyDiv(true);
+
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+
+            googletag.pubads().addEventListener('slotRenderEnded', function (e) {
+                if (!e.isEmpty) {	// If the ad isn't empty
+                    document.getElementById(e.slot.getSlotElementId()).setAttribute('class', 'loaded');
+                    console.log('Ad Loaded');
+                    document.querySelector('.hg').classList.add('ad');
+                } else {
+                    console.log('Ad Empty');
+                }
+            });
+        });
+    </script>
+
 
     <!-- Tracking -->
     <script src="https://tracking-lib.hk01.com/piwik/piwik.min.js"></script>
     <script src="https://tracking-lib.hk01.com/classic-piwik/trackerClient.lastest.js"></script>
-    <script src="src/trackEvent_staging.js"></script>
+    <script src="src/trackEvent.js?v=201901111227"></script>
     <script src="https://www.googletagmanager.com/gtag/js"></script>
 
 </head>
 
-<body>
-
-    <!-- Welcome Modal -->
-    <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="welcomeModal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title mx-auto" id="welcomeModal">香港01｜獸醫診所地圖</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body text-center">
-                    <p>這是教學</p>
-                    <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item"></li><img src="icon/pin-247.png" class="inline_img">24小時營業</li>
-                        <li class="list-inline-item"></li><img src="icon/pin-available.png" class="inline_img">營業中</li>
-                        <li class="list-inline-item"></li><img src="icon/pin-closed.png" class="inline_img">休息</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger mx-auto" data-dismiss="modal">好的</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Attribution Modal -->
-    <div class="modal fade" id="attributionModal" tabindex="-1" role="dialog" aria-labelledby="attributionModal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="attributionModal">獸醫診所地圖</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <h5>資料來源</h5>
-                    <ul class="list-unstyled">
-                        <li>漁護署獸醫診所名單</li>
-                        <li>Google 地圖</li>
-                    </ul>
-                    <p>註：此地圖只涵蓋已簽署同意被列入漁護署「獸醫診所名單」的獸醫診所，未必包括全港所有診所。</p>
-                    <p>最後更新：2018年9月10日</p>
-                    <p>工具：<a href="https://leafletjs.com/" target="_blank">Leaflet</a>, &copy; <a href="https://www.openstreetmap.org/copyright"
-                            target="_blank">OpenStreetMap</a></p>
-
+<body class="hg">
+    <main class="hg-main">
+        <!-- Welcome Modal -->
+        <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="welcomeModal"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title mx-auto" id="welcomeModal">香港01｜獸醫診所地圖</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p>遇到貓狗嘔吐唔舒服？想搵24小時獸醫診所？<br>即刻入獸醫診所地圖，睇吓獸醫診所<br>營業時間、地址、電話！</p>
+                        <p>&nbsp;</p>
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item"></li><img src="icon/pin-247.png" class="inline_img">24小時營業</li>
+                            <li class="list-inline-item"></li><img src="icon/pin-available.png" class="inline_img">營業中</li>
+                            <li class="list-inline-item"></li><img src="icon/pin-closed.png" class="inline_img">休息</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger mx-auto" data-dismiss="modal">好的</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Menu Modal -->
-    <!-- Check this for effect:  https://stackoverflow.com/questions/32168234/change-the-bootstrap-modal-effect -->
-    <div class="modal animated slideInRight" id="navModal" tabindex="-1" role="dialog" aria-labelledby="navModal" aria-hidden="true">
-        <div class="modal-dialog nav_modal" role="document">
-            <div class="modal-content nav_modal">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="navModal">獸醫診所地圖</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+        <!-- Attribution Modal -->
+        <div class="modal fade" id="attributionModal" tabindex="-1" role="dialog" aria-labelledby="attributionModal"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="attributionModal">獸醫診所地圖</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h5>資料來源</h5>
+                        <ul class="list-unstyled">
+                            <li>漁護署獸醫診所名單</li>
+                            <li>Google 地圖</li>
+                        </ul>
+                        <p>註：此地圖只涵蓋已簽署同意被列入漁護署「獸醫診所名單」的獸醫診所，未必包括全港所有診所。</p>
+                        <p>最後更新：2022年4月12日</p>
+                        <p>工具：<a href="https://leafletjs.com/" target="_blank">Leaflet</a>, &copy; <a href="https://www.openstreetmap.org/copyright"
+                                target="_blank">OpenStreetMap</a></p>
+
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item"></li><img src="icon/pin-247.png" class="inline_img">24小時營業</li>
-                        <li class="list-inline-item"></li><img src="icon/pin-available.png" class="inline_img">營業中</li>
-                        <li class="list-inline-item"></li><img src="icon/pin-closed.png" class="inline_img">休息</li>
-                    </ul>
-                    <ul class="list-group list-group-flush">
-                        <a href="#" class="list-group-item list-group-item-action attribution" data-toggle="modal" data-target="#attributionModal">資料來源</a>
-                        <a href="https://www.facebook.com/hk01.anistoryhk/" target="_blank" class="list-group-item list-group-item-action">毛孩子：我們的故事</a>
-                    </ul>
-                </div>
-                <div class="modal-footer">香港01有限公司版權所有 © 2018</div>
             </div>
         </div>
-    </div>
 
-    <nav class="navbar navbar-light bg-light" id="vet-nav">
-        <a class="navbar-brand" href="#"><div class="icon baseline"><svg class="hk01logo_black" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 104 59"><g stroke="none" fill-rule="evenodd">
-                        <path d="M91.51 15.136v37.706a5.839 5.839 0 0 0 11.677 0V1.22L91.51 15.136zM45.055 57.047l8.367-9.97C42.13 46.156 33.84 34.63 38.547 22.472c1.684-4.348 5.187-7.782 9.551-9.418 10.956-4.107 21.355 2.307 23.877 11.912l8.358-9.96v-.003C73.773 3.482 59.631-3.16 44.689 1.907 36.592 4.654 30.17 11.017 27.38 19.1c-5.837 16.911 3.346 32.845 17.667 37.95.003 0 .006 0 .007-.002M54.382 58.74c16.4.272 29.776-12.939 29.776-29.274 0-1.906-.188-3.769-.536-5.573L54.382 58.74zM11.103 40.445h3.285v-2.562h-3.285v2.562zm3.149 1.812h-2.65l-1.225 2.04h5.099l-1.224-2.04zm-4.304 6.3h5.822V46.11H9.948v2.447zm8.88-1.134v2.947h-8.88v1.88h10.58l-.883 1.813H6.888v-6.64H5.167l3.058-5.166H5.189v-1.812h2.854v-2.562H5.665v-1.811h2.378v-1.858h3.06v1.858h3.285v-1.858h3.06v1.858h2.4v1.811h-2.4v2.562h2.9v1.812h-2.72l3.059 5.166h-1.858zM2.402 45.158L.25 39.856h3.24l2.153 5.302h-3.24zm.794 8.905H.046l2.106-8.044h3.15l-2.107 8.044zm-.839-14.955L0 34.19h3.24l2.357 4.917h-3.24zM4.668 24.243h11.306V22.52H4.668v1.723zm0-3.49h11.306v-1.7H4.668v1.7zm7.183-8.7v4.713H8.79v-4.713H.453v-1.768h8.338V8.858H.974V7.09h15.68l.317-.951h3.195l-.93 2.719h-7.385v1.427h8.315v1.768H11.85zm7.182 5.822v8.135H1.609v-8.135H.023l3.421-5.052h3.512l-3.014 4.464h12.802l-3.058-4.464h3.511l3.467 5.052h-1.631z"></path>
-                    </g></svg></div>獸醫診所地圖</a>
-        <button class="navbar-toggler animated slideInRight faster" type="button" data-toggle="modal" data-target="#navModal" aria-controls="navModal"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-
-    </nav>
-
-      <ul class="nav nav-tabs nav-fill">
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">香港</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#" data-sub-district="wanchai" data-lat="22.273049" data-lng="114.180691">灣仔</a>
-              <a class="dropdown-item" href="#" data-sub-district="causewaybay" data-lat="22.286016" data-lng="114.140809">中環</a>
+        <!-- Menu Modal -->
+        <!-- Check this for effect:  https://stackoverflow.com/questions/32168234/change-the-bootstrap-modal-effect -->
+        <div class="modal animated slideInRight" id="navModal" tabindex="-1" role="dialog" aria-labelledby="navModal"
+            aria-hidden="true">
+            <div class="modal-dialog nav_modal" role="document">
+                <div class="modal-content nav_modal">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="navModal">寵物地圖</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <img src="icon/pin-247.png" class="inline_img">
+                                <span>24小時營業</span>
+                            </li>
+                            <li class="list-inline-item">
+                                <img src="icon/pin-available.png" class="inline_img">
+                                <span>營業中</span>
+                            </li>
+                            <li class="list-inline-item">
+                                <img src="icon/pin-closed.png" class="inline_img">
+                                <span>休息</span>
+                            </li>
+                        </ul>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <i class="fas fa-caret-right"></i>
+                                <a class="list-group-item-action" href="./index.html">獸醫診所地圖</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a class="list-group-item-action" href="https://www.hk01.com/channel/28/%E5%AF%B5%E7%89%A9"
+                                    target="_blank">
+                                    <span>01寵物頻道</span>
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a class="list-group-item-action" href="https://www.facebook.com/hk01.anistoryhk/"
+                                    target="_blank">
+                                    <i class="fab fa-facebook-square"></i>
+                                    <span>毛孩子：我們的故事</span>
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a class="list-group-item-action attribution" href="#" data-toggle="modal" data-target="#attributionModal">資料來源</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">香港01有限公司版權所有 © 2022</div>
+                </div>
             </div>
-          </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">九龍</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">新界</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </li>
-      </ul>
-    <!-- <nav>
-        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-          <a class="nav-item nav-link active" id="nav-hki-tab" data-toggle="tab" href="#nav-hki" role="tab" aria-controls="nav-hki" aria-selected="true">香港</a>
-          <a class="nav-item nav-link" id="nav-kln-tab" data-toggle="tab" href="#nav-kln" role="tab" aria-controls="nav-kln" aria-selected="false">九龍</a>
-          <a class="nav-item nav-link" id="nav-nts-tab" data-toggle="tab" href="#nav-nts" role="tab" aria-controls="nav-nts" aria-selected="false">新界</a>
         </div>
-      </nav> -->
 
-    <div id='mapid'></div>
-    <div class="card vet-card card--hidden"></div>
+        <nav class="navbar navbar-light bg-light" id="vet-nav">
+            <div class="nav-brand-cont">
+                <span class="inapp-back-button d-none"></span>
+                <a class="navbar-brand" href="#">
+                    <div class="icon baseline">
+                        <!-- <svg class="hk01logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 59">
+                            <g stroke="none" fill-rule="evenodd">
+                                <path d="M91.51 15.136v37.706a5.839 5.839 0 0 0 11.677 0V1.22L91.51 15.136zM45.055 57.047l8.367-9.97C42.13 46.156 33.84 34.63 38.547 22.472c1.684-4.348 5.187-7.782 9.551-9.418 10.956-4.107 21.355 2.307 23.877 11.912l8.358-9.96v-.003C73.773 3.482 59.631-3.16 44.689 1.907 36.592 4.654 30.17 11.017 27.38 19.1c-5.837 16.911 3.346 32.845 17.667 37.95.003 0 .006 0 .007-.002M54.382 58.74c16.4.272 29.776-12.939 29.776-29.274 0-1.906-.188-3.769-.536-5.573L54.382 58.74zM11.103 40.445h3.285v-2.562h-3.285v2.562zm3.149 1.812h-2.65l-1.225 2.04h5.099l-1.224-2.04zm-4.304 6.3h5.822V46.11H9.948v2.447zm8.88-1.134v2.947h-8.88v1.88h10.58l-.883 1.813H6.888v-6.64H5.167l3.058-5.166H5.189v-1.812h2.854v-2.562H5.665v-1.811h2.378v-1.858h3.06v1.858h3.285v-1.858h3.06v1.858h2.4v1.811h-2.4v2.562h2.9v1.812h-2.72l3.059 5.166h-1.858zM2.402 45.158L.25 39.856h3.24l2.153 5.302h-3.24zm.794 8.905H.046l2.106-8.044h3.15l-2.107 8.044zm-.839-14.955L0 34.19h3.24l2.357 4.917h-3.24zM4.668 24.243h11.306V22.52H4.668v1.723zm0-3.49h11.306v-1.7H4.668v1.7zm7.183-8.7v4.713H8.79v-4.713H.453v-1.768h8.338V8.858H.974V7.09h15.68l.317-.951h3.195l-.93 2.719h-7.385v1.427h8.315v1.768H11.85zm7.182 5.822v8.135H1.609v-8.135H.023l3.421-5.052h3.512l-3.014 4.464h12.802l-3.058-4.464h3.511l3.467 5.052h-1.631z"></path>
+                            </g>
+                        </svg> -->
+                        <img class="hk01logo" src="images/hk01branding3.png" height="37" alt="香港01" />
+                    </div>
+                    <span class="navbar-name">獸醫診所地圖</span>
+                </a>
+            </div>
 
-    <script>
-        // Global Variable
-        var DateTime = luxon.DateTime;
-        var vetClinicMap;
-        var vetLayer;
-        var entrySource;
-        var initialID = 0;
-        var currentID = 1;
-        var currentMkr = {};
-        var card = document.querySelector('.vet-card');
-        var defaultSizeIcon = L.Icon.extend({
-            options: {
-                iconSize: [30, 30]
-            }
-        });
+            <button class="navbar-toggler animated slideInRight faster" type="button" data-toggle="modal" data-target="#navModal"
+                aria-controls="navModal" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        var smallSizeIcon = L.Icon.extend({
-            options: {
-                iconSize: [12, 12]
-            }
-        });
 
-        var mediumSizeIcon = L.Icon.extend({
-            options: {
-                iconSize: [40, 40]
-            }
-        });
+        </nav>
 
-        var largeSizeIcon = L.Icon.extend({
-            options: {
-                iconSize: [55, 55]
-            }
-        });
+        <ul class="nav nav-tabs nav-fill">
+            <li class="nav-item dropdown sub-district-nav">
+                <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    香港
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" data-sub-district="wanchaicausewaybay" data-lat="22.274860" data-lng="114.181746">灣仔、銅鑼灣</a>
+                    <a class="dropdown-item" data-sub-district="central" data-lat="22.281300" data-lng="114.155863">中環</a>
+                    <a class="dropdown-item" data-sub-district="saiwan" data-lat="22.284786" data-lng="114.137310">西環</a>
+                    <a class="dropdown-item" data-sub-district="northpoint" data-lat="22.286839" data-lng="114.195207">北角</a>
+                    <a class="dropdown-item" data-sub-district="saiwanho" data-lat="22.282951" data-lng="114.221201">西灣河</a>
+                </div>
+            </li>
+            </div>
 
-        var red = new defaultSizeIcon({ iconUrl: 'icon/pin-247.png' });
-        var green = new defaultSizeIcon({ iconUrl: 'icon/pin-available.png' });
-        var grey = new defaultSizeIcon({ iconUrl: 'icon/pin-closed.png' });
 
-        function detectSource(callback) {
-            let linkText = window.location.href;
-            console.log(linkText);
-            entrySource = (linkText.match(/#/)) ? linkText.match(/#(.*?)(&|$|\?)/)[1] : "organic";
-            initialID = (linkText.match(/&id=/)) ? parseInt(linkText.match(/&id=(\d+)/)[1]) : 0;
+            <li class="nav-item dropdown sub-district-nav">
+                <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    九龍
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" data-sub-district="mongkok" data-lat="22.31926" data-lng="114.16932">旺角</a>
+                    <a class="dropdown-item" data-sub-district="kowlooncity" data-lat="22.315782" data-lng="114.187887">九龍城</a>
+                    <a class="dropdown-item" data-sub-district="kwuntong" data-lat="22.313683" data-lng="114.221671">觀塘</a>
+                    <a class="dropdown-item" data-sub-district="shamshuipoprinceedward" data-lat="22.329168" data-lng="114.163337">深水埗、太子</a>
+                </div>
+                </div>
+            </li>
 
-            switch (entrySource) {
-                case "article":
-                case "base":
-                case "issue":
-                    break;
-                default:
-                    entrySource = "organic";
-                    fireArticlePV(removehash(window.location.href));
-            }
 
-            console.log(entrySource + " | initialID: " + initialID);
+            <li class="nav-item dropdown sub-district-nav">
+                <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" data-persist="true"
+                    aria-haspopup="true" aria-expanded="false">
+                    新界
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" data-sub-district="tsuenwan" data-lat="22.371299" data-lng="114.115029">荃灣</a>
+                    <a class="dropdown-item" data-sub-district="tuenmun" data-lat="22.389242" data-lng="113.974507">屯門</a>
+                    <a class="dropdown-item" data-sub-district="yuenlong" data-lat="22.444457" data-lng="114.026956">元朗</a>
+                    <a class="dropdown-item" data-sub-district="northdistrict" data-lat="22.502254" data-lng="114.135678">北區</a>
+                    <a class="dropdown-item" data-sub-district="taipo" data-lat="22.451605" data-lng="114.164757">大埔</a>
+                    <a class="dropdown-item" data-sub-district="shatin" data-lat="22.379762" data-lng="114.182577">沙田</a>
+                    <a class="dropdown-item" data-sub-district="saikung" data-lat="22.383511" data-lng="114.271238">西貢</a>
+                    <a class="dropdown-item" data-sub-district="tseungkwano" data-lat="22.314464" data-lng="114.262384">將軍澳</a>
+                </div>
+        </ul>
 
-            fireEvent("vetmap_landing", "view", {
-                'start_mode': entrySource,
-                'anonymous_id': getAnonymousId(),
-                'session_id': '',
-                'ts': Date.now()
+        <div id='mapid'></div>
+        <div class="card vet-card card--hidden"></div>
+
+        <script src="src/reactWeb.js?v=201901111227"></script>
+        <script>
+            // Global Variable
+            var DateTime = luxon.DateTime;
+            var vetClinicMap;
+            var vetLayer;
+            var entrySource;
+            var initialID = 0;
+            var currentID = 1;
+            var currentMkr = {};
+            var card = document.querySelector('.vet-card');
+            var defaultSizeIcon = L.Icon.extend({
+                options: {
+                    iconSize: [25, 25]
+                }
             });
 
-            callback(initialID);
-        }
-
-        detectSource(initMap);
-
-        function initMap(initialID) {
-            // welcome();
-
-            vet.features.forEach(feature => {
-                feature.properties.status = calcBranchstatus(feature);
-                feature.properties.head_ad1 = checkAdStatus(feature, "head_ad1");
-                feature.properties.head_ad2 = checkAdStatus(feature, "head_ad2");
-                feature.properties.footer_ad1 = checkAdStatus(feature, "footer_ad1");
+            var smallSizeIcon = L.Icon.extend({
+                options: {
+                    iconSize: [10, 10]
+                }
             });
 
-            vetClinicMap = L.map('mapid', {
-                center: (screen.width >= 768) ? [22.316538, 114.174007] : [22.316538, 114.174007],
-                zoom: (screen.width >= 768) ? 14 : 13,
-                zoomSnap: 0.25,
-                maxBounds: ([
-                    [21.795661, 113.073929],
-                    [23.113786, 115.230749]
-                ]),
-                attributionControl: false,
-                keyboard: false // Prevent jumping in iframe
+            var mediumSizeIcon = L.Icon.extend({
+                options: {
+                    iconSize: [30, 30]
+                }
             });
 
-            L.tileLayer('https://maptile.hk01.com/tile/{z}/{x}/{y}.png', {
-                maxZoom: 18,
-                minZoom: 10
+            var largeSizeIcon = L.Icon.extend({
+                options: {
+                    iconSize: [45, 45]
+                }
+            });
+
+            var ExlargeSizeIcon = L.Icon.extend({
+                options: {
+                    iconSize: [60, 60]
+                }
+            });
+
+            var red = new defaultSizeIcon({
+                iconUrl: 'icon/pin-247.png'
+            });
+            var green = new defaultSizeIcon({
+                iconUrl: 'icon/pin-available.png'
+            });
+            var grey = new defaultSizeIcon({
+                iconUrl: 'icon/pin-closed.png'
+            });
+            var spec = new ExlargeSizeIcon({
+                iconUrl: 'icon/pet_icon1.png'
+            });
+            var pp = new ExlargeSizeIcon({
+                iconUrl: 'icon/pp.png'
+            });
+
+            function detectSource(callback) {
+                let linkText = window.location.href;
+                console.log(linkText);
+                entrySource = (linkText.match(/#/)) ? linkText.match(/#(.*?)(&|$|\?)/)[1] : "organic";
+                initialID = (linkText.match(/&id=/)) ? parseInt(linkText.match(/&id=(\d+)/)[1]) : 0;
+
+                switch (entrySource) {
+                    case "article":
+                    case "base":
+                    case "issue":
+                        break;
+                    default:
+                        entrySource = "organic";
+                        fireArticlePV(removehash(window.location.href));
+                }
+
+                console.log(entrySource + " | initialID: " + initialID);
+
+                fireEvent("vetmap_landing", "view", {
+                    'start_mode': entrySource,
+                    'anonymous_id': getAnonymousId(),
+                    'session_id': getSessionId(),
+                    'ts': Date.now()
+                });
+
+                fireMapPV(removehash(window.location.href));
+
+                callback(initialID);
+            }
+
+            detectSource(initMap);
+
+            function initMap(initialID) {
+                welcome();
+
+                vet.features.forEach(feature => {
+                    feature.properties.status = calcBranchstatus(feature);
+                    feature.properties.head_ad1 = checkAdStatus(feature, "head_ad1");
+                    feature.properties.head_ad2 = checkAdStatus(feature, "head_ad2");
+                    feature.properties.footer_ad1 = checkAdStatus(feature, "footer_ad1");
+                });
+
+                vetClinicMap = L.map('mapid', {
+                    center: (screen.width >= 768) ? [22.316538, 114.174007] : [22.316538, 114.174007],
+                    zoom: (screen.width >= 768) ? 14 : 13,
+                    zoomSnap: 0.25,
+                    maxBounds: ([
+                        [21.795661, 113.073929],
+                        [23.113786, 115.230749]
+                    ]),
+                    attributionControl: false,
+                    keyboard: false // Prevent jumping in iframe
+                });
+
+                L.tileLayer('https://maptile.hk01.com/tile/{z}/{x}/{y}.png', {
+                    maxZoom: 18,
+                    minZoom: 10
+                }).addTo(vetClinicMap);
+
+                vetLayer = L.geoJSON(vet, {
+                    onEachFeature: onEachFeature,
+
+                    pointToLayer: function (feature, latlng) {
+                        let options = {alt:feature.properties.id};
+
+                        switch (feature["properties"]["status"]) {
+                            case 'specific1_available':
+                                options.icon = spec;
+                                break;
+                            case 'specific2_available':
+                                options.icon = pp;
+                                break;
+                            case 'specific1':
+                                options.icon = spec;
+                                break;
+                            case 'specific2':
+                                options.icon = pp;
+                                break;
+                            case 'always_available':
+                                options.icon = red;
+                                break;
+                            case 'available':
+                                options.icon = green;
+                                break;
+                            case 'closed':
+                                options.icon = grey;
+                                break;
+
+                        }
+                        return L.marker(latlng, options);
+                    }
+                }).addTo(vetClinicMap);
+            }
+            
+
+            L.control.locate({
+                collapsed: false,
+                position: 'topleft',
+                setView: false,
+                flyTo: true,
+                showPopup: false
             }).addTo(vetClinicMap);
 
-            vetLayer = L.geoJSON(vet, {
-                onEachFeature: onEachFeature,
-                pointToLayer: function (feature, latlng) {
-                    let options = {};
-                    switch (feature["properties"]["status"]) {
+            function calDistance(loca_info) {
+                var options = {
+                    units: 'kilometers'
+                };
+
+                vet.features.forEach(function (f) {
+                    Object.defineProperty(f.properties, 'distance', {
+                        value: turf.distance(loca_info, f.geometry, options),
+                        writable: true,
+                        enumerable: true,
+                        configurable: true
+                    });
+                })
+
+                vet.features.sort(function (a, b) {
+                    if (a.properties.distance > b.properties.distance) {
+                        return 1;
+                    }
+                    if (a.properties.distance < b.properties.distance) {
+                        return -1;
+                    }
+                    // a must be equal to b
+                    return 0;
+                });
+
+            }
+
+            vetClinicMap.once('locationfound', function (e) {
+                var glatlng = [e.latlng.lng, e.latlng.lat];
+                calDistance(glatlng);
+
+                var line = turf.lineString([vet.features[3].geometry.coordinates, glatlng]); // Closest 3 features
+                var bbox = turf.bbox(line);
+
+                temp_bound = [
+                    [bbox[1], bbox[0]],
+                    [bbox[3], bbox[2]]
+                ];
+
+                vetClinicMap.fitBounds(temp_bound, {
+                    padding: [80, 80]
+                });
+
+                // Send Map Event
+                fireEvent("vetmap_gps", "click", {
+                    'lat': e.latlng.lat,
+                    'lng': e.latlng.lng,
+                    'anonymous_id': getAnonymousId(),
+                    'session_id': getSessionId(),
+                    'ts': Date.now()
+                });
+
+            });
+
+            vetClinicMap.on('zoomend', function () {
+                var currentZoom = vetClinicMap.getZoom();
+                var pet_icon = 'icon/pet_icon1.png'
+                var pp_icon = 'icon/pp.png'
+                if (currentZoom >= 11.5 && currentZoom < 14) {
+                    red = new defaultSizeIcon({
+                        iconUrl: 'icon/pin-247.png'
+                    });
+                    green = new defaultSizeIcon({
+                        iconUrl: 'icon/pin-available.png'
+                    });
+                    grey = new defaultSizeIcon({
+                        iconUrl: 'icon/pin-closed.png'
+                    });
+                    spec = new ExlargeSizeIcon({
+                        iconUrl: pet_icon
+                    });
+                    pp = new ExlargeSizeIcon({
+                        iconUrl: pp_icon
+                    });
+
+
+                } else if (currentZoom >= 14 && currentZoom < 15) {
+                    red = new mediumSizeIcon({
+                        iconUrl: 'icon/pin-247.png'
+                    });
+                    green = new mediumSizeIcon({
+                        iconUrl: 'icon/pin-available.png'
+                    });
+                    grey = new mediumSizeIcon({
+                        iconUrl: 'icon/pin-closed.png'
+                    });
+                    spec = new ExlargeSizeIcon({
+                        iconUrl: pet_icon
+                    });
+                    pp = new ExlargeSizeIcon({
+                        iconUrl: pp_icon
+                    });
+
+                } else if (currentZoom >= 15) {
+                    red = new largeSizeIcon({
+                        iconUrl: 'icon/pin-247.png'
+                    });
+                    green = new largeSizeIcon({
+                        iconUrl: 'icon/pin-available.png'
+                    });
+                    grey = new largeSizeIcon({
+                        iconUrl: 'icon/pin-closed.png'
+                    });
+                    spec = new ExlargeSizeIcon({
+                        iconUrl: pet_icon
+                    });
+                    pp = new ExlargeSizeIcon({
+                        iconUrl: pp_icon
+                    });
+
+                } else {
+                    red = new smallSizeIcon({
+                        iconUrl: 'icon/red_dot.png'
+                    });
+                    green = new smallSizeIcon({
+                        iconUrl: 'icon/green_dot.png'
+                    });
+                    grey = new smallSizeIcon({
+                        iconUrl: 'icon/grey_dot.png'
+                    });
+                    spec = new ExlargeSizeIcon({
+                        iconUrl: pet_icon
+                    });
+                    pp = new ExlargeSizeIcon({
+                        iconUrl: pp_icon
+                    });
+                }
+
+                vetLayer.eachLayer(mkr => {
+                    switch (mkr.feature["properties"]["status"]) {
+                        case 'specific1_available':
+                            icon = spec;
+                            break;
+                        case 'specific2_available':
+                            icon = pp;
+                            break;
+                        case 'specific1':
+                            icon = spec;
+                            break;
+                        case 'specific2':
+                            icon = pp;
+                            break;
                         case 'always_available':
-                            options.icon = red;
+                            icon = red;
                             break;
                         case 'available':
-                            options.icon = green;
+                            icon = green;
                             break;
                         case 'closed':
-                            options.icon = grey;
+                            icon = grey;
                             break;
                     }
-                    return L.marker(latlng, options);
-                }
-            }).addTo(vetClinicMap);
-        }
-
-        L.control.locate({
-            collapsed: false,
-            position: 'topleft',
-            setView: false,
-            flyTo: true,
-            showPopup: false
-        }).addTo(vetClinicMap);
-
-        function calDistance(loca_info) {
-            var options = {
-                units: 'kilometers'
-            };
-
-            vet.features.forEach(function (f) {
-                Object.defineProperty(f.properties, 'distance', {
-                    value: turf.distance(loca_info, f.geometry, options),
-                    writable: true,
-                    enumerable: true,
-                    configurable: true
+                    mkr.setIcon(icon);
                 });
             })
 
-            vet.features.sort(function (a, b) {
-                if (a.properties.distance > b.properties.distance) {
-                    return 1;
-                }
-                if (a.properties.distance < b.properties.distance) {
-                    return -1;
-                }
-                // a must be equal to b
-                return 0;
-            });
+            var card = document.querySelector('.vet-card');
 
-        }
-
-        vetClinicMap.once('locationfound', function (e) {
-            var glatlng = [e.latlng.lng, e.latlng.lat];
-            calDistance(glatlng);
-
-            var line = turf.lineString([vet.features[3].geometry.coordinates, glatlng]); // Closest 3 features
-            var bbox = turf.bbox(line);
-
-            temp_bound = [[bbox[1], bbox[0]], [bbox[3], bbox[2]]];
-
-            vetClinicMap.fitBounds(temp_bound, {
-                padding: [80, 80]
-            });
-        });
-
-        vetClinicMap.on('zoomend', function () {
-            var currentZoom = vetClinicMap.getZoom();
-            if (currentZoom >= 11.5 && currentZoom < 14) {
-                red = new defaultSizeIcon({ iconUrl: 'icon/pin-247.png' });
-                green = new defaultSizeIcon({ iconUrl: 'icon/pin-available.png' });
-                grey = new defaultSizeIcon({ iconUrl: 'icon/pin-closed.png' });
-            } else if (currentZoom >= 14 && currentZoom < 15) {
-                red = new mediumSizeIcon({ iconUrl: 'icon/pin-247.png' });
-                green = new mediumSizeIcon({ iconUrl: 'icon/pin-available.png' });
-                grey = new mediumSizeIcon({ iconUrl: 'icon/pin-closed.png' });
-            } else if (currentZoom >= 15) {
-                red = new largeSizeIcon({ iconUrl: 'icon/pin-247.png' });
-                green = new largeSizeIcon({ iconUrl: 'icon/pin-available.png' });
-                grey = new largeSizeIcon({ iconUrl: 'icon/pin-closed.png' });
-            } else {
-                red = new smallSizeIcon({ iconUrl: 'icon/red_dot.png' });
-                green = new smallSizeIcon({ iconUrl: 'icon/green_dot.png' });
-                grey = new smallSizeIcon({ iconUrl: 'icon/grey_dot.png' });
+            function onEachFeature(feature, layer) {
+                layer.on({
+                    click: popCard
+                })
             }
 
-            vetLayer.eachLayer(mkr => {
-                switch (mkr.feature["properties"]["status"]) {
-                    case 'always_available':
-                        icon = red;
-                        break;
-                    case 'available':
-                        icon = green;
-                        break;
-                    case 'closed':
-                        icon = grey;
-                        break;
-                }
-                mkr.setIcon(icon);
-            });
-        })
+            function calcBranchstatus(feature) {
+                // Return if no information
+                var client = {51:51, 87:87, 110:110}
+                var client2 =  {189:189, 190:190, 191:191, 192:192, 193:193, 194:194, 195:195, 196:196, 197:197}
+                //if (feature.properties.id in client) return "specific1";
+                //if (feature.properties.id in client2) return "specific2";
+                if (feature.properties["opening_hours"] == "") return "available";
+                let date = new Date();
+                let weekDay = date.getDay();
+                let hourUTC = date.getUTCHours();
+                let gmt = 8; // Clinic opening hours are based on Hong Kong Time
+                let hour = (hourUTC + gmt > 23) ? hourUTC + gmt - 24 : hourUTC + gmt;
+                let time = hour * 100 + date.getMinutes();
+                let periods = feature.properties["opening_hours"];
+                let filValue = "closed";
+                periods.forEach(days => {
+                    // Always Open
+                    if (days['open']['day'] == 0 && days['open']['time'] == '0000' && days['close'] == null)
+                        return filValue = "always_available";
+                    if (days['open']['day'] == weekDay) {
+                        let open = parseInt(days['open']['time']);
+                        let close = parseInt(days['close']['time']);
+                        if (time >= open && time <= close && feature.properties.id in client) {
+                            filValue = "specific1_available";
+                        }
+                        else if (time >= open && time <= close && feature.properties.id in client2) {
+                            filValue = "specific2_available";
+                        }
+                        else if (time >= open && time <= close) {
+                            filValue = "available";
+                        }
+                        else if (time <= open && time >= close && feature.properties.id in client) {
+                            filValue = "specific1";
+                        }
+                        else if (time <= open && time >= close && feature.properties.id in client2) {
+                            filValue = "specific2";
+                        }
+                }})
 
-        var card = document.querySelector('.vet-card');
-
-        function onEachFeature(feature, layer) {
-            layer.on({
-                click: popCard
-            })
-        }
-
-        function calcBranchstatus(feature) {
-            // Return if no information
-            if (feature.properties["opening_hours"] == "") return "available";
-            let date = new Date();
-            let weekDay = date.getDay();
-            let time = date.getHours() * 100 + date.getMinutes();
-            let periods = feature.properties["opening_hours"];
-            let filValue = "closed";
-            periods.forEach(days => {
-                // Always Open
-                if (days['open']['day'] == 0 && days['open']['time'] == '0000' && days['close'] == null) return filValue = "always_available";
-                if (days['open']['day'] == weekDay) {
-                    let open = parseInt(days['open']['time']);
-                    let close = parseInt(days['close']['time']);
-                    if (time >= open && time <= close) {
-                        filValue = "available";
-                    }
-                }
-            })
-            return filValue;
-        }
-
-        function checkAdStatus(feature, ad) {
-            if (feature.properties[ad+"_image"]) {
-                let now = DateTime.local().setZone('UTC+8');
-                if (now > DateTime.fromISO(feature.properties[ad+"_end"], { zone: "UTC+8" }) || DateTime.fromISO(feature.properties[ad+"_start"], { zone: "UTC+8" }) > now) return false;
-                return true;
+                return filValue;
             }
-            return false;
-        }
 
-        function popCard(e) {
-            let stateObj = { playground_id: currentID };
-            window.history.pushState(stateObj, "", `#${entrySource}&id=${currentID}`);
+            function checkAdStatus(feature, ad) {
+                if (feature.properties[ad + "_image"]) {
+                    let now = DateTime.local().setZone('UTC+8');
+                    if (now > DateTime.fromISO(feature.properties[ad + "_end"], {
+                            zone: "UTC+8"
+                        }) || DateTime.fromISO(feature.properties[ad + "_start"], {
+                            zone: "UTC+8"
+                        }) > now) return false;
+                    return true;
+                }
+                return false;
+            }
 
-            currentMkr = e.target.feature;
-            let prop = currentMkr["properties"];
-            //offset the centre
-            bounds = vetClinicMap.getBounds();
-            lat_bounds = bounds._northEast.lat - bounds._southWest.lat;
-            let centre = currentMkr.geometry.coordinates //.reverse();
-            vetClinicMap.panTo([centre[1] - lat_bounds * 0.3, centre[0]]);
+            function popCard(e) {
+                currentMkr = e.target.feature;
 
-            card.innerHTML = `
-            <div class="card-header">
-                <h6 id="branchStatus" class="${prop.status}">${
-                (prop.status == "always_available") ? "24小時營業" : (prop.status == "available") ? " 營業中" : "休息"
-                }</h6>
-                <span class="head_box">
-                    ${(prop.head_ad1) ? `<span><a href="${prop.head_ad1_href}" target="_blank"><img src="images/ad/${prop.head_ad1_image}"></a></span>` : ''}
-					${(prop.head_ad2) ? `<span><a href="${prop.head_ad2_href}" target="_blank"><img src="images/ad/${prop.head_ad2_image}"></a></span>` : ''}
-				</span>
-                <h5 class="card-title">${prop.chi_name}</h5>
-                
-            </div>
-            
-            <div class="vet-card-body">
-                <button type="button" class="close" id="close-card" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="card-text">
-                    <ul class="fa-ul" id="branchDetail">
-                        <li><span class="fa-li"><i class="fas fa-map-marker-alt fa-fw"></i></span><span id="cal_distance"></span></li>
-                        <li><span class="fa-li"><i class="fas fa-map-marker-alt fa-fw"></i></span>${prop.chi_address}</li>
-                        <li><span class="fa-li"><i class="fas fa-phone fa-fw"></i></span>
-                            ${prop.tel1}${(prop.tel2) ? '/' + prop.tel2 : ''}${(prop.tel3) ? '/' + prop.tel3 : ''}
-                            </li>
-                            ${(prop.website) ? `<li><span class="fa-li"><i class="fas fa-link fa-fw"></i></span><a href="${prop.website}" target="_blank">網站</a></li>` : ''}
-                            ${(prop.fb_page) ? `<li><span class="fa-li"><i class="fab fa-facebook fa-fw"></i></span><a href="${prop.fb_page}" target="_blank">Facebook</a></li>` : ''}
-                        ${(prop.opening_hours) ? `<li id="opening_hour_title"><span class="fa-li"><i class="fas fa-clock fa-fw"></i></span>開放時間</li>` : ''}
-                        
-                    </ul>
-                    ${(prop.weekday_text) ? `<ul id="opening_hours">${prop.weekday_text.map(
-                    day => `<li>${day}</li>`.trim()).join('')}</ul>` : ''}
-                    <p id="remarks"></p>
+                let stateObj = {
+                    id: currentID
+                };
+                window.history.pushState(stateObj, "", `#${entrySource}&clinicid=${currentMkr.properties.id}`);
 
-                    <a id="issueReport" href="https://docs.google.com/forms/d/e/1FAIpQLSfb7iTwVeGGaSbER9PocNqhihbR3SVerUbW593ud5QhWiOFqA/viewform?usp=pp_url&entry.149864145=${prop.chi_name}&entry.759571823=${prop.chi_address}" target="_blank">資料有誤？請報料 ⟶</a>
+                let prop = currentMkr["properties"];
+                //offset the centre
+                bounds = vetClinicMap.getBounds();
+                lat_bounds = bounds._northEast.lat - bounds._southWest.lat;
+                let centre = currentMkr.geometry.coordinates //.reverse();
+                vetClinicMap.panTo([centre[1] - lat_bounds * 0.3, centre[0]]);
+
+                card.innerHTML =
+                    `
+                <div class="card-header">
+                    <h6 id="branchStatus" class="${prop.status}">${
+                    (prop.status == "always_available") ? "24小時營業" : (prop.status == "available") ? " 營業中" : (prop.status == "specific1_available") ? " 營業中" : (prop.status == "specific2_available") ? " 營業中" : "休息"
+                    }</h6>
+                    <span class="head_box">
+                        ${(prop.head_ad1) ? `<span><a href="${prop.head_ad1_href}" target="_blank"><img src="images/ad/${prop.head_ad1_image}"></a></span>` : ''}
+                        ${(prop.head_ad2) ? `<span><a href="${prop.head_ad2_href}" target="_blank"><img src="images/ad/${prop.head_ad2_image}"></a></span>` : ''}
+                    </span>
+                    <h5 class="card-title">${prop.chi_name}</h5>
 
                 </div>
-            </div>
-            ${(prop.footer_ad1) ? `<div class="card-footer"><a href="${prop.footer_ad1_href}" target="_blank"><img src="images/ad/${prop.footer_ad1_image}"></a></div>` : ''}
-            `;
+                
+                <div class="vet-card-body">
+                    <button type="button" class="close" id="close-card" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="card-text">
+                        <ul class="fa-ul" id="branchDetail">
+                            <li><span class="fa-li"><i class="fas fa-map-marker-alt fa-fw"></i></span><span id="cal_distance"></span></li>
+                            <li><span class="fa-li"><i class="fas fa-map-marker-alt fa-fw"></i></span>${prop.chi_address}</li>
+                            <li><span class="fa-li"><i class="fas fa-phone fa-fw"></i></span>
+                                ${prop.tel1}${(prop.tel2) ? '/' + prop.tel2 : ''}${(prop.tel3) ? '/' + prop.tel3 : ''}
+                                </li>
+                                ${(prop.website) ? `<li><span class="fa-li"><i class="fas fa-link fa-fw"></i></span><a data-link-type="website" class="external_link" href="${prop.website}" target="_blank">網站</a></li>` : ''}
+                                ${(prop.fb_page) ? `<li><span class="fa-li"><i class="fab fa-facebook fa-fw"></i></span><a data-link-type="facebook" class="external_link"  href="${prop.fb_page}" target="_blank">Facebook</a></li>` : ''}
+                            ${(prop.opening_hours) ? `<li id="opening_hour_title"><span class="fa-li"><i class="fas fa-clock fa-fw"></i></span><a data-toggle="collapse" href="#opening_hours" role="button" aria-expanded="false" aria-controls="collapseExample">開放時間</a></li>` : ''}
+
+                        </ul>
+                        ${(prop.weekday_text) ? `<ul class="collapse" id="opening_hours">${prop.weekday_text.map(
+                        day => `<li>${day}</li>`.trim()).join('')}</ul>` : ''}
+                        <p id="remarks"></p>
+
+                        <a data-link-type="report" class="external_link" href="https://docs.google.com/forms/d/e/1FAIpQLSfb7iTwVeGGaSbER9PocNqhihbR3SVerUbW593ud5QhWiOFqA/viewform?usp=pp_url&entry.149864145=${prop.chi_name}&entry.759571823=${prop.chi_address}" target="_blank">資料有誤？請報料 ⟶</a>
+
+                    </div>
+                </div>
+                ${(false && prop.footer_ad1) ? `<div class="card-footer"><a href="${prop.footer_ad1_href}" target="_blank"><img src="images/ad/${prop.footer_ad1_image}"></a></div>` : ''}
+                ${(prop.footer_ad1) ? `<div class="card-footer"><div id='div-gpt-ad-1528861904168-0'></div></div>` : ''}
+                `;
 
 
 
-            let closeCard = document.querySelector('#close-card');
-            // User close card
-            closeCard.addEventListener('click', (event) => {
-                card.classList.remove('card--expanded');
-                card.classList.add("card--hidden");
-                event.stopPropagation();
+                let closeCard = document.querySelector('#close-card');
+                // User close card
+                closeCard.addEventListener('click', (event) => {
+                    card.classList.remove('card--expanded');
+                    card.classList.add("card--hidden");
+                    event.stopPropagation();
+
+                    document.querySelectorAll('.card-footer').forEach(s => {
+                        s.remove();
+                    });
+
+                    // Send Map Event
+                    fireEvent("vetmap_clinic", "close", {
+                        'clinic_name': currentMkr.properties.chi_name,
+                        'clinic_status': currentMkr.properties.status,
+                        'clinic_id': currentMkr.properties.id,
+                        'clinic_lat': currentMkr.geometry.coordinates[1],
+                        'clinic_lng': currentMkr.geometry.coordinates[0],
+                        'clinic_district': currentMkr.properties.district,
+                        'anonymous_id': getAnonymousId(),
+                        'session_id': getSessionId(),
+                        'ts': Date.now()
+                    });
+
+                });
+
+                card.classList.remove("card--hidden");
 
                 // Send Map Event
-                fireEvent("vetmap_clinic", "close", {
+                fireEvent("vetmap_clinic", "click", {
                     'clinic_name': currentMkr.properties.chi_name,
                     'clinic_status': currentMkr.properties.status,
-                    'clinic_id': '',
+                    'clinic_id': currentMkr.properties.id,
                     'clinic_lat': currentMkr.geometry.coordinates[1],
                     'clinic_lng': currentMkr.geometry.coordinates[0],
                     'clinic_district': currentMkr.properties.district,
                     'anonymous_id': getAnonymousId(),
-                    'session_id': '',
+                    'session_id': getSessionId(),
                     'ts': Date.now()
                 });
 
-            });
-
-            card.classList.remove("card--hidden");
-
-            fireEvent("vetmap_clinic", "click", {
-                'clinic_name': currentMkr.properties.chi_name,
-                'clinic_status': currentMkr.properties.status,
-                'clinic_id': '',
-                'clinic_lat': currentMkr.geometry.coordinates[1],
-                'clinic_lng': currentMkr.geometry.coordinates[0],
-                'clinic_district': currentMkr.properties.district,
-                'anonymous_id': getAnonymousId(),
-                'session_id': '',
-                'ts': Date.now()
-            });
-
-            fireMapPV(removehash(window.location.href));
-            fireArticlePV(removehash(window.location.href));
-        }
+                fireMapPV(removehash(window.location.href));
+                fireArticlePV(removehash(window.location.href));
 
 
-
-        // User expand or collase card
-        card.addEventListener('click', (event) => {
-            event.stopPropagation();
-            if (matchMedia('screen and (max-width: 700px)').matches) {
-                card.classList.toggle('card--expanded');
-
-                // Send Map Event
-                fireEvent("vetmap_clinic", "expand", {
-                    'clinic_name': currentMkr.properties.chi_name,
-                    'clinic_status': currentMkr.properties.status,
-                    'clinic_id': '',
-                    'clinic_lat': currentMkr.geometry.coordinates[1],
-                    'clinic_lng': currentMkr.geometry.coordinates[0],
-                    'clinic_district': currentMkr.properties.district,
-                    'action': (card.classList.contains('card--expanded')) ? 'expand' : 'collapse',
-                    'anonymous_id': getAnonymousId(),
-                    'session_id': '',
-                    'ts': Date.now()
+                // Prevent card expand when links are clicked
+                let allLinkOnCard = document.querySelectorAll('a');
+                allLinkOnCard.forEach(item => {
+                    item.addEventListener('click', (event) => {
+                        event.stopPropagation();
+                    });
                 });
+
+                // Listener for external links on card
+                let externalLinks = document.querySelectorAll('.external_link');
+
+                externalLinks.forEach(el => {
+                    el.addEventListener('click', (event) => {
+                        // Send Map Event
+                        fireEvent("vetmap_clinic_externallink", "click", {
+                            'clinic_name': currentMkr.properties.chi_name,
+                            'clinic_status': currentMkr.properties.status,
+                            'clinic_id': currentMkr.properties.id,
+                            'clinic_lat': currentMkr.geometry.coordinates[1],
+                            'clinic_lng': currentMkr.geometry.coordinates[0],
+                            'clinic_district': currentMkr.properties.district,
+                            'link_type': el.getAttribute("data-link-type"),
+                            'target_url': el.getAttribute("href"),
+                            'anonymous_id': getAnonymousId(),
+                            'session_id': getSessionId(),
+                            'ts': Date.now()
+                        });
+                    })
+                });
+
+                var collaspeButton = document.querySelectorAll('a[data-toggle="collapse"]');
+
+                collaspeButton.forEach(s => {
+                    s.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        var href = s.getAttribute('href');
+                        var target = document.querySelectorAll(`${href}`)[0];
+                        var status = target.className === 'collapse' ? 'open' : 'close';
+
+                        if (status === 'open') {
+                            target.className = '';
+                        } else {
+                            target.className = 'collapse';
+                        }
+
+                        // Send Map Event
+                        fireEvent("vetmap_opening_hour", "click", {
+                            'type': status,
+                            'clinic_name': currentMkr.properties.chi_name,
+                            'clinic_status': currentMkr.properties.status,
+                            'clinic_id': currentMkr.properties.id,
+                            'clinic_lat': currentMkr.geometry.coordinates[1],
+                            'clinic_lng': currentMkr.geometry.coordinates[0],
+                            'clinic_district': currentMkr.properties.district,
+                            'anonymous_id': getAnonymousId(),
+                            'session_id': getSessionId(),
+                            'ts': Date.now()
+                        });
+                    });
+                });
+
+                if (prop.footer_ad1) {
+                    googletag.cmd.push(function () {
+                        var iframeWidth = document.documentElement.clientWidth;
+                        switch (true) {
+                            // case (iframeWidth >= 970): //1280
+                            //     console.log(970, 90);
+                            //     googletag.defineSlot('/108346865/HK01_Map_Component/info_card', [
+                            //             [970, 90]
+                            //         ], 'div-gpt-ad-1528861904168-0')
+                            //         .setTargeting('map_id', ['petcare']).addService(googletag.pubads());
+                            //     break;
+                            // case (iframeWidth >= 728 && iframeWidth < 970): // (iframeWidth >= 960 && iframeWidth < 1280):
+                            //     console.log(728, 90);
+                            //     googletag.defineSlot('/108346865/HK01_Map_Component/info_card', [
+                            //             [728, 90]
+                            //         ], 'div-gpt-ad-1528861904168-0')
+                            //         .setTargeting('map_id', ['petcare']).addService(googletag.pubads());
+                            //     break;
+                            // case (iframeWidth >= 468 && iframeWidth < 728): // (iframeWidth >= 640 && iframeWidth < 960):
+                            //     console.log(468, 60);
+                            //     googletag.defineSlot('/108346865/HK01_Map_Component/info_card', [
+                            //             [468, 60]
+                            //         ], 'div-gpt-ad-1528861904168-0')
+                            //         .setTargeting('map_id', ['petcare']).addService(googletag.pubads());
+                            //     break;
+                            // case (iframeWidth >= 320 && iframeWidth < 468):
+                            //     console.log(320, 50);
+                            //     googletag.defineSlot('/108346865/HK01_Map_Component/info_card', [
+                            //             [320, 50]
+                            //         ], 'div-gpt-ad-1528861904168-0')
+                            //         .setTargeting('map_id', ['petcare']).addService(googletag.pubads());
+                            //     break;
+                            default:
+                                console.log("default-card");
+                                var slot = googletag.defineSlot('/108346865/HK01_Map_Component/info_card', [
+                                    [320, 50]
+                                ], 'div-gpt-ad-1528861904168-0');
+
+                                if (slot) {
+                                    slot.setTargeting('map_id', ['petcare']).addService(googletag.pubads());
+                                }
+                        }
+                        googletag.pubads().enableSingleRequest();
+                        googletag.enableServices();
+
+                        // googletag.pubads().addEventListener('slotRenderEnded', function (e) {
+                        //     if (!e.isEmpty) { // If the ad isn't empty
+                        //         document.getElementById(e.slot.getSlotElementId()).setAttribute('class',
+                        //             'loaded');
+                        //         console.log('Ad Loaded');
+                        //         document.querySelector('.hg').classList.add('ad');
+                        //     } else {
+                        //         console.log('Ad Empty');
+                        //     }
+                        // });
+                    });
+
+
+                    googletag.cmd.push(function () {
+                        googletag.display('div-gpt-ad-1528861904168-0');
+                    });
+                }
+
             }
-        });
 
-        var allLink = document.querySelectorAll('a');
-        allLink.forEach(item => {
-            item.addEventListener('click', (event) => {
+
+
+            // User expand or collase card
+            card.addEventListener('click', (event) => {
                 event.stopPropagation();
+                if (matchMedia('screen and (max-width: 700px)').matches) {
+                    card.classList.toggle('card--expanded');
+
+                    // Send Map Event
+                    fireEvent("vetmap_clinic", "expand", {
+                        'clinic_name': currentMkr.properties.chi_name,
+                        'clinic_status': currentMkr.properties.status,
+                        'clinic_id': currentMkr.properties.id,
+                        'clinic_lat': currentMkr.geometry.coordinates[1],
+                        'clinic_lng': currentMkr.geometry.coordinates[0],
+                        'clinic_district': currentMkr.properties.district,
+                        'action': (card.classList.contains('card--expanded')) ? 'expand' : 'collapse',
+                        'anonymous_id': getAnonymousId(),
+                        'session_id': getSessionId(),
+                        'ts': Date.now()
+                    });
+                }
             });
-        });
 
-        function welcome() {
-            // if (initialID == 0) {
-            var myModal = document.getElementById('welcomeModal');
 
-            var options = { backdrop: true }
-            // OR initialize and show the modal right away
-            var myModalInstance = new Modal(myModal, options);
-            myModalInstance.show();
 
-            var close_method = 'backdrop';
-            document.querySelector('#welcomeModal .btn').addEventListener('click', function () {
-                close_method = 'button';
-            });
-        }
-        
-        var subDistrictBtns = document.querySelectorAll('a[data-sub-district]');
+
+            function chkWelcomed() {
+                function s4() {
+                    return Math.floor((1 + Math.random()) * 0x10000)
+                        .toString(16)
+                        .substring(1);
+                }
+
+                if (document.cookie.match(/hk01_petcare_welcomed/)) {
+                    return (document.cookie.match(/hk01_petcare_welcomed=([\w\-]+)/)[1]);
+                } else {
+                    var temp_uid = s4() + s4() + "-" + s4() + "-" + s4() + "-" + s4() + "-" + s4() + s4() + s4();
+                    var d = new Date();
+                    d.setTime(d.getTime() + (7 * 24 * 60 * 60 * 1000));
+                    var expires = "expires=" + d.toUTCString();
+                    document.cookie = "hk01_petcare_welcomed=" + temp_uid + ";" + expires +
+                        ";path=/;domain=." + window.location.host.match(/([^\.]+(\.[^\.]+)?)$/)[1];
+                    return false;
+                }
+            }
+            function welcome() {
+                // if (initialID == 0) {
+                var myModal = document.getElementById('welcomeModal');
+
+                var options = {
+                    backdrop: true
+                }
+                // OR initialize and show the modal right away
+                var myModalInstance = new Modal(myModal, options);
+                if (!chkWelcomed()) {
+                    myModalInstance.show();
+                }
+
+                var close_method = 'backdrop';
+                document.querySelector('#welcomeModal .btn').addEventListener('click', function () {
+                    close_method = 'button';
+                });
+
+                myModal.addEventListener('hide.bs.modal', function (event) {
+                    // Send Map Event
+                    fireEvent("vetmap_welcome", "close", {
+                        'close_method': close_method,
+                        'anonymous_id': getAnonymousId(),
+                        'session_id': getSessionId(),
+                        'ts': Date.now()
+                    });
+
+                    // Send Article PV if the map is embed into article
+                    if (entrySource == "article" | entrySource == "issue") fireArticlePV(removehash(window.location
+                        .href));
+                }, false);
+
+            }
+
+            var subDistrictBtns = document.querySelectorAll('a[data-sub-district]');
 
             subDistrictBtns.forEach(s => {
                 s.addEventListener('click', (event) => {
-                    vetClinicMap.setView([s.getAttribute("data-lat"), s.getAttribute("data-lng")], 14);
+                    vetClinicMap.setView([s.getAttribute("data-lat"), s.getAttribute("data-lng")], 15);
                     event.stopPropagation();
 
+                    let stateObj = {
+                        subdistrict: s.getAttribute("data-sub-district")
+                    };
+                    window.history.pushState(stateObj, "",
+                        `#subdistrict=${s.getAttribute("data-sub-district")}`);
+
+                    s.parentNode.classList.remove('show');
+                    s.parentNode.parentNode.classList.remove('show');
+
+                    fireArticlePV(removehash(window.location.href));
+
                     // Send Map Event
-                    fireEvent("vetmap_clinic_menu", "click", {
+                    fireEvent("vetmap_menu_subdistrict", "click", {
                         'sub_district': s.getAttribute("data-sub-district"),
                         'anonymous_id': getAnonymousId(),
-                        'session_id': '',
+                        'session_id': getSessionId(),
                         'ts': Date.now()
                     });
                 })
-            }
-            );
+            });
 
-    </script>
+            var sideMenubutton = document.querySelectorAll('#vet-nav .navbar-toggler');
+
+            sideMenubutton.forEach(s => {
+                s.addEventListener('click', (event) => {
+                    // Send Map Event
+                    fireEvent('vetmap_menu', 'click', {
+                        'anonymous_id': getAnonymousId(),
+                        'session_id': getSessionId(),
+                        'ts': Date.now()
+                    });
+                });
+            });
+
+            var sideMenuMethod = 'backdrop';
+            var sideMenuModal = document.getElementById('navModal');
+
+            sideMenuModal.addEventListener('hide.bs.modal', function (event) {
+                // Send Map Event
+                fireEvent('vetmap_menu', 'close', {
+                    'close_method': sideMenuMethod,
+                    'anonymous_id': getAnonymousId(),
+                    'session_id': getSessionId(),
+                    'ts': Date.now()
+                });
+                sideMenuMethod = 'backdrop';
+            }, false);
+
+            var sideMenuClose = document.querySelectorAll('#navModal .close');
+
+            sideMenuClose.forEach(s => {
+                s.addEventListener('click', (event) => {
+                    sideMenuMethod = 'close';
+                });
+            });
+
+            var sideMenuLinks = document.querySelectorAll('#navModal .list-group-item-action');
+
+            sideMenuLinks.forEach(s => {
+                s.addEventListener('click', (event) => {
+                    var type = '';
+                    var href = s.getAttribute("href");
+
+                    if (href.indexOf('facebook') !== -1) {
+                        type = 'facebook'
+                    } else if (s.classList.contains('attribution')) {
+                        type = 'attribution'
+                    } else {
+                        type = 'other'
+                    }
+
+                    // Send Map Event
+                    fireEvent("vetmap_menu_link", "click", {
+                        'link_type': type,
+                        'anonymous_id': getAnonymousId(),
+                        'session_id': getSessionId(),
+                        'target_url': href,
+                        'ts': Date.now()
+                    });
+                });
+            });
+
+            window.addEventListener('resize', function (e) {
+                googletag.pubads().refresh();
+                console.log(`[petcare]: ${window.innerWidth}`)
+            });
+
+            //20220412
+            function getImagesByAlt() {
+                var allImages = document.getElementsByTagName("img");
+                var images_list = {51:51, 87:87, 110:110};
+                var result
+
+                for (var i = 0, len = allImages.length; i < len; ++i) {
+                    if (allImages[i].alt in images_list) {
+                        console.log('img ok ah')
+                        allImages[i].style.height = parseInt(allImages[i].style.height)*1.5+'px';
+                        allImages[i].style.width = parseInt(allImages[i].style.width)*1.5+'px';
+
+                        result = allImages[i]
+                    }
+                    }
+                return result
+                }
+        </script>
+    </main>
+    <footer class="hg-footer">
+        <!-- /108346865/HK01_Map_Component -->
+        <div id='div-gpt-ad-1536895837023-0'>
+            <script>
+                googletag.cmd.push(function () {
+                    googletag.display('div-gpt-ad-1536895837023-0');
+                });
+            </script>
+        </div>
+    </footer>
 
 </body>
+
 </html>

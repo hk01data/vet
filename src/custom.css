@@ -1,13 +1,34 @@
 /* @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans'); */
 body {
+    height: auto !important;
     margin: 0;
     padding: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    overflow: hidden;
     font-family: 'Noto Sans TC', sans-serif;
 }
 
 a {
     color: teal;
+}
+
+.inapp-back-button {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0 22L22 0l2.1 2.1L4.2 22l19.9 19.9L22 44 0 22z' fill='%23000'/%3E%3C/svg%3E");
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    cursor: pointer;
+    position: relative;
+    height: 37px;
+    width: 30px;
+    top: 0;
+    left: 0;
+    display: none !important;
 }
 
 .leaflet-control-layers {
@@ -21,11 +42,11 @@ a {
 }
 
 #mapid {
-    height: calc(100vh - 50px);
+    height: calc(100vh - 88px);
 }
 
 #vet-nav {
-    height:50px;
+    height: 50px;
 }
 
 
@@ -40,7 +61,7 @@ a {
 }
 
 
-.navbar {
+#vet-nav {
     padding: .5rem 0 .5rem 1rem !important;
 }
 
@@ -61,58 +82,79 @@ a {
     height: 100%;
 }
 
+.nav_modal .list-group-item-action {
+    color: teal;
+}
+
 .inline_img {
     height: 1rem;
     margin: 0 5px;
 }
 
-
-svg.hk01logo_black {
-    height: 1.1rem;
-    margin: 0 0.25rem 0;
+.navbar-brand {
+    height: 37px;
+    padding: 0;
+    vertical-align: top;
 }
 
-svg.hk01logo_black {
-    height: 1rem;
-    margin: 0 0.25rem 0;
+.navbar-name {
+    height: 37px;
+    margin-left: 0.5em;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.5rem;
+    line-height: 37px;
 }
 
-.icon {
+svg.hk01logo {
+    width: auto;
+    height: 37px;
+    margin: 0;
+}
+
+.navbar-brand .icon {
     display: inline-flex;
     align-self: center;
+    color: rgb(0, 51, 232);
 }
 
-.icon.baseline svg, .icon img {
-    top: .15rem;
-    margin-right: 1rem;
+.icon.baseline svg,
+.icon img {
     position: relative;
+    fill: currentcolor;
 }
+
 
 #navModal {
     animation-duration: .1s;
     animation-delay: 0s;
     animation-iteration-count: 1;
-  }
+}
+
+.navbar-light {
+    background: white !important;
+}
 
 
-  .leaflet-popup {
-      margin: 0;
-  }
+.leaflet-popup {
+    margin: 0;
+}
 
-  .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-      background: none;
-      color: black;
-      box-shadow: none;
-      padding: 0;
-      border: none;
-  }
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background: none;
+    color: black;
+    box-shadow: none;
+    padding: 0;
+    border: none;
+}
 
-  .leaflet-popup-content {
-      margin: 0;
-      line-height: 1rem;
-  }
+.leaflet-popup-content {
+    margin: 0;
+    line-height: 1rem;
+}
 
-  .card-header {
+.card-header {
     background-color: #fff;
     padding: 1rem 2rem 0rem !important;
     border: none;
@@ -133,29 +175,39 @@ svg.hk01logo_black {
 .vet-card-body {
     overflow-y: auto;
     /* max-height: calc(100vh - 220px); */
-    background: url(../images/hk01watermark.png);
+    /* background: url(../images/hk01watermark.png); */
     background-repeat: no-repeat;
     background-position: center;
     padding: 0 2rem 1rem !important;
-    }
+}
 
 .card-footer {
     height: 64px;
     text-align: center;
     border: none !important;
     padding: 0 !important;
+    background-color: #fff;
 }
 
 @media only screen and (max-width: 700px) {
+    .inapp-back-button {
+        width: 15px;
+        margin-left: -12px;
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+    }
+
     .vet-card {
-        bottom: 0;
+        bottom: 50px;
         height: 65%;
         left: 0;
         right: 0;
         line-height: 1.8rem;
         /* max-height: 100%; */
-        -webkit-transition: all .3s ease-in-out,top .3s ease-out; 
-        transition: all .3s ease-in-out,top .3s ease-out;
+        -webkit-transition: all .3s ease-in-out, top .3s ease-out;
+        transition: all .3s ease-in-out, top .3s ease-out;
     }
 
     .card--expanded:not(.card--hidden) {
@@ -168,8 +220,8 @@ svg.hk01logo_black {
         height: 0;
         visibility: hidden;
         opacity: 0;
-        -webkit-transition: all .5s ease-in-out,top .5s ease-out; 
-        transition: all .5s ease-in-out,top .5s ease-out;
+        -webkit-transition: all .5s ease-in-out, top .5s ease-out;
+        transition: all .5s ease-in-out, top .5s ease-out;
     }
 
 
@@ -180,8 +232,8 @@ svg.hk01logo_black {
         width: 100%;
         position: relative;
         z-index: 5020;
-        -webkit-transition: all .3s ease-in-out,top .3s ease-out; 
-        transition: all .3s ease-in-out,top .3s ease-out;
+        -webkit-transition: all .3s ease-in-out, top .3s ease-out;
+        transition: all .3s ease-in-out, top .3s ease-out;
     }
 
     .card #branchStatus {
@@ -197,16 +249,30 @@ svg.hk01logo_black {
         font-size: 1.6rem;
         font-weight: 500;
         display: block;
-        
+
     }
 }
+.dropdown-item {
+    width: 33.3%;
+    padding: .25rem 4px;
+}
+.sub-district-nav:first-child .dropdown-menu {
+    align-items: flex-start;
+}
 
+.sub-district-nav:first-child + .sub-district-nav .dropdown-menu {
+    align-items: center;
+}
+
+.sub-district-nav:last-child .dropdown-menu {
+    align-items: flex-end;
+}
 
 @media only screen and (min-width: 700px) {
     .vet-card {
         min-width: 400px;
         max-height: 60%;
-        top: 200px;
+        top: 250px;
         left: 10px;
         font-size: 0.9rem;
         line-height: 1.4rem;
@@ -219,13 +285,13 @@ svg.hk01logo_black {
     .card--hidden {
         visibility: hidden;
         opacity: 0;
-        -webkit-transition: all .5s ease-in-out,top .5s ease-out; 
-        transition: all .5s ease-in-out,top .5s ease-out;
+        -webkit-transition: all .5s ease-in-out, top .5s ease-out;
+        transition: all .5s ease-in-out, top .5s ease-out;
     }
 
     .card #branchStatus {
         border-radius: 0.6rem;
-        font-size: 0.5rem;
+        font-size: 0.8rem;
         padding: 5px 5px;
         font-weight: 300;
     }
@@ -243,7 +309,7 @@ svg.hk01logo_black {
     top: 0.75rem;
     right: 0.75rem;
     z-index: 2;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1;
     color: #000;
@@ -254,22 +320,39 @@ svg.hk01logo_black {
 
 .card #branchStatus {
     display: inline-block;
-    color: black;
 }
 
 .card .always_available {
-    background: rgb(245, 69, 92);
+    background: #0038B2;
+    color: #FFF;
 }
 
 .card .available {
-    background: springgreen;
+    background: #DE7F00;
+}
+
+.card .specific1_available {
+    background: #DE7F00;
+}
+
+.card .specific2_available {
+    background: #DE7F00;
+}
+
+.card .specific1 {
+    background: #D3D3D3;
+}
+
+.card .specific2 {
+    background: #D3D3D3;
 }
 
 .card .closed {
-    background: lightgray;
+    background: #D3D3D3;
 }
 
-.card .fas, .card .fab  {
+.card .fas,
+.card .fab {
     margin-right: 1rem;
 }
 
@@ -282,31 +365,42 @@ svg.hk01logo_black {
     float: right;
 }
 
-#subDistrictMenu div {
-    overflow-x: auto;
-    white-space: nowrap;
-    margin: 0;
-    padding: 0;
-}
-
-#subDistrictMenu a {
-    display: inline-block;
-}
-
-/* #districtMenu li a {
-    color: white;
-    text-decoration: none;
-}
-
-#districtMenu li:hover {
-    border-bottom: 3px solid white;
-}      
-
-#districtMenu li.active {
-    border-bottom: 3px solid white;
+/* .sub-district-nav  {
+    position: static;
 } */
 
-  
-  
-  
-  
+.sub-district-nav .dropdown-menu {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    z-index: 5050;
+    text-align: center;
+    background-color: #FAFAFA;
+}
+.sub-district-nav .dropdown-menu.show {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-tabs {
+    position: relative;
+}
+
+.nav-tabs .dropdown {
+    position: initial;
+}
+
+.dropdown .btn-link {
+    width: 100%;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown.show .btn-link {
+    background-color: #FAFAFA;
+}
+
+.dropdown-item:hover {
+    background-color: #FFF;
+    cursor: pointer;
+}
