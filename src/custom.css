@@ -331,6 +331,22 @@ svg.hk01logo {
     background: #DE7F00;
 }
 
+.card .specific1_available {
+    background: #DE7F00;
+}
+
+.card .specific2_available {
+    background: #DE7F00;
+}
+
+.card .specific1 {
+    background: #D3D3D3;
+}
+
+.card .specific2 {
+    background: #D3D3D3;
+}
+
 .card .closed {
     background: #D3D3D3;
 }

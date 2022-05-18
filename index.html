@@ -10,7 +10,7 @@
     <meta property="og:title" content="獸醫診所地圖 | 話你知香港獸醫診所位置、營業時間 | 香港01" />
     <meta property="og:description" content="獸醫診所地圖 | 話你知香港獸醫診所位置、營業時間 | 香港01" />
     <meta property="og:site_name" content="獸醫診所地圖 | 話你知香港獸醫診所位置、營業時間 | 香港01 x 01數據新聞" />
-    <meta property="og:image" content="https://datanews.hk01.com/map/petcare/images/og-image.png?v=201901211226" />
+    <meta property="og:image" content="https://datanews.hk01.com/map/petcare/images/og-image.png?v=201901111227" />
     <meta property="article:publisher" content="https://www.facebook.com/hk01.anistoryhk/" />
     <meta property="article:author" content="https://www.facebook.com/hk01.anistoryhk/" />
     <meta property="og:type" content="website" />
@@ -20,7 +20,7 @@
     <meta property="twitter:site" content="@hk01wemedia">
     <meta property="twitter:url" content="https://datanews.hk01.com/map/petcare/index.html">
     <meta property="twitter:description" content="獸醫診所地圖 | 話你知香港獸醫診所位置、營業時間 | 香港01">
-    <meta property="twitter:image" content="https://datanews.hk01.com/map/petcare/images/og-image.png?v=201901211226">
+    <meta property="twitter:image" content="https://datanews.hk01.com/map/petcare/images/og-image.png?v=201901111227">
 
     <title>獸醫診所地圖 | 話你知香港獸醫診所位置、營業時間 | 香港01</title>
     <meta name="keywords" content="貓,狗,嘔吐,瘋狗症,跳蚤,24小時,獸醫,診所,獸醫診所,地圖,最近">
@@ -43,13 +43,13 @@
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
         crossorigin=""></script>
-    <script src="src/vet.js?v=201901211226"></script>
+    <script src="src/vet.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="src/custom.css?v=201901211226">
+    <link rel="stylesheet" href="src/custom.css?v=201901111227">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
@@ -166,7 +166,7 @@
     <!-- Tracking -->
     <script src="https://tracking-lib.hk01.com/piwik/piwik.min.js"></script>
     <script src="https://tracking-lib.hk01.com/classic-piwik/trackerClient.lastest.js"></script>
-    <script src="src/trackEvent.js?v=201901211226"></script>
+    <script src="src/trackEvent.js?v=201901111227"></script>
     <script src="https://www.googletagmanager.com/gtag/js"></script>
 
 </head>
@@ -218,7 +218,7 @@
                             <li>Google 地圖</li>
                         </ul>
                         <p>註：此地圖只涵蓋已簽署同意被列入漁護署「獸醫診所名單」的獸醫診所，未必包括全港所有診所。</p>
-                        <p>最後更新：2019年1月21日</p>
+                        <p>最後更新：2022年4月12日</p>
                         <p>工具：<a href="https://leafletjs.com/" target="_blank">Leaflet</a>, &copy; <a href="https://www.openstreetmap.org/copyright"
                                 target="_blank">OpenStreetMap</a></p>
 
@@ -278,7 +278,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="modal-footer">香港01有限公司版權所有 © 2018</div>
+                    <div class="modal-footer">香港01有限公司版權所有 © 2022</div>
                 </div>
             </div>
         </div>
@@ -359,7 +359,7 @@
         <div id='mapid'></div>
         <div class="card vet-card card--hidden"></div>
 
-        <script src="src/reactWeb.js?v=201901211226"></script>
+        <script src="src/reactWeb.js?v=201901111227"></script>
         <script>
             // Global Variable
             var DateTime = luxon.DateTime;
@@ -372,25 +372,31 @@
             var card = document.querySelector('.vet-card');
             var defaultSizeIcon = L.Icon.extend({
                 options: {
-                    iconSize: [30, 30]
+                    iconSize: [25, 25]
                 }
             });
 
             var smallSizeIcon = L.Icon.extend({
                 options: {
-                    iconSize: [12, 12]
+                    iconSize: [10, 10]
                 }
             });
 
             var mediumSizeIcon = L.Icon.extend({
                 options: {
-                    iconSize: [40, 40]
+                    iconSize: [30, 30]
                 }
             });
 
             var largeSizeIcon = L.Icon.extend({
                 options: {
-                    iconSize: [55, 55]
+                    iconSize: [45, 45]
+                }
+            });
+
+            var ExlargeSizeIcon = L.Icon.extend({
+                options: {
+                    iconSize: [60, 60]
                 }
             });
 
@@ -402,6 +408,12 @@
             });
             var grey = new defaultSizeIcon({
                 iconUrl: 'icon/pin-closed.png'
+            });
+            var spec = new ExlargeSizeIcon({
+                iconUrl: 'icon/pet_icon1.png'
+            });
+            var pp = new ExlargeSizeIcon({
+                iconUrl: 'icon/pp.png'
             });
 
             function detectSource(callback) {
@@ -465,9 +477,23 @@
 
                 vetLayer = L.geoJSON(vet, {
                     onEachFeature: onEachFeature,
+
                     pointToLayer: function (feature, latlng) {
-                        let options = {};
+                        let options = {alt:feature.properties.id};
+
                         switch (feature["properties"]["status"]) {
+                            case 'specific1_available':
+                                options.icon = spec;
+                                break;
+                            case 'specific2_available':
+                                options.icon = pp;
+                                break;
+                            case 'specific1':
+                                options.icon = spec;
+                                break;
+                            case 'specific2':
+                                options.icon = pp;
+                                break;
                             case 'always_available':
                                 options.icon = red;
                                 break;
@@ -477,11 +503,13 @@
                             case 'closed':
                                 options.icon = grey;
                                 break;
+
                         }
                         return L.marker(latlng, options);
                     }
                 }).addTo(vetClinicMap);
             }
+            
 
             L.control.locate({
                 collapsed: false,
@@ -547,6 +575,8 @@
 
             vetClinicMap.on('zoomend', function () {
                 var currentZoom = vetClinicMap.getZoom();
+                var pet_icon = 'icon/pet_icon1.png'
+                var pp_icon = 'icon/pp.png'
                 if (currentZoom >= 11.5 && currentZoom < 14) {
                     red = new defaultSizeIcon({
                         iconUrl: 'icon/pin-247.png'
@@ -557,6 +587,14 @@
                     grey = new defaultSizeIcon({
                         iconUrl: 'icon/pin-closed.png'
                     });
+                    spec = new ExlargeSizeIcon({
+                        iconUrl: pet_icon
+                    });
+                    pp = new ExlargeSizeIcon({
+                        iconUrl: pp_icon
+                    });
+
+
                 } else if (currentZoom >= 14 && currentZoom < 15) {
                     red = new mediumSizeIcon({
                         iconUrl: 'icon/pin-247.png'
@@ -567,6 +605,13 @@
                     grey = new mediumSizeIcon({
                         iconUrl: 'icon/pin-closed.png'
                     });
+                    spec = new ExlargeSizeIcon({
+                        iconUrl: pet_icon
+                    });
+                    pp = new ExlargeSizeIcon({
+                        iconUrl: pp_icon
+                    });
+
                 } else if (currentZoom >= 15) {
                     red = new largeSizeIcon({
                         iconUrl: 'icon/pin-247.png'
@@ -577,6 +622,13 @@
                     grey = new largeSizeIcon({
                         iconUrl: 'icon/pin-closed.png'
                     });
+                    spec = new ExlargeSizeIcon({
+                        iconUrl: pet_icon
+                    });
+                    pp = new ExlargeSizeIcon({
+                        iconUrl: pp_icon
+                    });
+
                 } else {
                     red = new smallSizeIcon({
                         iconUrl: 'icon/red_dot.png'
@@ -587,10 +639,28 @@
                     grey = new smallSizeIcon({
                         iconUrl: 'icon/grey_dot.png'
                     });
+                    spec = new ExlargeSizeIcon({
+                        iconUrl: pet_icon
+                    });
+                    pp = new ExlargeSizeIcon({
+                        iconUrl: pp_icon
+                    });
                 }
 
                 vetLayer.eachLayer(mkr => {
                     switch (mkr.feature["properties"]["status"]) {
+                        case 'specific1_available':
+                            icon = spec;
+                            break;
+                        case 'specific2_available':
+                            icon = pp;
+                            break;
+                        case 'specific1':
+                            icon = spec;
+                            break;
+                        case 'specific2':
+                            icon = pp;
+                            break;
                         case 'always_available':
                             icon = red;
                             break;
@@ -615,6 +685,10 @@
 
             function calcBranchstatus(feature) {
                 // Return if no information
+                var client = {51:51, 87:87, 110:110}
+                var client2 =  {189:189, 190:190, 191:191, 192:192, 193:193, 194:194, 195:195, 196:196, 197:197}
+                //if (feature.properties.id in client) return "specific1";
+                //if (feature.properties.id in client2) return "specific2";
                 if (feature.properties["opening_hours"] == "") return "available";
                 let date = new Date();
                 let weekDay = date.getDay();
@@ -631,11 +705,23 @@
                     if (days['open']['day'] == weekDay) {
                         let open = parseInt(days['open']['time']);
                         let close = parseInt(days['close']['time']);
-                        if (time >= open && time <= close) {
+                        if (time >= open && time <= close && feature.properties.id in client) {
+                            filValue = "specific1_available";
+                        }
+                        else if (time >= open && time <= close && feature.properties.id in client2) {
+                            filValue = "specific2_available";
+                        }
+                        else if (time >= open && time <= close) {
                             filValue = "available";
                         }
-                    }
-                })
+                        else if (time <= open && time >= close && feature.properties.id in client) {
+                            filValue = "specific1";
+                        }
+                        else if (time <= open && time >= close && feature.properties.id in client2) {
+                            filValue = "specific2";
+                        }
+                }})
+
                 return filValue;
             }
 
@@ -671,7 +757,7 @@
                     `
                 <div class="card-header">
                     <h6 id="branchStatus" class="${prop.status}">${
-                    (prop.status == "always_available") ? "24小時營業" : (prop.status == "available") ? " 營業中" : "休息"
+                    (prop.status == "always_available") ? "24小時營業" : (prop.status == "available") ? " 營業中" : (prop.status == "specific1_available") ? " 營業中" : (prop.status == "specific2_available") ? " 營業中" : "休息"
                     }</h6>
                     <span class="head_box">
                         ${(prop.head_ad1) ? `<span><a href="${prop.head_ad1_href}" target="_blank"><img src="images/ad/${prop.head_ad1_image}"></a></span>` : ''}
@@ -1055,6 +1141,24 @@
                 googletag.pubads().refresh();
                 console.log(`[petcare]: ${window.innerWidth}`)
             });
+
+            //20220412
+            function getImagesByAlt() {
+                var allImages = document.getElementsByTagName("img");
+                var images_list = {51:51, 87:87, 110:110};
+                var result
+
+                for (var i = 0, len = allImages.length; i < len; ++i) {
+                    if (allImages[i].alt in images_list) {
+                        console.log('img ok ah')
+                        allImages[i].style.height = parseInt(allImages[i].style.height)*1.5+'px';
+                        allImages[i].style.width = parseInt(allImages[i].style.width)*1.5+'px';
+
+                        result = allImages[i]
+                    }
+                    }
+                return result
+                }
         </script>
     </main>
     <footer class="hg-footer">
