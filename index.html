@@ -455,6 +455,7 @@
                     feature.properties.status = calcBranchstatus(feature);
                     feature.properties.head_ad1 = checkAdStatus(feature, "head_ad1");
                     feature.properties.head_ad2 = checkAdStatus(feature, "head_ad2");
+                    feature.properties.head_ad3 = checkAdStatus(feature, "head_ad3");
                     feature.properties.footer_ad1 = checkAdStatus(feature, "footer_ad1");
                 });
 
@@ -691,13 +692,15 @@
                 //if (feature.properties.id in client2) return "specific2";
                 if (feature.properties["opening_hours"] == "") return "available";
                 let date = new Date();
-                let weekDay = date.getDay();
+                // Monday: 0 ... Sunday: 6
+                let weekDay = (date.getDay() == 0) ? 6 : date.getDay() - 1;
                 let hourUTC = date.getUTCHours();
                 let gmt = 8; // Clinic opening hours are based on Hong Kong Time
                 let hour = (hourUTC + gmt > 23) ? hourUTC + gmt - 24 : hourUTC + gmt;
                 let time = hour * 100 + date.getMinutes();
                 let periods = feature.properties["opening_hours"];
                 let filValue = "closed";
+                if (typeof(periods) !== "string") {
                 periods.forEach(days => {
                     // Always Open
                     if (days['open']['day'] == 0 && days['open']['time'] == '0000' && days['close'] == null)
@@ -721,6 +724,7 @@
                             filValue = "specific2";
                         }
                 }})
+            }
 
                 return filValue;
             }
@@ -760,8 +764,9 @@
                     (prop.status == "always_available") ? "24小時營業" : (prop.status == "available") ? " 營業中" : (prop.status == "specific1_available") ? " 營業中" : (prop.status == "specific2_available") ? " 營業中" : "休息"
                     }</h6>
                     <span class="head_box">
-                        ${(prop.head_ad1) ? `<span><a href="${prop.head_ad1_href}" target="_blank"><img src="images/ad/${prop.head_ad1_image}"></a></span>` : ''}
-                        ${(prop.head_ad2) ? `<span><a href="${prop.head_ad2_href}" target="_blank"><img src="images/ad/${prop.head_ad2_image}"></a></span>` : ''}
+                        ${(prop.head_ad1) ? `<span><a href="${prop.head_ad1_href}" target="_blank"><img height="64" src="images/add/${prop.head_ad1_image}"></a></span>` : ''}
+                        ${(prop.head_ad2) ? `<span><a href="${prop.head_ad2_href}" target="_blank"><img height="64" src="images/add/${prop.head_ad2_image}"></a></span>` : ''}
+                        ${(prop.head_ad3) ? `<span><a href="${prop.head_ad3_href}" target="_blank"><img height="64" src="images/add/${prop.head_ad3_image}"></a></span>` : ''}
                     </span>
                     <h5 class="card-title">${prop.chi_name}</h5>
 
@@ -783,7 +788,7 @@
                             ${(prop.opening_hours) ? `<li id="opening_hour_title"><span class="fa-li"><i class="fas fa-clock fa-fw"></i></span><a data-toggle="collapse" href="#opening_hours" role="button" aria-expanded="false" aria-controls="collapseExample">開放時間</a></li>` : ''}
 
                         </ul>
-                        ${(prop.weekday_text) ? `<ul class="collapse" id="opening_hours">${prop.weekday_text.map(
+                        ${(prop.weekday_text && prop.weekday_text.map) ? `<ul class="collapse" id="opening_hours">${prop.weekday_text.map(
                         day => `<li>${day}</li>`.trim()).join('')}</ul>` : ''}
                         <p id="remarks"></p>
 
@@ -791,7 +796,7 @@
 
                     </div>
                 </div>
-                ${(false && prop.footer_ad1) ? `<div class="card-footer"><a href="${prop.footer_ad1_href}" target="_blank"><img src="images/ad/${prop.footer_ad1_image}"></a></div>` : ''}
+                ${(false && prop.footer_ad1) ? `<div class="card-footer"><a href="${prop.footer_ad1_href}" target="_blank"><img height="64" src="images/add/${prop.footer_ad1_image}"></a></div>` : ''}
                 ${(prop.footer_ad1) ? `<div class="card-footer"><div id='div-gpt-ad-1528861904168-0'></div></div>` : ''}
                 `;
 

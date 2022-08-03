@@ -39,7 +39,7 @@ API_KEY = 'AIzaSyAo1IdMwXkSVsDc3-ZVrzdj9iDRFXO4wFs'
 
 # Retrieve place openinghours
 URL = 'https://maps.googleapis.com/maps/api/place/details/json?'
-df = pd.read_csv('vet_id.csv', encoding = 'utf8')
+df = pd.read_csv('input_files/vet_id.csv', encoding = 'utf8')
 # df = df[:2]
 place_details = []
 
@@ -68,5 +68,5 @@ for idx, pid in enumerate(df['place_id']):
 print(place_details)
 
 df['place_details'] = place_details
-df.to_csv('vet_detail.csv', encoding = 'utf8')
+df.to_csv('output/vet_detail.csv', encoding = 'utf8')
 

@@ -1,7 +1,7 @@
 import pandas as pd
 import json
 
-df = pd.read_csv("vet.tsv", sep="\t", encoding="utf-8")
+df = pd.read_csv("input_files/vet.tsv", sep="\t", encoding="utf-8")
 df = df.fillna("")
 
 geojson_features = []
@@ -35,21 +35,29 @@ for index, row in df.iterrows():
         "head_ad2_href": row["head_ad2_href"],
         "head_ad2_start": row["head_ad2_start"],
         "head_ad2_end": row["head_ad2_end"],
+        "head_ad3_image": row["head_ad3_image"],
+        "head_ad3_href": row["head_ad3_href"],
+        "head_ad3_start": row["head_ad3_start"],
+        "head_ad3_end": row["head_ad3_end"],
         "footer_ad1_image": row["footer_ad1_image"],
         "footer_ad1_href": row["footer_ad1_href"],
         "footer_ad1_start": row["footer_ad1_start"],
-        "footer_ad1_end": row["footer_ad1_end"]
+        "footer_ad1_end": row["footer_ad1_end"],
+        "opening_hours": row["opening_hours"],
+        "weekday_text": row["weekday_text"],
     }
 
-    if row["opening_hours"] == "":
-        data["opening_hours"] = ""
-    else:
-        data["opening_hours"] = json.loads(row["opening_hours"])
+    print(f'== {index} ====== {row["opening_hours"]} ==')
+    if row["opening_hours"] != "" and row["opening_hours"].strip("\n\r\t") != "N":
+        if row["opening_hours"] == "":
+            data["opening_hours"] = ""
+        else:
+            data["opening_hours"] = json.loads(row["opening_hours"].replace("'", '"'))
 
-    if row["weekday_text"] == "":
-        data["weekday_text"] = ""
-    else:
-        data["weekday_text"] = json.loads(row["weekday_text"])
+        if row["weekday_text"] == "":
+            data["weekday_text"] = ""
+        else:
+            data["weekday_text"] = json.loads(row["weekday_text"].replace("'", '"'))
 
 
     features = {
@@ -65,6 +73,6 @@ geojson = {
     "features": geojson_features
 }
 
-with open("parsed.geojson", "w", encoding="utf-8") as file:
+with open("output/parsed.geojson", "w", encoding="utf-8") as file:
      file.write(json.dumps(geojson, indent=4, ensure_ascii=False))
 print(json.dumps(geojson, indent=4, ensure_ascii=False))

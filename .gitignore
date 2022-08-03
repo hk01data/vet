@@ -3,6 +3,8 @@ sass-cache
 backup
 _untracked
 _current-folder.bat
+.ipynb_checkpoints
+nenv
 
 dist
 dist*

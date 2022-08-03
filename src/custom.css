@@ -365,6 +365,22 @@ svg.hk01logo {
     float: right;
 }
 
+.head_box a {
+    max-width: 64px;
+    max-height: 64px;
+    border: 1px solid #F0F0F0;
+    display: inline-block;
+    line-height: 64px;
+    font-size: 0;
+}
+
+.head_box a img {
+    width: 100%;
+    height: auto;
+    line-height: 64px;
+    vertical-align: middle;
+}
+
 /* .sub-district-nav  {
     position: static;
 } */

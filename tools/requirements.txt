@@ -1,0 +1,7 @@
+beautifulsoup4
+jupyter
+notebook
+numpy
+openpyxl
+pandas
+requests
